@@ -18,13 +18,13 @@ export interface MafiaGame {
 export interface PlayerStats {
   name: string;
   games: number;
-  totalWinPercent: number;
+  totalWinPercentage: number;
   totalWins: number;
   totalLosses: number;
-  townWinPercent: number;
+  townWinPercentage: number;
   townWins: number;
   townLosses: number;
-  mafiaWinPercent: number;
+  mafiaWinPercentage: number;
   mafiaWins: number;
   mafiaLosses: number;
   averageDaysLived: number;
@@ -44,6 +44,6 @@ export interface PlayerStats {
   cop: number;
   medic: number;
   vigilante: number;
-  townPercent: number;
-  prPercent: number;
+  townPercentage: number;
+  prPercentage: number;
 }
