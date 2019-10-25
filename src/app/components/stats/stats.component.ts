@@ -12,6 +12,7 @@ export class StatsComponent implements OnInit {
 
   ngOnInit() {
     console.log('mafiaGames: ', this.statsService.mafiaGames);
+    console.log('playerNames: ', this.statsService.playerNames);
   }
 
 }
