@@ -35,12 +35,12 @@ export interface PlayerStats {
   vigilanteShotMafia: number;
   vigilanteShotVT: number;
   vigilanteShotPR: number;
-  mafiaLynched: number;
-  vtLynched: number;
-  prLynched: number;
-  mafiaShot: number;
-  vtShot: number;
-  prShot: number;
+  lynchedAsMafia: number;
+  lynchedAsVT: number;
+  lynchedAsPR: number;
+  shotAsMafia: number;
+  shotAsVT: number;
+  shotAsPR: number;
   cop: number;
   medic: number;
   vigilante: number;
