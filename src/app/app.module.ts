@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { PlayerComponent } from './components/player/player.component';
 import { StatsComponent } from './components/stats/stats.component';
+import { StatsService } from './services/stats.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,9 @@ import { StatsComponent } from './components/stats/stats.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    StatsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
