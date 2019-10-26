@@ -74,7 +74,7 @@ import * as Schemas from '../interfaces/stats.interface';
 export class StatsService {
   public readonly mafiaGames: Schemas.MafiaGame[];
   public readonly playerNames: string[];
-  public playerStats: Map<string, Schemas.PlayerStats>;
+  public readonly playerStats: Map<string, Schemas.PlayerStats>;
 
   constructor() {
     this.mafiaGames = [
