@@ -1,4 +1,3 @@
-import * as Schemas from '../interfaces/stats.interface';
 import g01 from '../../assets/2019/01.json';
 import g02 from '../../assets/2019/02.json';
 import g03 from '../../assets/2019/03.json';
@@ -70,11 +69,12 @@ import g68 from '../../assets/2019/68.json';
 import g69 from '../../assets/2019/69.json';
 import g70 from '../../assets/2019/70.json';
 import g71 from '../../assets/2019/71.json';
+import * as Schemas from '../interfaces/stats.interface';
 
 export class StatsService {
-  public readonly mafiaGames: Schemas.MafiaGame[] = null;
-  public readonly playerNames: string[] = null;
-  public playerStats: Map<string, Schemas.PlayerStats> = null;
+  public readonly mafiaGames: Schemas.MafiaGame[];
+  public readonly playerNames: string[];
+  public playerStats: Map<string, Schemas.PlayerStats>;
 
   constructor() {
     this.mafiaGames = [
@@ -89,7 +89,15 @@ export class StatsService {
     ];
     this.playerNames = this.getPlayerNames();
     this.playerStats = this.initPlayerStats();
-    this.countGameStats();
+    this.mafiaGames.forEach(game => {
+      this.getGames(game);
+      this.getRolled(game);
+      this.getWinsLosses(game);
+      this.getShots(game);
+      this.getLynched(game);
+      this.getN0(game);
+      this.getFinal3(game);
+    });
     this.getTotals();
   }
 
@@ -119,40 +127,173 @@ export class StatsService {
       map.set(name, {
         name,
         games: 0,
-        totalWinPercentage: null,
         totalWins: 0,
         totalLosses: 0,
-        townWinPercentage: null,
+        totalWinPercentage: null,
         townWins: 0,
         townLosses: 0,
-        mafiaWinPercentage: null,
+        townWinPercentage: null,
         mafiaWins: 0,
         mafiaLosses: 0,
+        mafiaWinPercentage: null,
         n0ed: 0,
         n0Saved: 0,
         final3Wins: 0,
         final3Losses: 0,
         vigilanteShotMafia: 0,
-        vigilanteShotVT: 0,
         vigilanteShotCop: 0,
         vigilanteShotMedic: 0,
+        vigilanteShotVT: 0,
         lynchedAsMafia: 0,
-        lynchedAsVT: 0,
         lynchedAsCop: 0,
         lynchedAsMedic: 0,
         lynchedAsVigilante: 0,
+        lynchedAsVT: 0,
         shotAsMafia: 0,
-        shotAsVT: 0,
         shotAsCop: 0,
         shotAsMedic: 0,
-        cop: 0,
-        medic: 0,
-        vigilante: 0,
+        shotAsVT: 0,
+        rolledCop: 0,
+        rolledMedic: 0,
+        rolledVigilante: 0,
         townPercentage: null,
         prPercentage: null
       })
     );
     return map;
+  }
+
+  private getGames(game: Schemas.MafiaGame): void {
+    this.playerStats.get(game.cop).games++;
+    this.playerStats.get(game.medic).games++;
+    this.playerStats.get(game.vigilante).games++;
+    game.vanilla_town.forEach(player => this.playerStats.get(player).games++);
+    game.mafia.forEach(player => this.playerStats.get(player).games++);
+  }
+
+  private getRolled(game: Schemas.MafiaGame): void {
+    this.playerStats.get(game.cop).rolledCop++;
+    this.playerStats.get(game.medic).rolledMedic++;
+    this.playerStats.get(game.vigilante).rolledVigilante++;
+  }
+
+  private getWinsLosses(game: Schemas.MafiaGame): void {
+    if (game.winner === Schemas.TOWN) {
+      if (this.survivedN0(game.cop, game)) {
+        this.playerStats.get(game.cop).townWins++;
+      }
+      if (this.survivedN0(game.medic, game)) {
+        this.playerStats.get(game.medic).townWins++;
+      }
+      if (this.survivedN0(game.vigilante, game)) {
+        this.playerStats.get(game.vigilante).townWins++;
+      }
+      game.vanilla_town.forEach(player => {
+        if (this.survivedN0(player, game)) {
+          this.playerStats.get(player).townWins++;
+        }
+      });
+      game.mafia.forEach(player => {
+        if (this.survivedN0(player, game)) {
+          this.playerStats.get(player).mafiaLosses++;
+        }
+      });
+    } else if (game.winner === Schemas.MAFIA) {
+      if (this.survivedN0(game.cop, game)) {
+        this.playerStats.get(game.cop).townLosses++;
+      }
+      if (this.survivedN0(game.medic, game)) {
+        this.playerStats.get(game.medic).townLosses++;
+      }
+      if (this.survivedN0(game.vigilante, game)) {
+        this.playerStats.get(game.vigilante).townLosses++;
+      }
+      game.vanilla_town.forEach(player => {
+        if (this.survivedN0(player, game)) {
+          this.playerStats.get(player).townLosses++;
+        }
+      });
+      game.mafia.forEach(player => {
+        if (this.survivedN0(player, game)) {
+          this.playerStats.get(player).mafiaWins++;
+        }
+      });
+    } else {
+      console.log('Warning: Winning team has invalid input.');
+    }
+  }
+
+  private getShots(game: Schemas.MafiaGame): void {
+    const shotPlayer = game.shot[game.shot.length - 1];
+    if (shotPlayer !== Schemas.NONE) {
+      const roll = this.getRoll(shotPlayer, game);
+      if (roll === Schemas.MAFIA) {
+        this.playerStats.get(game.vigilante).vigilanteShotMafia++;
+        this.playerStats.get(shotPlayer).shotAsMafia++;
+      } else if (roll === Schemas.COP) {
+        this.playerStats.get(game.vigilante).vigilanteShotCop++;
+        this.playerStats.get(shotPlayer).shotAsCop++;
+      } else if (roll === Schemas.MEDIC) {
+        this.playerStats.get(game.vigilante).vigilanteShotMedic++;
+        this.playerStats.get(shotPlayer).shotAsMedic++;
+      } else if (roll === Schemas.VIGILANTE) {
+        console.log('Warning: Vigilante shot himself.');
+      } else if (roll === Schemas.VT) {
+        this.playerStats.get(game.vigilante).vigilanteShotVT++;
+        this.playerStats.get(shotPlayer).shotAsVT++;
+      } else {
+        console.log('Warning: Shot player does not have a roll.');
+      }
+    }
+  }
+
+  private getLynched(game: Schemas.MafiaGame): void {
+    game.lynched.forEach(lynch => {
+      if (lynch !== Schemas.SLEEP) {
+        const roll = this.getRoll(lynch, game);
+        if (roll === Schemas.MAFIA) {
+          this.playerStats.get(lynch).lynchedAsMafia++;
+        } else if (roll === Schemas.COP) {
+          this.playerStats.get(lynch).lynchedAsCop++;
+        } else if (roll === Schemas.MEDIC) {
+          this.playerStats.get(lynch).lynchedAsMedic++;
+        } else if (roll === Schemas.VIGILANTE) {
+          this.playerStats.get(lynch).lynchedAsVigilante++;
+        } else if (roll === Schemas.VT) {
+          this.playerStats.get(lynch).lynchedAsVT++;
+        } else {
+          console.log('Warning: Lynched player does not have a roll.');
+        }
+      }
+    });
+  }
+
+  private getN0(game: Schemas.MafiaGame): void {
+    game.kill[0].forEach(player => this.playerStats.get(player).n0ed++);
+    if (game.save[0] !== Schemas.NONE) {
+      this.playerStats.get(game.save[0]).n0Saved++;
+    }
+  }
+
+  private getFinal3(game: Schemas.MafiaGame): void {
+    if (game.f3_win && game.f3_loss) {
+      game.f3_win.forEach(player => this.playerStats.get(player).final3Wins++);
+      game.f3_loss.forEach(player => this.playerStats.get(player).final3Losses++);
+    } else if ((game.f3_win && !game.f3_loss) || (!game.f3_win && game.f3_loss)) {
+      console.log('Warning: Final 3 data is missing');
+    }
+  }
+
+  private getTotals(): void {
+    this.playerStats.forEach(player => {
+      player.totalWins = player.townWins + player.mafiaWins;
+      player.totalLosses = player.townLosses + player.mafiaLosses;
+      player.townWinPercentage = ((player.townWins / (player.townWins + player.townLosses)) * 100).toFixed(0);
+      player.mafiaWinPercentage = ((player.mafiaWins / (player.mafiaWins + player.mafiaLosses)) * 100).toFixed(0);
+      player.totalWinPercentage = ((player.totalWins / (player.totalWins + player.totalLosses)) * 100).toFixed(0);
+      player.townPercentage = (((player.games - player.mafiaWins - player.mafiaLosses) / player.games) * 100).toFixed(0);
+      player.prPercentage = (((player.rolledCop + player.rolledMedic + player.rolledVigilante) / player.games) * 100).toFixed(0);
+    });
   }
 
   private survivedN0(name: string, game: Schemas.MafiaGame): boolean {
@@ -169,164 +310,19 @@ export class StatsService {
     }
   }
 
-  private getAlignment(name: string, game: Schemas.MafiaGame): 'Mafia' | 'Town' {
-    if (
-      name === game.cop ||
-      name === game.medic ||
-      name === game.vigilante ||
-      game.vanilla_town.includes(name)
-    ) {
-      return Schemas.TOWN;
-    } else if (game.mafia.includes(name)) {
+  private getRoll(name: string, game: Schemas.MafiaGame): 'Mafia' | 'Cop' | 'Medic' | 'Vigilante' | 'VT' {
+    if (game.mafia.includes(name)) {
       return Schemas.MAFIA;
-    } else {
-      console.log('Warning: Alignment is not Town or Mafia.');
-    }
-  }
-
-  private getRoll(name: string, game: Schemas.MafiaGame): 'Mafia' | 'VT' | 'Cop' | 'Medic' | 'Vigilante' {
-    if (name === game.cop) {
-      return 'Cop';
+    } else if (name === game.cop) {
+      return Schemas.COP;
     } else if (name === game.medic) {
-      return 'Medic';
+      return Schemas.MEDIC;
     } else if (name === game.vigilante) {
-      return 'Vigilante';
+      return Schemas.VIGILANTE;
     } else if (game.vanilla_town.includes(name)) {
-      return 'VT';
-    } else if (game.mafia.includes(name)) {
-      return 'Mafia';
+      return Schemas.VT;
     } else {
       console.log('Warning: Player does not have a roll.');
     }
-  }
-
-  private countGameStats(): void {
-    this.mafiaGames.forEach(game => {
-      // Games
-      this.playerStats.get(game.cop).games++;
-      this.playerStats.get(game.medic).games++;
-      this.playerStats.get(game.vigilante).games++;
-      game.vanilla_town.forEach(player => this.playerStats.get(player).games++);
-      game.mafia.forEach(player => this.playerStats.get(player).games++);
-
-      // Roll Count
-      this.playerStats.get(game.cop).cop++;
-      this.playerStats.get(game.medic).medic++;
-      this.playerStats.get(game.vigilante).vigilante++;
-
-      // Win Loss
-      if (game.winner === Schemas.TOWN) {
-        if (this.survivedN0(game.cop, game)) {
-          this.playerStats.get(game.cop).townWins++;
-        }
-        if (this.survivedN0(game.medic, game)) {
-          this.playerStats.get(game.medic).townWins++;
-        }
-        if (this.survivedN0(game.vigilante, game)) {
-          this.playerStats.get(game.vigilante).townWins++;
-        }
-        game.vanilla_town.forEach(player => {
-          if (this.survivedN0(player, game)) {
-            this.playerStats.get(player).townWins++;
-          }
-        });
-        game.mafia.forEach(player => {
-          if (this.survivedN0(player, game)) {
-            this.playerStats.get(player).mafiaLosses++;
-          }
-        });
-      } else if (game.winner === Schemas.MAFIA) {
-        if (this.survivedN0(game.cop, game)) {
-          this.playerStats.get(game.cop).townLosses++;
-        }
-        if (this.survivedN0(game.medic, game)) {
-          this.playerStats.get(game.medic).townLosses++;
-        }
-        if (this.survivedN0(game.vigilante, game)) {
-          this.playerStats.get(game.vigilante).townLosses++;
-        }
-        game.vanilla_town.forEach(player => {
-          if (this.survivedN0(player, game)) {
-            this.playerStats.get(player).townLosses++;
-          }
-        });
-        game.mafia.forEach(player => {
-          if (this.survivedN0(player, game)) {
-            this.playerStats.get(player).mafiaWins++;
-          }
-        });
-      } else {
-        console.log('Warning: Winning team has invalid input.');
-      }
-
-      // Shot Stats
-      const shotPlayer = game.shot[game.shot.length - 1];
-      if (shotPlayer !== 'NONE') {
-        const roll = this.getRoll(shotPlayer, game);
-        if (roll === 'Cop') {
-          this.playerStats.get(game.vigilante).vigilanteShotCop++;
-          this.playerStats.get(shotPlayer).shotAsCop++;
-        } else if (roll === 'Medic') {
-          this.playerStats.get(game.vigilante).vigilanteShotMedic++;
-          this.playerStats.get(shotPlayer).shotAsMedic++;
-        } else if (roll === 'Vigilante') {
-          console.log('Warning: Vigilante shot himself.');
-        } else if (roll === 'VT') {
-          this.playerStats.get(game.vigilante).vigilanteShotVT++;
-          this.playerStats.get(shotPlayer).shotAsVT++;
-        } else if (roll === 'Mafia') {
-          this.playerStats.get(game.vigilante).vigilanteShotMafia++;
-          this.playerStats.get(shotPlayer).shotAsMafia++;
-        } else {
-          console.log('Warning: Shot player does not have a roll.');
-        }
-      }
-
-      // Lynched As X
-      game.lynched.forEach(lynch => {
-        if (lynch !== 'SLEEP') {
-          const roll = this.getRoll(lynch, game);
-          if (roll === 'Cop') {
-            this.playerStats.get(lynch).lynchedAsCop++;
-          } else if (roll === 'Medic') {
-            this.playerStats.get(lynch).lynchedAsMedic++;
-          } else if (roll === 'Vigilante') {
-            this.playerStats.get(lynch).lynchedAsVigilante++;
-          } else if (roll === 'VT') {
-            this.playerStats.get(lynch).lynchedAsVT++;
-          } else if (roll === 'Mafia') {
-            this.playerStats.get(lynch).lynchedAsMafia++;
-          } else {
-            console.log('Warning: Lynched player does not have a roll.');
-          }
-        }
-      });
-
-      // n0 stats
-      game.kill[0].forEach(player => this.playerStats.get(player).n0ed++);
-      if (game.save[0] !== 'NONE') {
-        this.playerStats.get(game.save[0]).n0Saved++;
-      }
-
-      // Final 3 stats
-      if (game.f3_win && game.f3_loss) {
-        game.f3_win.forEach(player => this.playerStats.get(player).final3Wins++);
-        game.f3_loss.forEach(player => this.playerStats.get(player).final3Losses++);
-      } else if ((game.f3_win && !game.f3_loss) || (!game.f3_win && game.f3_loss)) {
-        console.log('Warning: Final 3 data is missing');
-      }
-    });
-  }
-
-  private getTotals(): void {
-    this.playerStats.forEach(player => {
-      player.totalWins = player.townWins + player.mafiaWins;
-      player.totalLosses = player.townLosses + player.mafiaLosses;
-      player.townWinPercentage = ((player.townWins / (player.townWins + player.townLosses)) * 100).toFixed(0);
-      player.mafiaWinPercentage = ((player.mafiaWins / (player.mafiaWins + player.mafiaLosses)) * 100).toFixed(0);
-      player.totalWinPercentage = ((player.totalWins / (player.totalWins + player.totalLosses)) * 100).toFixed(0);
-      player.townPercentage = (((player.games - player.mafiaWins - player.mafiaLosses) / player.games) * 100).toFixed(0);
-      player.prPercentage = (((player.cop + player.medic + player.vigilante) / player.games) * 100).toFixed(0);
-    });
   }
 }
