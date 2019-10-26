@@ -37,40 +37,42 @@
     </tr>
   </thead>
   <tbody>
-		<tr *ngFor="let player of statsService?.playerStats | keyvalue">
-      <td><b>{{player?.value?.name}}</b></td>
-      <td>{{player?.value?.games}}</td>
-      <td class="left">{{player?.value?.totalWins}}</td>
-      <td>{{player?.value?.totalLosses}}</td>
-      <td>{{player?.value?.totalWinPercentage}}</td>
-      <td class="left">{{player?.value?.townWins}}</td>
-      <td>{{player?.value?.townLosses}}</td>
-      <td>{{player?.value?.townWinPercentage}}</td>
-      <td class="left">{{player?.value?.mafiaWins}}</td>
-      <td>{{player?.value?.mafiaLosses}}</td>
-      <td>{{player?.value?.mafiaWinPercentage}}</td>
-      <td class="left">{{player?.value?.n0ed}}</td>
-      <td>{{player?.value?.n0Saved}}</td>
-      <td class="left">{{player?.value?.final3Wins}}</td>
-      <td>{{player?.value?.final3Losses}}</td>
-      <td class="left">{{player?.value?.vigilanteShotCop}}</td>
-      <td>{{player?.value?.vigilanteShotMedic}}</td>
-      <td>{{player?.value?.vigilanteShotVT}}</td>
-      <td>{{player?.value?.vigilanteShotMafia}}</td>
-      <td class="left">{{player?.value?.lynchedAsCop}}</td>
-      <td>{{player?.value?.lynchedAsMedic}}</td>
-      <td>{{player?.value?.lynchedAsVigilante}}</td>
-      <td>{{player?.value?.lynchedAsVT}}</td>
-      <td>{{player?.value?.lynchedAsMafia}}</td>
-      <td class="left">{{player?.value?.shotAsCop}}</td>
-      <td>{{player?.value?.shotAsMedic}}</td>
-      <td>{{player?.value?.shotAsVT}}</td>
-      <td>{{player?.value?.shotAsMafia}}</td>
-      <td class="left">{{player?.value?.rolledCop}}</td>
-      <td>{{player?.value?.rolledMedic}}</td>
-      <td>{{player?.value?.rolledVigilante}}</td>
-      <td class="left">{{player?.value?.townPercentage}}</td>
-      <td>{{player?.value?.prPercentage}}</td>
-		</tr>
+    <ng-container *ngFor="let player of statsService?.playerStats | keyvalue">
+      <tr *ngIf="player?.value?.games >= 10">
+        <td><b>{{player?.value?.name}}</b></td>
+        <td>{{player?.value?.games}}</td>
+        <td class="left">{{player?.value?.totalWins}}</td>
+        <td>{{player?.value?.totalLosses}}</td>
+        <td>{{player?.value?.totalWinPercentage}}</td>
+        <td class="left">{{player?.value?.townWins}}</td>
+        <td>{{player?.value?.townLosses}}</td>
+        <td>{{player?.value?.townWinPercentage}}</td>
+        <td class="left">{{player?.value?.mafiaWins}}</td>
+        <td>{{player?.value?.mafiaLosses}}</td>
+        <td>{{player?.value?.mafiaWinPercentage}}</td>
+        <td class="left">{{player?.value?.n0ed}}</td>
+        <td>{{player?.value?.n0Saved}}</td>
+        <td class="left">{{player?.value?.final3Wins}}</td>
+        <td>{{player?.value?.final3Losses}}</td>
+        <td class="left">{{player?.value?.vigilanteShotCop}}</td>
+        <td>{{player?.value?.vigilanteShotMedic}}</td>
+        <td>{{player?.value?.vigilanteShotVT}}</td>
+        <td>{{player?.value?.vigilanteShotMafia}}</td>
+        <td class="left">{{player?.value?.lynchedAsCop}}</td>
+        <td>{{player?.value?.lynchedAsMedic}}</td>
+        <td>{{player?.value?.lynchedAsVigilante}}</td>
+        <td>{{player?.value?.lynchedAsVT}}</td>
+        <td>{{player?.value?.lynchedAsMafia}}</td>
+        <td class="left">{{player?.value?.shotAsCop}}</td>
+        <td>{{player?.value?.shotAsMedic}}</td>
+        <td>{{player?.value?.shotAsVT}}</td>
+        <td>{{player?.value?.shotAsMafia}}</td>
+        <td class="left">{{player?.value?.rolledCop}}</td>
+        <td>{{player?.value?.rolledMedic}}</td>
+        <td>{{player?.value?.rolledVigilante}}</td>
+        <td class="left">{{player?.value?.townPercentage}}</td>
+        <td>{{player?.value?.prPercentage}}</td>
+      </tr>
+    </ng-container>
 	</tbody>
 </table>
