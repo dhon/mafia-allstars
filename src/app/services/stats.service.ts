@@ -101,7 +101,6 @@ export class StatsService {
     this.getTotals();
   }
 
-  // Return an array of all player names
   private getPlayerNames(): string[] {
     const names: string[] = [];
     this.mafiaGames.forEach(game => {
@@ -120,7 +119,6 @@ export class StatsService {
     return uniqueNames;
   }
 
-  // Return the initialized array of all player stats
   private initPlayerStats(): Map<string, Schemas.PlayerStats> {
     const map = new Map<string, Schemas.PlayerStats>();
     this.playerNames.forEach(name =>
