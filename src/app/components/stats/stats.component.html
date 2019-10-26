@@ -1,42 +1,42 @@
 <table class="table auto sortable">
-	<thead>
-		<tr class="sticky">
-			<th>Name</th>
-			<th>Gs</th>
-			<th>W</th>
+  <thead>
+    <tr class="sticky">
+      <th>Name</th>
+      <th>Gs</th>
+      <th>W</th>
       <th>L</th>
       <th>Win%</th>
-			<th>T<br>W</th>
+      <th>T<br>W</th>
       <th>T<br>L</th>
       <th>Town<br>Win%</th>
-			<th>M<br>W</th>
+      <th>M<br>W</th>
       <th>M<br>L</th>
       <th>Mafia<br>Win%</th>
-			<th>n0</th>
-			<th>n0<br>s</th>
-			<th>F3<br>W</th>
-			<th>F3<br>L</th>
+      <th>n0</th>
+      <th>n0<br>s</th>
+      <th>F3<br>W</th>
+      <th>F3<br>L</th>
       <th>Vig<br>Cop</th>
       <th>Vig<br>Med</th>
       <th>Vig<br>VT</th>
       <th>Vig<br>Maf</th>
-			<th>Cop<br>Ly</th>
-			<th>Med<br>Ly</th>
+      <th>Cop<br>Ly</th>
+      <th>Med<br>Ly</th>
       <th>Vig<br>Ly</th>
       <th>VT<br>Ly</th>
-			<th>Maf<br>Ly</th>
+      <th>Maf<br>Ly</th>
       <th>Cop<br>Sh</th>
       <th>Med<br>Sh</th>
-			<th>VT<br>Sh</th>
-			<th>Mf<br>Sh</th>
-			<th>C</th>
-			<th>M</th>
-			<th>V</th>
-			<th>% Tn</th>
-			<th>% PR</th>
-		</tr>
+      <th>VT<br>Sh</th>
+      <th>Mf<br>Sh</th>
+      <th>C</th>
+      <th>M</th>
+      <th>V</th>
+      <th>% Tn</th>
+      <th>% PR</th>
+    </tr>
   </thead>
-	<tbody>
+  <tbody>
 		<tr *ngFor="let player of statsService?.playerStats | keyvalue">
       <td><b>{{player?.value?.name}}</b></td>
       <td>{{player?.value?.games}}</td>
