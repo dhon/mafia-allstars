@@ -105,17 +105,17 @@ export class StatsService {
   private getPlayerNames(): string[] {
     const names: string[] = [];
     this.mafiaGames.forEach(game => {
-      game.mafia.forEach(mafia => names.push(mafia));
       names.push(game.cop);
       names.push(game.medic);
       names.push(game.vigilante);
       game.vanilla_town.forEach(vt => names.push(vt));
+      game.mafia.forEach(mafia => names.push(mafia));
     });
     const uniqueNames = Array.from(new Set(names)); // Remove duplicates
     // Make all names lowercase and remove whitespace to test for JSON input errors
     const validateNames = uniqueNames.map(name => name.toLowerCase().replace(/\s/g, ''));
     if (uniqueNames.length !== validateNames.length) {
-      console.log('Warning: At least one player has name issues.');
+      console.log('Warning: At least one player has name capitalization or spacing issues.');
     }
     return uniqueNames;
   }
@@ -325,37 +325,41 @@ export class StatsService {
       names.push(this.mafiaGames[i].vigilante);
       this.mafiaGames[i].vanilla_town.forEach(vt => names.push(vt));
       this.mafiaGames[i].mafia.forEach(mafia => names.push(mafia));
+      const uniqueNames = Array.from(new Set(names)); // Remove duplicates
+      if (names.length !== uniqueNames.length) {
+        console.log(`Warning: Name duplication error. Game ${i = 1}`);
+      }
 
       for (let x = 0; x < this.mafiaGames[i].check.length; x++) {
         if (!names.includes(this.mafiaGames[i].check[x])) {
-          console.log(`Warning: Check name error. Game ${i + 1} Check ${x}`);
+          console.log(`Warning: Name error. Game ${i + 1} Check ${x}`);
         }
       }
       for (let x = 0; x < this.mafiaGames[i].save.length; x++) {
         if (!names.includes(this.mafiaGames[i].save[x]) && this.mafiaGames[i].save[x] !== Schemas.NONE) {
-          console.log(`Warning: Save name error. Game ${i + 1} Save ${x}`);
+          console.log(`Warning: Name error. Game ${i + 1} Save ${x}`);
         }
       }
       for (let x = 0; x < this.mafiaGames[i].shot.length; x++) {
         if (!names.includes(this.mafiaGames[i].shot[x]) && this.mafiaGames[i].shot[x] !== Schemas.NONE) {
-          console.log(`Warning: Shot name error. Game ${i + 1} Shot ${x}`);
+          console.log(`Warning: Name error. Game ${i + 1} Shot ${x}`);
         }
       }
       for (let x = 0; x < this.mafiaGames[i].kill.length; x++) {
         for (let y = 0; y < this.mafiaGames[i].kill[x].length; y++) {
           if (!names.includes(this.mafiaGames[i].kill[x][y])) {
-            console.log(`Warning: Kill name error. Game ${i + 1} Kill ${x}${y}`);
+            console.log(`Warning: Name error. Game ${i + 1} Kill ${x}${y}`);
           }
         }
       }
       for (let x = 0; x < this.mafiaGames[i].f3_win.length; x++) {
         if (!names.includes(this.mafiaGames[i].f3_win[x])) {
-          console.log(`Warning: Final 3 name error. Game ${i + 1} Winner ${x}`);
+          console.log(`Warning: Name error. Game ${i + 1} Final 3 Winner ${x}`);
         }
       }
       for (let x = 0; x < this.mafiaGames[i].f3_loss.length; x++) {
         if (!names.includes(this.mafiaGames[i].f3_loss[x])) {
-          console.log(`Warning: Final 3 name error. Game ${i + 1} Loser ${x}`);
+          console.log(`Warning: Name error. Game ${i + 1} Final 3 Loser ${x}`);
         }
       }
     }
