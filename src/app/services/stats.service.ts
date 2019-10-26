@@ -332,12 +332,12 @@ export class StatsService {
         }
       }
       for (let x = 0; x < this.mafiaGames[i].save.length; x++) {
-        if (!names.includes(this.mafiaGames[i].save[x]) && this.mafiaGames[i].save[x] !== 'NONE') {
+        if (!names.includes(this.mafiaGames[i].save[x]) && this.mafiaGames[i].save[x] !== Schemas.NONE) {
           console.log(`Warning: Save name error. Game ${i + 1} Save ${x}`);
         }
       }
       for (let x = 0; x < this.mafiaGames[i].shot.length; x++) {
-        if (!names.includes(this.mafiaGames[i].shot[x]) && this.mafiaGames[i].shot[x] !== 'NONE') {
+        if (!names.includes(this.mafiaGames[i].shot[x]) && this.mafiaGames[i].shot[x] !== Schemas.NONE) {
           console.log(`Warning: Shot name error. Game ${i + 1} Shot ${x}`);
         }
       }
