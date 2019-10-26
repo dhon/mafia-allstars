@@ -43,7 +43,7 @@
     "Striker",
     "Guy"
   ],
-  "f3_win": null,
-  "f3_loss": null,
+  "f3_win": [],
+  "f3_loss": [],
   "winner": "Town"
 }

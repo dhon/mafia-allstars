@@ -99,6 +99,7 @@ export class StatsService {
       this.getFinal3(game);
     });
     this.getTotals();
+    this.validateNames();
   }
 
   private getPlayerNames(): string[] {
@@ -313,6 +314,50 @@ export class StatsService {
       return Schemas.MAFIA;
     } else {
       console.log('Warning: Player does not have a roll.');
+    }
+  }
+
+  private validateNames(): void {
+    for (let i = 0; i < this.mafiaGames.length; i++) {
+      const names: string[] = [];
+      names.push(this.mafiaGames[i].cop);
+      names.push(this.mafiaGames[i].medic);
+      names.push(this.mafiaGames[i].vigilante);
+      this.mafiaGames[i].vanilla_town.forEach(vt => names.push(vt));
+      this.mafiaGames[i].mafia.forEach(mafia => names.push(mafia));
+
+      for (let x = 0; x < this.mafiaGames[i].check.length; x++) {
+        if (!names.includes(this.mafiaGames[i].check[x])) {
+          console.log(`Warning: Check name error. Game ${i + 1} Check ${x}`);
+        }
+      }
+      for (let x = 0; x < this.mafiaGames[i].save.length; x++) {
+        if (!names.includes(this.mafiaGames[i].save[x]) && this.mafiaGames[i].save[x] !== 'NONE') {
+          console.log(`Warning: Save name error. Game ${i + 1} Save ${x}`);
+        }
+      }
+      for (let x = 0; x < this.mafiaGames[i].shot.length; x++) {
+        if (!names.includes(this.mafiaGames[i].shot[x]) && this.mafiaGames[i].shot[x] !== 'NONE') {
+          console.log(`Warning: Shot name error. Game ${i + 1} Shot ${x}`);
+        }
+      }
+      for (let x = 0; x < this.mafiaGames[i].kill.length; x++) {
+        for (let y = 0; y < this.mafiaGames[i].kill[x].length; y++) {
+          if (!names.includes(this.mafiaGames[i].kill[x][y])) {
+            console.log(`Warning: Kill name error. Game ${i + 1} Kill ${x}${y}`);
+          }
+        }
+      }
+      for (let x = 0; x < this.mafiaGames[i].f3_win.length; x++) {
+        if (!names.includes(this.mafiaGames[i].f3_win[x])) {
+          console.log(`Warning: Final 3 name error. Game ${i + 1} Winner ${x}`);
+        }
+      }
+      for (let x = 0; x < this.mafiaGames[i].f3_loss.length; x++) {
+        if (!names.includes(this.mafiaGames[i].f3_loss[x])) {
+          console.log(`Warning: Final 3 name error. Game ${i + 1} Loser ${x}`);
+        }
+      }
     }
   }
 }
