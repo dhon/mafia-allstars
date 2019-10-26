@@ -1,3 +1,6 @@
+export const TOWN = 'Town';
+export const MAFIA = 'Mafia';
+
 export interface MafiaGame {
   id: string;
   mafia: string[];
@@ -18,32 +21,35 @@ export interface MafiaGame {
 export interface PlayerStats {
   name: string;
   games: number;
-  totalWinPercentage: number;
+  totalWinPercentage: string;
   totalWins: number;
   totalLosses: number;
-  townWinPercentage: number;
+  townWinPercentage: string;
   townWins: number;
   townLosses: number;
-  mafiaWinPercentage: number;
+  mafiaWinPercentage: string;
   mafiaWins: number;
   mafiaLosses: number;
-  averageDaysLived: number;
   n0ed: number;
   n0Saved: number;
   final3Wins: number;
   final3Losses: number;
   vigilanteShotMafia: number;
   vigilanteShotVT: number;
-  vigilanteShotPR: number;
+  vigilanteShotCop: number;
+  vigilanteShotMedic: number;
   lynchedAsMafia: number;
   lynchedAsVT: number;
-  lynchedAsPR: number;
+  lynchedAsCop: number;
+  lynchedAsMedic: number;
+  lynchedAsVigilante: number;
   shotAsMafia: number;
   shotAsVT: number;
-  shotAsPR: number;
+  shotAsCop: number;
+  shotAsMedic: number;
   cop: number;
   medic: number;
   vigilante: number;
-  townPercentage: number;
-  prPercentage: number;
+  townPercentage: string;
+  prPercentage: string;
 }

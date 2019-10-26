@@ -1,0 +1,42 @@
+{
+  "id": "10/09/2019 G1",
+  "mafia": [ "Jan", "Colin", "Kevin" ],
+  "kill": [
+    [ "RJ", "Garrinski" ],
+    [ "dLGN", "Ryan" ],
+    [ "Rolfe", "Younguns" ]
+  ],
+  "cop": "RJ",
+  "check": [
+    "dLGN"
+  ],
+  "medic": "Ryuzilla",
+  "save": [
+    "Colin",
+    "Rolfe",
+    "RJ"
+  ],
+  "vigilante": "Garrinski",
+  "shot": [
+    "NONE"
+  ],
+  "vanilla_town": [
+    "Striker",
+    "Stockton",
+    "Ryan",
+    "Guy",
+    "Younguns",
+    "Plen",
+    "dLGN",
+    "Rollo",
+    "Rolfe"
+  ],
+  "lynched": [
+    "Guy",
+    "SLEEP",
+    "Plen"
+  ],
+  "f3_win": null,
+  "f3_loss": null,
+  "winner": "Mafia"
+}

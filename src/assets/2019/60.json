@@ -1,0 +1,42 @@
+{
+  "id": "08/18/2019 G2",
+  "mafia": [ "Garrinski", "Rolfe", "Steep" ],
+  "kill": [
+    [ "Ghost 1", "Stockton" ],
+    [ "Rollo", "Striker" ],
+    [ "CarsonGarden", "Ryuzilla" ]
+  ],
+  "cop": "Ryuzilla",
+  "check": [
+    "Pope",
+    "Rollo",
+    "Siggywiggy"
+  ],
+  "medic": "Stockton",
+  "save": [
+    "Rollo"
+  ],
+  "vigilante": "Ghost 1",
+  "shot": [
+    "NONE"
+  ],
+  "vanilla_town": [
+    "BaehreX",
+    "CarsonGarden",
+    "Jaleb",
+    "Jan",
+    "Pat",
+    "Pope",
+    "Rollo",
+    "Siggywiggy",
+    "Striker"
+  ],
+  "lynched": [
+    "Jaleb",
+    "BaehreX",
+    "Siggywiggy"
+  ],
+  "f3_win": null,
+  "f3_loss": null,
+  "winner": "Mafia"
+}

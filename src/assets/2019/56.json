@@ -1,0 +1,47 @@
+{
+  "id": "08/07/2019 G2",
+  "mafia": [ "Duke", "Ringabel", "Jan" ],
+  "kill": [
+    [ "Ryuzilla", "Rollo" ],
+    [ "Colin", "BaehreX" ],
+    [ "BaehreX", "BaehreX" ],
+    [ "David", "David" ]
+  ],
+  "cop": "BaehreX",
+  "check": [
+    "Duke",
+    "Steep",
+    "Plen"
+  ],
+  "medic": "David",
+  "save": [
+    "Kevin",
+    "BaehreX",
+    "Ringabel"
+  ],
+  "vigilante": "Colin",
+  "shot": [
+    "NONE",
+    "NONE"
+  ],
+  "vanilla_town": [
+    "Plen",
+    "Ryuzilla",
+    "dLGN",
+    "Rolfe",
+    "Steep",
+    "Stockton",
+    "Greg",
+    "Rollo",
+    "Kevin"
+  ],
+  "lynched": [
+    "SLEEP",
+    "Steep",
+    "Plen",
+    "Stockton"
+  ],
+  "f3_win": null,
+  "f3_loss": null,
+  "winner": "Mafia"
+}

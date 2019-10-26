@@ -4,16 +4,93 @@ import g02 from '../../assets/2019/02.json';
 import g03 from '../../assets/2019/03.json';
 import g04 from '../../assets/2019/04.json';
 import g05 from '../../assets/2019/05.json';
+import g06 from '../../assets/2019/06.json';
+import g07 from '../../assets/2019/07.json';
+import g08 from '../../assets/2019/08.json';
+import g09 from '../../assets/2019/09.json';
+import g10 from '../../assets/2019/10.json';
+import g11 from '../../assets/2019/11.json';
+import g12 from '../../assets/2019/12.json';
+import g13 from '../../assets/2019/13.json';
+import g14 from '../../assets/2019/14.json';
+import g15 from '../../assets/2019/15.json';
+import g16 from '../../assets/2019/16.json';
+import g17 from '../../assets/2019/17.json';
+import g18 from '../../assets/2019/18.json';
+import g19 from '../../assets/2019/19.json';
+import g20 from '../../assets/2019/20.json';
+import g21 from '../../assets/2019/21.json';
+import g22 from '../../assets/2019/22.json';
+import g23 from '../../assets/2019/23.json';
+import g24 from '../../assets/2019/24.json';
+import g25 from '../../assets/2019/25.json';
+import g26 from '../../assets/2019/26.json';
+import g27 from '../../assets/2019/27.json';
+import g28 from '../../assets/2019/28.json';
+import g29 from '../../assets/2019/29.json';
+import g30 from '../../assets/2019/30.json';
+import g31 from '../../assets/2019/31.json';
+import g32 from '../../assets/2019/32.json';
+import g33 from '../../assets/2019/33.json';
+import g34 from '../../assets/2019/34.json';
+import g35 from '../../assets/2019/35.json';
+import g36 from '../../assets/2019/36.json';
+import g37 from '../../assets/2019/37.json';
+import g38 from '../../assets/2019/38.json';
+import g39 from '../../assets/2019/39.json';
+import g40 from '../../assets/2019/40.json';
+import g41 from '../../assets/2019/41.json';
+import g42 from '../../assets/2019/42.json';
+import g43 from '../../assets/2019/43.json';
+import g44 from '../../assets/2019/44.json';
+import g45 from '../../assets/2019/45.json';
+import g46 from '../../assets/2019/46.json';
+import g47 from '../../assets/2019/47.json';
+import g48 from '../../assets/2019/48.json';
+import g49 from '../../assets/2019/49.json';
+import g50 from '../../assets/2019/50.json';
+import g51 from '../../assets/2019/51.json';
+import g52 from '../../assets/2019/52.json';
+import g53 from '../../assets/2019/53.json';
+import g54 from '../../assets/2019/54.json';
+import g55 from '../../assets/2019/55.json';
+import g56 from '../../assets/2019/56.json';
+import g57 from '../../assets/2019/57.json';
+import g58 from '../../assets/2019/58.json';
+import g59 from '../../assets/2019/59.json';
+import g60 from '../../assets/2019/60.json';
+import g61 from '../../assets/2019/61.json';
+import g62 from '../../assets/2019/62.json';
+import g63 from '../../assets/2019/63.json';
+import g64 from '../../assets/2019/64.json';
+import g65 from '../../assets/2019/65.json';
+import g66 from '../../assets/2019/66.json';
+import g67 from '../../assets/2019/67.json';
+import g68 from '../../assets/2019/68.json';
+import g69 from '../../assets/2019/69.json';
+import g70 from '../../assets/2019/70.json';
+import g71 from '../../assets/2019/71.json';
 
 export class StatsService {
   public readonly mafiaGames: Schemas.MafiaGame[] = null;
   public readonly playerNames: string[] = null;
-  public playerStats: Schemas.PlayerStats[] = null;
+  public playerStats: Map<string, Schemas.PlayerStats> = null;
 
   constructor() {
-    this.mafiaGames = [g01, g02, g03, g04, g05];
+    this.mafiaGames = [
+      g01, g02, g03, g04, g05, g06, g07, g08, g09, g10,
+      g11, g12, g13, g14, g15, g16, g17, g18, g19, g20,
+      g21, g22, g23, g24, g25, g26, g27, g28, g29, g30,
+      g31, g32, g33, g34, g35, g36, g37, g38, g39, g40,
+      g41, g42, g43, g44, g45, g46, g47, g48, g49, g50,
+      g51, g52, g53, g54, g55, g56, g57, g58, g59, g60,
+      g61, g62, g63, g64, g65, g66, g67, g68, g69, g70,
+      g71
+    ];
     this.playerNames = this.getPlayerNames();
     this.playerStats = this.initPlayerStats();
+    this.countGameStats();
+    this.getTotals();
   }
 
   // Return an array of all player names
@@ -36,9 +113,10 @@ export class StatsService {
   }
 
   // Return the initialized array of all player stats
-  private initPlayerStats(): Schemas.PlayerStats[] {
-    return this.playerNames.map(name => {
-      return {
+  private initPlayerStats(): Map<string, Schemas.PlayerStats> {
+    const map = new Map<string, Schemas.PlayerStats>();
+    this.playerNames.forEach(name =>
+      map.set(name, {
         name,
         games: 0,
         totalWinPercentage: null,
@@ -50,26 +128,205 @@ export class StatsService {
         mafiaWinPercentage: null,
         mafiaWins: 0,
         mafiaLosses: 0,
-        averageDaysLived: null,
         n0ed: 0,
         n0Saved: 0,
         final3Wins: 0,
         final3Losses: 0,
         vigilanteShotMafia: 0,
         vigilanteShotVT: 0,
-        vigilanteShotPR: 0,
+        vigilanteShotCop: 0,
+        vigilanteShotMedic: 0,
         lynchedAsMafia: 0,
         lynchedAsVT: 0,
-        lynchedAsPR: 0,
+        lynchedAsCop: 0,
+        lynchedAsMedic: 0,
+        lynchedAsVigilante: 0,
         shotAsMafia: 0,
         shotAsVT: 0,
-        shotAsPR: 0,
+        shotAsCop: 0,
+        shotAsMedic: 0,
         cop: 0,
         medic: 0,
         vigilante: 0,
         townPercentage: null,
         prPercentage: null
-      };
+      })
+    );
+    return map;
+  }
+
+  private survivedN0(name: string, game: Schemas.MafiaGame): boolean {
+    if (!game.kill[0].includes(name)) {
+      return true; // Not targeted
+    } else if (name === game.kill[0][0] && name === game.kill[0][1]) {
+      return false; // Double stacked
+    } else if (name === game.save[0]) {
+      return true; // Saved
+    } else if (name === game.kill[0][0] || name === game.kill[0][1]) {
+      return false; // Targeted and not saved
+    } else {
+      console.log('Warning: Night 0 kills invalid');
+    }
+  }
+
+  private getAlignment(name: string, game: Schemas.MafiaGame): 'Mafia' | 'Town' {
+    if (
+      name === game.cop ||
+      name === game.medic ||
+      name === game.vigilante ||
+      game.vanilla_town.includes(name)
+    ) {
+      return Schemas.TOWN;
+    } else if (game.mafia.includes(name)) {
+      return Schemas.MAFIA;
+    } else {
+      console.log('Warning: Alignment is not Town or Mafia.');
+    }
+  }
+
+  private getRoll(name: string, game: Schemas.MafiaGame): 'Mafia' | 'VT' | 'Cop' | 'Medic' | 'Vigilante' {
+    if (name === game.cop) {
+      return 'Cop';
+    } else if (name === game.medic) {
+      return 'Medic';
+    } else if (name === game.vigilante) {
+      return 'Vigilante';
+    } else if (game.vanilla_town.includes(name)) {
+      return 'VT';
+    } else if (game.mafia.includes(name)) {
+      return 'Mafia';
+    } else {
+      console.log('Warning: Player does not have a roll.');
+    }
+  }
+
+  private countGameStats(): void {
+    this.mafiaGames.forEach(game => {
+      // Games
+      this.playerStats.get(game.cop).games++;
+      this.playerStats.get(game.medic).games++;
+      this.playerStats.get(game.vigilante).games++;
+      game.vanilla_town.forEach(player => this.playerStats.get(player).games++);
+      game.mafia.forEach(player => this.playerStats.get(player).games++);
+
+      // Roll Count
+      this.playerStats.get(game.cop).cop++;
+      this.playerStats.get(game.medic).medic++;
+      this.playerStats.get(game.vigilante).vigilante++;
+
+      // Win Loss
+      if (game.winner === Schemas.TOWN) {
+        if (this.survivedN0(game.cop, game)) {
+          this.playerStats.get(game.cop).townWins++;
+        }
+        if (this.survivedN0(game.medic, game)) {
+          this.playerStats.get(game.medic).townWins++;
+        }
+        if (this.survivedN0(game.vigilante, game)) {
+          this.playerStats.get(game.vigilante).townWins++;
+        }
+        game.vanilla_town.forEach(player => {
+          if (this.survivedN0(player, game)) {
+            this.playerStats.get(player).townWins++;
+          }
+        });
+        game.mafia.forEach(player => {
+          if (this.survivedN0(player, game)) {
+            this.playerStats.get(player).mafiaLosses++;
+          }
+        });
+      } else if (game.winner === Schemas.MAFIA) {
+        if (this.survivedN0(game.cop, game)) {
+          this.playerStats.get(game.cop).townLosses++;
+        }
+        if (this.survivedN0(game.medic, game)) {
+          this.playerStats.get(game.medic).townLosses++;
+        }
+        if (this.survivedN0(game.vigilante, game)) {
+          this.playerStats.get(game.vigilante).townLosses++;
+        }
+        game.vanilla_town.forEach(player => {
+          if (this.survivedN0(player, game)) {
+            this.playerStats.get(player).townLosses++;
+          }
+        });
+        game.mafia.forEach(player => {
+          if (this.survivedN0(player, game)) {
+            this.playerStats.get(player).mafiaWins++;
+          }
+        });
+      } else {
+        console.log('Warning: Winning team has invalid input.');
+      }
+
+      // Shot Stats
+      const shotPlayer = game.shot[game.shot.length - 1];
+      if (shotPlayer !== 'NONE') {
+        const roll = this.getRoll(shotPlayer, game);
+        if (roll === 'Cop') {
+          this.playerStats.get(game.vigilante).vigilanteShotCop++;
+          this.playerStats.get(shotPlayer).shotAsCop++;
+        } else if (roll === 'Medic') {
+          this.playerStats.get(game.vigilante).vigilanteShotMedic++;
+          this.playerStats.get(shotPlayer).shotAsMedic++;
+        } else if (roll === 'Vigilante') {
+          console.log('Warning: Vigilante shot himself.');
+        } else if (roll === 'VT') {
+          this.playerStats.get(game.vigilante).vigilanteShotVT++;
+          this.playerStats.get(shotPlayer).shotAsVT++;
+        } else if (roll === 'Mafia') {
+          this.playerStats.get(game.vigilante).vigilanteShotMafia++;
+          this.playerStats.get(shotPlayer).shotAsMafia++;
+        } else {
+          console.log('Warning: Shot player does not have a roll.');
+        }
+      }
+
+      // Lynched As X
+      game.lynched.forEach(lynch => {
+        if (lynch !== 'SLEEP') {
+          const roll = this.getRoll(lynch, game);
+          if (roll === 'Cop') {
+            this.playerStats.get(lynch).lynchedAsCop++;
+          } else if (roll === 'Medic') {
+            this.playerStats.get(lynch).lynchedAsMedic++;
+          } else if (roll === 'Vigilante') {
+            this.playerStats.get(lynch).lynchedAsVigilante++;
+          } else if (roll === 'VT') {
+            this.playerStats.get(lynch).lynchedAsVT++;
+          } else if (roll === 'Mafia') {
+            this.playerStats.get(lynch).lynchedAsMafia++;
+          } else {
+            console.log('Warning: Lynched player does not have a roll.');
+          }
+        }
+      });
+
+      // n0 stats
+      game.kill[0].forEach(player => this.playerStats.get(player).n0ed++);
+      if (game.save[0] !== 'NONE') {
+        this.playerStats.get(game.save[0]).n0Saved++;
+      }
+
+      // Final 3 stats
+      if (game.f3_win && game.f3_loss) {
+        game.f3_win.forEach(player => this.playerStats.get(player).final3Wins++);
+        game.f3_loss.forEach(player => this.playerStats.get(player).final3Losses++);
+      } else if ((game.f3_win && !game.f3_loss) || (!game.f3_win && game.f3_loss)) {
+        console.log('Warning: Final 3 data is missing');
+      }
+    });
+  }
+
+  private getTotals(): void {
+    this.playerStats.forEach(player => {
+      player.totalWins = player.townWins + player.mafiaWins;
+      player.totalLosses = player.townLosses + player.mafiaLosses;
+      player.townWinPercentage = ((player.townWins / (player.townWins + player.townLosses)) * 100).toFixed(0);
+      player.mafiaWinPercentage = ((player.mafiaWins / (player.mafiaWins + player.mafiaLosses)) * 100).toFixed(0);
+      player.totalWinPercentage = ((player.totalWins / (player.totalWins + player.totalLosses)) * 100).toFixed(0);
+      player.townPercentage = (((player.games - player.mafiaWins - player.mafiaLosses) / player.games) * 100).toFixed(0);
+      player.prPercentage = (((player.cop + player.medic + player.vigilante) / player.games) * 100).toFixed(0);
     });
   }
 }

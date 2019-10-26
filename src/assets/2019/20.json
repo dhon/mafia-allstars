@@ -1,0 +1,48 @@
+{
+  "id": "03/06/2019 G2",
+  "mafia": [ "Plen", "Ryuzilla", "Vanity" ],
+  "kill": [
+    [ "Colin", "Guy" ],
+    [ "Greg", "Rollo" ],
+    [ "Duke" ],
+    [ "Duke" ]
+  ],
+  "cop": "Duke",
+  "check": [
+    "Colin",
+    "Logan",
+    "Vanity",
+    "Plen"
+  ],
+  "medic": "kny",
+  "save": [
+    "Rollo",
+    "Vanity",
+    "Duke",
+    "Shakespeare"
+  ],
+  "vigilante": "Guy",
+  "shot": [
+    "NONE"
+  ],
+  "vanilla_town": [
+    "CarsonGarden",
+    "Colin",
+    "Greg",
+    "Logan",
+    "Ringabel",
+    "Rob Alloy",
+    "Rollo",
+    "Shakespeare",
+    "Striker"
+  ],
+  "lynched": [
+    "Striker",
+    "Ryuzilla",
+    "Vanity",
+    "Plen"
+  ],
+  "f3_win": null,
+  "f3_loss": null,
+  "winner": "Town"
+}

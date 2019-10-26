@@ -1,0 +1,45 @@
+{
+  "id": "03/13/2019 G1",
+  "mafia": [ "Colin", "Blue Eagle", "Plen" ],
+  "kill": [
+    [ "Rich", "Steve" ],
+    [ "Rollo" ],
+    [ "Ramza" ],
+    [ "David" ]
+  ],
+  "cop": "Rich",
+  "check": [
+    "Steve"
+  ],
+  "medic": "Rollo",
+  "save": [
+    "Pope",
+    "Ryuzilla"
+  ],
+  "vigilante": "Guy",
+  "shot": [
+    "NONE",
+    "NONE",
+    "Dave Dob"
+  ],
+  "vanilla_town": [
+    "dLGN",
+    "Steve",
+    "Ramza",
+    "Ryuzilla",
+    "Banks",
+    "Dave Dob",
+    "David",
+    "Pope",
+    "Jan"
+  ],
+  "lynched": [
+    "Colin",
+    "Jan",
+    "Blue Eagle",
+    "Plen"
+  ],
+  "f3_win": null,
+  "f3_loss": null,
+  "winner": "Town"
+}

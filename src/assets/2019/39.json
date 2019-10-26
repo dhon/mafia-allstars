@@ -1,0 +1,52 @@
+
+{
+  "id": "05/22/2019 G1",
+  "mafia": [ "JumpRopes", "Pope", "Aquilla" ],
+  "kill": [
+    [ "RJ", "Rich" ],
+    [ "Guy", "Jan" ],
+    [ "Slip", "Rollo" ],
+    [ "Rollo" ],
+    [ "Ringabel" ]
+  ],
+  "cop": "Guy",
+  "check": [
+    "Rich",
+    "JumpRopes"
+  ],
+  "medic": "Joey",
+  "save": [
+    "Pope",
+    "Slip",
+    "Rollo",
+    "JumpRopes",
+    "Ryuzilla"
+  ],
+  "vigilante": "Slip",
+  "shot": [
+    "NONE",
+    "NONE",
+    "Pope"
+  ],
+  "vanilla_town": [
+    "Rollo",
+    "Ringabel",
+    "Ryuzilla",
+    "Rich",
+    "RJ",
+    "Dave Dob",
+    "Jan",
+    "Colin",
+    "Plen"
+  ],
+  "lynched": [
+    "Plen",
+    "SLEEP",
+    "Dave Dob",
+    "SLEEP",
+    "Colin"
+  ],
+  "f3_win": null,
+  "f3_loss": null,
+  "winner": "Mafia"
+}

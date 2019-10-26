@@ -1,0 +1,47 @@
+{
+  "id": "07/17/2019 G1",
+  "mafia": [ "Colin", "Garrinski", "Jordan" ],
+  "kill": [
+    [ "Plen", "Stockton" ],
+    [ "Rob Alloy" ],
+    [ "Jan" ],
+    [ "Greg" ],
+    [ "Rich" ]
+  ],
+  "cop": "Rob Alloy",
+  "check": [
+    "Ryuzilla",
+    "Thore"
+  ],
+  "medic": "Plen",
+  "save": [
+    "Jan"
+  ],
+  "vigilante": "Jan",
+  "shot": [
+    "NONE",
+    "NONE",
+    "Steep"
+  ],
+  "vanilla_town": [
+    "Thore",
+    "Ryuzilla",
+    "Rollo",
+    "Rich",
+    "Stockton",
+    "Joey",
+    "Steep",
+    "Kevin",
+    "Greg"
+  ],
+  "lynched": [
+    "Colin",
+    "Joey",
+    "Rollo",
+    "Steep",
+    "Thore"
+  ],
+  "f3_win": null,
+  "f3_loss": null,
+  "winner": "Mafia"
+}

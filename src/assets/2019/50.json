@@ -1,0 +1,55 @@
+{
+  "id": "07/17/2019 G2",
+  "mafia": [ "Greg", "Steep", "Thore" ],
+  "kill": [
+    [ "Ghost 1", "Ghost 2" ],
+    [ "Ryuzilla", "Ryuzilla" ],
+    [ "Colin" ],
+    [ "Rollo" ],
+    [ "Duke" ],
+    [ "Kevin" ]
+  ],
+  "cop": "Rollo",
+  "check": [
+    "Greg",
+    "Duke",
+    "Kevin",
+    "Jan"
+  ],
+  "medic": "Jordan",
+  "save": [
+    "NONE",
+    "Ryuzilla",
+    "Steep",
+    "Duke",
+    "Kevin",
+    "Steep"
+  ],
+  "vigilante": "Ryuzilla",
+  "shot": [
+    "NONE",
+    "Morris"
+  ],
+  "vanilla_town": [
+    "Colin",
+    "Duke",
+    "Jan",
+    "Kevin",
+    "Morris",
+    "Rob Alloy",
+    "Stockton",
+    "Ghost 1",
+    "Ghost 2"
+  ],
+  "lynched": [
+    "SLEEP",
+    "Thore",
+    "Greg",
+    "Jan",
+    "Stockton",
+    "Jordan"
+  ],
+  "f3_win": [ "Steep" ],
+  "f3_loss": [ "Jordan", "Rob Alloy" ],
+  "winner": "Mafia"
+}

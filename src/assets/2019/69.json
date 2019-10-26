@@ -1,0 +1,52 @@
+{
+  "id": "10/02/2019 G1",
+  "mafia": [ "Garrinski", "Jordan", "Kevin" ],
+  "kill": [
+    [ "Colin", "Rollo" ],
+    [ "Siggywiggy", "Guy" ],
+    [ "Stockton", "Stockton" ],
+    [ "Rezzivaer" ],
+    [ "Dave Dob" ],
+    [ "Pope" ]
+  ],
+  "cop": "Stockton",
+  "check": [
+    "Garrinski",
+    "Kevin",
+    "Pope"
+  ],
+  "medic": "Rezzivaer",
+  "save": [
+    "Siggywiggy",
+    "Pope",
+    "Stockton",
+    "Dave Dob"
+  ],
+  "vigilante": "Guy",
+  "shot": [
+    "NONE",
+    "NONE"
+  ],
+  "vanilla_town": [
+    "Aquilla",
+    "Dave Dob",
+    "Colin",
+    "Steep",
+    "Rollo",
+    "Pope",
+    "Siggywiggy",
+    "Striker",
+    "Ryuzilla"
+  ],
+  "lynched": [
+    "Steep",
+    "Striker",
+    "Kevin",
+    "Garrinski",
+    "SLEEP",
+    "Jordan"
+  ],
+  "f3_win": [ "Aquilla", "Ryuzilla" ],
+  "f3_loss": [ "Jordan" ],
+  "winner": "Town"
+}

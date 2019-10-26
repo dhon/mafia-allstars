@@ -1,0 +1,54 @@
+
+{
+  "id": "05/29/2019 G1",
+  "mafia": [ "Jordan", "Plen", "Tyler" ],
+  "kill": [
+    [ "Jan", "Pope" ],
+    [ "Ryuzilla", "Garrinski" ],
+    [ "Guy", "Guy" ],
+    [ "RJ" ],
+    [ "Greg" ],
+    [ "Striker" ]
+  ],
+  "cop": "Guy",
+  "check": [
+    "Rolfe",
+    "Striker",
+    "Joey"
+  ],
+  "medic": "RJ",
+  "save": [
+    "Slip",
+    "Ryuzilla",
+    "Guy",
+    "Ryuzilla"
+  ],
+  "vigilante": "Greg",
+  "shot": [
+    "NONE",
+    "NONE",
+    "Jordan"
+  ],
+  "vanilla_town": [
+    "Jan",
+    "Rolfe",
+    "Slip",
+    "Joey",
+    "Colin",
+    "Striker",
+    "Ryuzilla",
+    "Pope",
+    "Garrinski"
+  ],
+  "lynched": [
+    "Rolfe",
+    "Colin",
+    "Tyler",
+    "Joey",
+    "SLEEP",
+    "Plen"
+  ],
+  "f3_win": [ "Ryuzilla", "Slip" ],
+  "f3_loss": [ "Plen" ],
+  "winner": "Town"
+}

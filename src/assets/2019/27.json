@@ -1,0 +1,45 @@
+{
+  "id": "04/03/2019 G1",
+  "mafia": [ "Cron", "Kevin", "Rollo" ],
+  "kill": [
+    [ "Dave Dob", "Colin" ],
+    [ "CarsonGarden" ],
+    [ "Ramza" ]
+  ],
+  "cop": "Ramza",
+  "check": [
+    "dLGN",
+    "Ryuzilla",
+    "Rollo"
+  ],
+  "medic": "QuibsY",
+  "save": [
+    "Tyler",
+    "Younguns",
+    "Ramza"
+  ],
+  "vigilante": "CarsonGarden",
+  "shot": [
+    "NONE",
+    "NONE"
+  ],
+  "vanilla_town": [
+    "dLGN",
+    "Tyler",
+    "Ryuzilla",
+    "Pope",
+    "Jan",
+    "Vanity",
+    "Younguns",
+    "Dave Dob",
+    "Colin"
+  ],
+  "lynched": [
+    "Cron",
+    "Kevin",
+    "Rollo"
+  ],
+  "f3_win": null,
+  "f3_loss": null,
+  "winner": "Town"
+}

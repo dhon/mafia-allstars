@@ -1,0 +1,53 @@
+{
+  "id": "07/24/2019 G1",
+  "mafia": [ "Ramza", "Stockton", "Guy" ],
+  "kill": [
+    [ "dLGN", "Rolfe" ],
+    [ "Steve", "Rollo" ],
+    [ "Rollo", "Nick" ],
+    [ "Nick" ],
+    [ "Jan" ]
+  ],
+  "cop": "Nick",
+  "check": [
+    "Guy",
+    "Stockton",
+    "Ryuzilla",
+    "Jan"
+  ],
+  "medic": "Kevin",
+  "save": [
+    "Striker",
+    "Rollo",
+    "Nick",
+    "Stockton",
+    "Jan"
+  ],
+  "vigilante": "Rollo",
+  "shot": [
+    "NONE",
+    "NONE",
+    "Ramza"
+  ],
+  "vanilla_town": [
+    "Steve",
+    "Ryuzilla",
+    "Jordan",
+    "Jan",
+    "Striker",
+    "Rolfe",
+    "Colin",
+    "Jaleb",
+    "dLGN"
+  ],
+  "lynched": [
+    "Jaleb",
+    "Colin",
+    "Guy",
+    "SLEEP",
+    "Stockton"
+  ],
+  "f3_win": null,
+  "f3_loss": null,
+  "winner": "Town"
+}

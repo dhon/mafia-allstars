@@ -1,0 +1,47 @@
+{
+  "id": "02/06/2019 G1",
+  "mafia": [ "Garrinski", "Rolfe", "RJ" ],
+  "kill": [
+    [ "Ramza", "Jordan" ],
+    [ "Younguns" ],
+    [ "Rollo" ],
+    [ "dLGN" ]
+  ],
+  "cop": "Jordan",
+  "check": [
+    "RJ"
+  ],
+  "medic": "dLGN",
+  "save": [
+    "Plen",
+    "Rollo",
+    "Colin",
+    "Ryuzilla"
+  ],
+  "vigilante": "Ryuzilla",
+  "shot": [
+    "NONE",
+    "NONE",
+    "Garrinski"
+  ],
+  "vanilla_town": [
+    "Rollo",
+    "Jan",
+    "Colin",
+    "Rich",
+    "Plen",
+    "Dave Dob",
+    "Younguns",
+    "Steep",
+    "Ramza"
+  ],
+  "lynched": [
+    "RJ",
+    "Jan",
+    "Plen",
+    "Rolfe"
+  ],
+  "f3_win": null,
+  "f3_loss": null,
+  "winner": "Town"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "09/11/2019 G2",
+  "mafia": [ "CarsonGarden", "Creatchee", "Vanity" ],
+  "kill": [
+    [ "Jan", "Striker" ],
+    [ "Colin", "Jaleb" ],
+    [ "Ryuzilla" ],
+    [ "Jordan" ]
+  ],
+  "cop": "Ryuzilla",
+  "check": [
+    "Pope",
+    "Thore",
+    "Rollo"
+  ],
+  "medic": "Jan",
+  "save": [
+    "Thore"
+  ],
+  "vigilante": "Jordan",
+  "shot": [
+    "NONE",
+    "NONE",
+    "NONE",
+    "Siggywiggy"
+  ],
+  "vanilla_town": [
+    "Jaleb",
+    "Colin",
+    "Rollo",
+    "Thore",
+    "Siggywiggy",
+    "Striker",
+    "Stockton",
+    "Pope",
+    "Garrinski"
+  ],
+  "lynched": [
+    "Stockton",
+    "Creatchee",
+    "CarsonGarden",
+    "Vanity"
+  ],
+  "f3_win": null,
+  "f3_loss": null,
+  "winner": "Town"
+}
