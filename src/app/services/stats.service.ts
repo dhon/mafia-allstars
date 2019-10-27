@@ -177,37 +177,12 @@ export class StatsService {
   }
 
   private getWinsLosses(game: Schemas.MafiaGame): void {
+    const town = [game.cop, game.medic, game.vigilante, ...game.vanilla_town];
     if (game.winner === Schemas.TOWN) {
-      if (this.survivedN0(game.cop, game)) {
-        this.playerStats.get(game.cop).townWins++;
-      }
-      if (this.survivedN0(game.medic, game)) {
-        this.playerStats.get(game.medic).townWins++;
-      }
-      if (this.survivedN0(game.vigilante, game)) {
-        this.playerStats.get(game.vigilante).townWins++;
-      }
-      game.vanilla_town.forEach(player => {
-        if (this.survivedN0(player, game)) {
-          this.playerStats.get(player).townWins++;
-        }
-      });
+      town.filter(player => this.survivedN0(player, game)).forEach(player => this.playerStats.get(player).townWins++);
       game.mafia.forEach(player => this.playerStats.get(player).mafiaLosses++);
     } else if (game.winner === Schemas.MAFIA) {
-      if (this.survivedN0(game.cop, game)) {
-        this.playerStats.get(game.cop).townLosses++;
-      }
-      if (this.survivedN0(game.medic, game)) {
-        this.playerStats.get(game.medic).townLosses++;
-      }
-      if (this.survivedN0(game.vigilante, game)) {
-        this.playerStats.get(game.vigilante).townLosses++;
-      }
-      game.vanilla_town.forEach(player => {
-        if (this.survivedN0(player, game)) {
-          this.playerStats.get(player).townLosses++;
-        }
-      });
+      town.filter(player => this.survivedN0(player, game)).forEach(player => this.playerStats.get(player).townLosses++);
       game.mafia.forEach(player => this.playerStats.get(player).mafiaWins++);
     } else {
       console.log('Warning: Winning team has invalid input.');
@@ -239,22 +214,20 @@ export class StatsService {
   }
 
   private getLynched(game: Schemas.MafiaGame): void {
-    game.lynched.forEach(lynch => {
-      if (lynch !== Schemas.SLEEP) {
-        const roll = this.getRoll(lynch, game);
-        if (roll === Schemas.COP) {
-          this.playerStats.get(lynch).lynchedAsCop++;
-        } else if (roll === Schemas.MEDIC) {
-          this.playerStats.get(lynch).lynchedAsMedic++;
-        } else if (roll === Schemas.VIGILANTE) {
-          this.playerStats.get(lynch).lynchedAsVigilante++;
-        } else if (roll === Schemas.VT) {
-          this.playerStats.get(lynch).lynchedAsVT++;
-        } else if (roll === Schemas.MAFIA) {
-          this.playerStats.get(lynch).lynchedAsMafia++;
-        } else {
-          console.log('Warning: Lynched player does not have a roll.');
-        }
+    game.lynched.filter(lynch => lynch !== Schemas.SLEEP).forEach(lynch => {
+      const roll = this.getRoll(lynch, game);
+      if (roll === Schemas.COP) {
+        this.playerStats.get(lynch).lynchedAsCop++;
+      } else if (roll === Schemas.MEDIC) {
+        this.playerStats.get(lynch).lynchedAsMedic++;
+      } else if (roll === Schemas.VIGILANTE) {
+        this.playerStats.get(lynch).lynchedAsVigilante++;
+      } else if (roll === Schemas.VT) {
+        this.playerStats.get(lynch).lynchedAsVT++;
+      } else if (roll === Schemas.MAFIA) {
+        this.playerStats.get(lynch).lynchedAsMafia++;
+      } else {
+        console.log('Warning: Lynched player does not have a roll.');
       }
     });
   }
