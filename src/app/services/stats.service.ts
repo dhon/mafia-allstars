@@ -99,6 +99,7 @@ export class StatsService {
       this.getFinal3(game);
     });
     this.getTotals();
+    this.playerStats = this.sortMap(this.playerStats);
     this.validateNames();
   }
 
@@ -294,6 +295,23 @@ export class StatsService {
     } else {
       console.log('Warning: Player does not have a roll.');
     }
+  }
+
+  private sortMap(playerStats: Map<string, Schemas.PlayerStats>): Map<string, Schemas.PlayerStats> {
+    const array = Array.from(playerStats.values());
+    array.sort((a, b) => {
+      if (a.games > b.games) {
+        return -1;
+      } else if (a.games < b.games) {
+        return 1;
+      } else if (a.name < b.name) {
+        return -1;
+      } else if (a.name > b.name) {
+        return 1;
+      }
+      return 0;
+    });
+    return new Map(array.map(obj => [obj.name, obj]));
   }
 
   private validateNames(): void {

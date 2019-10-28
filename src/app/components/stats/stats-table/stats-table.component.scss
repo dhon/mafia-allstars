@@ -1,19 +1,13 @@
 tr:nth-child(odd){
   background-color: #e6e6e6;
 }
-.mat-cell, .mat-cell-header {
-  text-align: center
+
+table {
+  width: 100%;
 }
-.mat-column-totalWins,
-.mat-column-townWins,
-.mat-column-mafiaWins,
-.mat-column-n0ed,
-.mat-column-final3Wins,
-.mat-column-vigilanteShotCop,
-.mat-column-lynchedAsCop,
-.mat-column-shotAsCop,
-.mat-column-rolledCop,
-.mat-column-townPercentage {
-  border-left: 1px solid black;
-  padding-left: 4px
+
+.mat-header-cell, .mat-cell {
+  text-align: center;
+  border: 1px solid #CCC;
+  padding: 4px;
 }
