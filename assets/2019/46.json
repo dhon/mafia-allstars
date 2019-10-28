@@ -1,0 +1,43 @@
+{
+  "id": "06/26/2019 G2",
+  "mafia": [ "RJ", "Jan", "Garrinski" ],
+  "kill": [
+    [ "Colin", "Stockton" ],
+    [ "Rob Alloy", "Ringabel" ],
+    [ "Beny", "Beny" ]
+  ],
+  "cop": "dLGN",
+  "check": [
+    "Ringabel",
+    "Ryuzilla",
+    "Beny"
+  ],
+  "medic": "Stockton",
+  "save": [
+    "dLGN"
+  ],
+  "vigilante": "Ringabel",
+  "shot": [
+    "NONE",
+    "NONE"
+  ],
+  "vanilla_town": [
+    "Ryuzilla",
+    "Rich",
+    "Rob Alloy",
+    "Greg",
+    "Rollo",
+    "Rolfe",
+    "Creatchee",
+    "Beny",
+    "Colin"
+  ],
+  "lynched": [
+    "Rollo",
+    "Rich",
+    "Rolfe"
+  ],
+  "f3_win": [],
+  "f3_loss": [],
+  "winner": "Mafia"
+}

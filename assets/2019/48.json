@@ -1,0 +1,47 @@
+{
+  "id": "07/10/2019 G2",
+  "mafia": [ "Rollo", "Rob Alloy", "Stockton" ],
+  "kill": [
+    [ "Steep", "Slip" ],
+    [ "Plen", "Morris" ],
+    [ "Morris", "JumpRopes" ],
+    [ "Ryuzilla", "Ryuzilla" ]
+  ],
+  "cop": "JumpRopes",
+  "check": [
+    "Plen",
+    "Garrinski",
+    "Rollo"
+  ],
+  "medic": "Ryuzilla",
+  "save": [
+    "Rollo",
+    "Morris",
+    "Rollo",
+    "Rob Alloy"
+  ],
+  "vigilante": "Steep",
+  "shot": [
+    "NONE"
+  ],
+  "vanilla_town": [
+    "Colin",
+    "Vanity",
+    "dLGN",
+    "Plen",
+    "Garrinski",
+    "Jan",
+    "Morris",
+    "Rolfe",
+    "Slip"
+  ],
+  "lynched": [
+    "SLEEP",
+    "Jan",
+    "SLEEP",
+    "Garrinski"
+  ],
+  "f3_win": [],
+  "f3_loss": [],
+  "winner": "Mafia"
+}

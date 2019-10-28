@@ -1,0 +1,45 @@
+{
+  "id": "06/26/2019 G1",
+  "mafia": [ "RJ", "Razze", "dLGN" ],
+  "kill": [
+    [ "Rollo", "Slip" ],
+    [ "Rollo", "Joey" ],
+    [ "Rolfe", "Rolfe" ]
+  ],
+  "cop": "Rollo",
+  "check": [
+    "Guy",
+    "Pope"
+  ],
+  "medic": "Rolfe",
+  "save": [
+    "Rollo",
+    "Pope",
+    "Razze"
+  ],
+  "vigilante": "Ramza",
+  "shot": [
+    "NONE",
+    "NONE",
+    "Greg"
+  ],
+  "vanilla_town": [
+    "Slip",
+    "Joey",
+    "Stockton",
+    "Guy",
+    "Ryuzilla",
+    "Greg",
+    "Pope",
+    "Colin",
+    "Jan"
+  ],
+  "lynched": [
+    "Jan",
+    "Pope",
+    "Stockton"
+  ],
+  "f3_win": [],
+  "f3_loss": [],
+  "winner": "Mafia"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "03/13/2019 G2",
+  "mafia": [ "Jan", "Steve", "JumpRopes" ],
+  "kill": [
+    [ "David", "Ryuzilla" ],
+    [ "dLGN", "Colin" ],
+    [ "Shakespeare", "Shakespeare" ],
+    [ "Banks" ]
+  ],
+  "cop": "Banks",
+  "check": [
+    "Rollo",
+    "Dave Dob",
+    "Steve",
+    "Jan"
+  ],
+  "medic": "Shakespeare",
+  "save": [
+    "dLGN",
+    "Dave Dob",
+    "kny"
+  ],
+  "vigilante": "kny",
+  "shot": [
+    "NONE",
+    "NONE",
+    "NONE",
+    "Jan"
+  ],
+  "vanilla_town": [
+    "Rich",
+    "Colin",
+    "dLGN",
+    "Aquilla",
+    "Rollo",
+    "Plen",
+    "Dave Dob",
+    "David",
+    "Ryuzilla"
+  ],
+  "lynched": [
+    "SLEEP",
+    "Rich",
+    "Steve",
+    "JumpRopes"
+  ],
+  "f3_win": [],
+  "f3_loss": [],
+  "winner": "Town"
+}

@@ -1,0 +1,42 @@
+{
+  "id": "08/14/2019 G2",
+  "mafia": [ "Rollo", "Pope", "Rob Alloy" ],
+  "kill": [
+    [ "Colin", "Ryuzilla" ],
+    [ "Jan", "Ringabel" ],
+    [ "Plen", "Rezzivaer" ]
+  ],
+  "cop": "Colin",
+  "check": [
+    "Rollo"
+  ],
+  "medic": "Jan",
+  "save": [
+    "Robik",
+    "Pope"
+  ],
+  "vigilante": "Ringabel",
+  "shot": [
+    "NONE",
+    "NONE"
+  ],
+  "vanilla_town": [
+    "Rezzivaer",
+    "Robik",
+    "Tyler",
+    "Garrinski",
+    "Kevin",
+    "Plen",
+    "Duke",
+    "Ryuzilla",
+    "CarsonGarden"
+  ],
+  "lynched": [
+    "Kevin",
+    "Robik",
+    "Garrinski"
+  ],
+  "f3_win": [],
+  "f3_loss": [],
+  "winner": "Mafia"
+}

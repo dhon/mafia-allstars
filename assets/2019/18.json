@@ -1,0 +1,54 @@
+{
+  "id": "02/27/2019 G2",
+  "mafia": [ "Ryuzilla", "Rolfe", "RJ" ],
+  "kill": [
+    [ "Plen", "Aquilla" ],
+    [ "Wiggles", "JumpRopes" ],
+    [ "Younguns", "Younguns" ],
+    [ "Rollo" ],
+    [ "Steve" ],
+    [ "Rollo" ]
+  ],
+  "cop": "Younguns",
+  "check": [
+    "Rollo",
+    "Wiggles",
+    "Jan"
+  ],
+  "medic": "Steve",
+  "save": [
+    "Ryuzilla",
+    "Kevin",
+    "Younguns",
+    "Rollo",
+    "dLGN"
+  ],
+  "vigilante": "Rollo",
+  "shot": [
+    "NONE",
+    "NONE",
+    "Kevin"
+  ],
+  "vanilla_town": [
+    "Colin",
+    "dLGN",
+    "Dave Dob",
+    "Wiggles",
+    "Plen",
+    "Jan",
+    "Aquilla",
+    "JumpRopes",
+    "Kevin"
+  ],
+  "lynched": [
+    "SLEEP",
+    "Colin",
+    "Ryuzilla",
+    "RJ",
+    "dLGN",
+    "Jan"
+  ],
+  "f3_win": [ "Rolfe" ],
+  "f3_loss": [ "Dave Dob", "dLGN" ],
+  "winner": "Mafia"
+}

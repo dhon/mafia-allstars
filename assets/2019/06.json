@@ -1,0 +1,52 @@
+{
+  "id": "01/16/2019 G2",
+  "mafia": [ "Rich", "Duke", "RJ" ],
+  "kill": [
+    [ "Plen", "Tyler" ],
+    [ "Pope" ],
+    [ "Vanity" ],
+    [ "Chad" ],
+    [ "Ryuzilla" ],
+    [ "Garrinski" ]
+  ],
+  "cop": "Chad",
+  "check": [
+    "Rollo",
+    "RJ",
+    "5",
+    "dLGN"
+  ],
+  "medic": "Pope",
+  "save": [
+    "Garrinski",
+    "Vanity"
+  ],
+  "vigilante": "Vanity",
+  "shot": [
+    "NONE",
+    "NONE",
+    "RJ"
+  ],
+  "vanilla_town": [
+    "Colin",
+    "Ryuzilla",
+    "Garrinski",
+    "Jan",
+    "Rollo",
+    "Tyler",
+    "dLGN",
+    "Plen",
+    "5"
+  ],
+  "lynched": [
+    "Rich",
+    "Rollo",
+    "5",
+    "SLEEP",
+    "Jan",
+    "Duke"
+  ],
+  "f3_win": [ "Colin", "dLGN" ],
+  "f3_loss": [ "Duke" ],
+  "winner": "Town"
+}

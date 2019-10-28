@@ -1,0 +1,49 @@
+
+{
+  "id": "05/15/2019 G2",
+  "mafia": [ "RJ", "Ryuzilla", "Guy" ],
+  "kill": [
+    [ "Duke", "Jordan" ],
+    [ "Colin", "Rollo" ],
+    [ "Rich" ]
+  ],
+  "cop": "Tyler",
+  "check": [
+    "Guy",
+    "Vanity",
+    "Ryuzilla",
+    "Garrinski"
+  ],
+  "medic": "Rich",
+  "save": [
+    "Jan",
+    "Colin",
+    "Greg"
+  ],
+  "vigilante": "Greg",
+  "shot": [
+    "NONE",
+    "NONE",
+    "Kevin"
+  ],
+  "vanilla_town": [
+    "Colin",
+    "Duke",
+    "Garrinski",
+    "Kevin",
+    "Jan",
+    "Jordan",
+    "Rob Alloy",
+    "Rollo",
+    "Vanity"
+  ],
+  "lynched": [
+    "SLEEP",
+    "RJ",
+    "Ryuzilla",
+    "Guy"
+  ],
+  "f3_win": [],
+  "f3_loss": [],
+  "winner": "Town"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "09/11/2019 G1",
+  "mafia": [ "Jaleb", "Jan", "Vanity" ],
+  "kill": [
+    [ "Ghost 1", "Ghost 2" ],
+    [ "Rolfe", "Ryuzilla" ],
+    [ "Colin" ],
+    [ "Stockton" ],
+    [ "Striker" ]
+  ],
+  "cop": "Stockton",
+  "check": [
+    "Ryuzilla",
+    "Colin",
+    "Rich",
+    "Rollo"
+  ],
+  "medic": "Ryuzilla",
+  "save": [
+    "Colin",
+    "Jaleb"
+  ],
+  "vigilante": "Striker",
+  "shot": [
+    "NONE",
+    "NONE",
+    "Thore"
+  ],
+  "vanilla_town": [
+    "Colin",
+    "Garrinski",
+    "Kevin",
+    "Rich",
+    "Rolfe",
+    "Rollo",
+    "Thore",
+    "Ghost 1",
+    "Ghost 2"
+  ],
+  "lynched": [
+    "Garrinski",
+    "Vanity",
+    "Jaleb",
+    "Rollo",
+    "Jan"
+  ],
+  "f3_win": [ "Kevin", "Rich" ],
+  "f3_loss": [ "Jan" ],
+  "winner": "Town"
+}

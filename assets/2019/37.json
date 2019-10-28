@@ -1,0 +1,50 @@
+
+{
+  "id": "05/15/2019 G1",
+  "mafia": [ "Rich", "Colin", "Pope" ],
+  "kill": [
+    [ "Ryuzilla", "Ghost 1" ],
+    [ "Rollo", "Nydus" ],
+    [ "Guy" ],
+    [ "Rob Alloy" ]
+  ],
+  "cop": "Rob Alloy",
+  "check": [
+    "Guy",
+    "Rich",
+    "Rolfe",
+    "Jordan"
+  ],
+  "medic": "Guy",
+  "save": [
+    "Rollo",
+    "Rolfe",
+    "Rob Alloy"
+  ],
+  "vigilante": "Jan",
+  "shot": [
+    "NONE",
+    "NONE",
+    "Kevin"
+  ],
+  "vanilla_town": [
+    "Garrinski",
+    "Nydus",
+    "Creatchee",
+    "Jordan",
+    "Rolfe",
+    "Rollo",
+    "Kevin",
+    "Ryuzilla",
+    "Ghost 1"
+  ],
+  "lynched": [
+    "Garrinski",
+    "Rich",
+    "Pope",
+    "Colin"
+  ],
+  "f3_win": [],
+  "f3_loss": [],
+  "winner": "Town"
+}

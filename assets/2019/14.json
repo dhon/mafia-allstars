@@ -1,0 +1,48 @@
+{
+  "id": "02/13/2019 G2",
+  "mafia": [ "Banks", "Steve", "Ryuzilla" ],
+  "kill": [
+    [ "Rolfe", "Nydus" ],
+    [ "Greg", "Striker" ],
+    [ "Colin" ],
+    [ "Rich" ],
+    [ "Rollo" ]
+  ],
+  "cop": "Colin",
+  "check": [
+    "Plen",
+    "Rollo",
+    "dLGN"
+  ],
+  "medic": "Greg",
+  "save": [
+    "Striker",
+    "Steve"
+  ],
+  "vigilante": "Rich",
+  "shot": [
+    "NONE",
+    "Banks"
+  ],
+  "vanilla_town": [
+    "Striker",
+    "Pat",
+    "Nydus",
+    "dLGN",
+    "Rollo",
+    "Plen",
+    "JumpRopes",
+    "Rolfe",
+    "kny"
+  ],
+  "lynched": [
+    "SLEEP",
+    "JumpRopes",
+    "kny",
+    "SLEEP",
+    "Pat"
+  ],
+  "f3_win": [],
+  "f3_loss": [],
+  "winner": "Mafia"
+}

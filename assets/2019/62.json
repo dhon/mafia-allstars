@@ -1,0 +1,49 @@
+{
+  "id": "09/04/2019 G2",
+  "mafia": [ "Ryuzilla", "Thore", "Tyler" ],
+  "kill": [
+    [ "Rolfe", "Rollo" ],
+    [ "Pat", "Striker" ],
+    [ "Stockton", "Stockton" ],
+    [ "Colin", "Jan" ]
+  ],
+  "cop": "Stockton",
+  "check": [
+    "Tyler",
+    "Ryuzilla",
+    "Colin"
+  ],
+  "medic": "Jan",
+  "save": [
+    "Pat",
+    "Stockton",
+    "Rich",
+    "Tyler"
+  ],
+  "vigilante": "Rich",
+  "shot": [
+    "NONE",
+    "NONE",
+    "NONE",
+    "Kevin"
+  ],
+  "vanilla_town": [
+    "Rolfe",
+    "Rollo",
+    "Pat",
+    "Striker",
+    "Colin",
+    "Pooch",
+    "Plen",
+    "Garrinski",
+    "Kevin"
+  ],
+  "lynched": [
+    "Pooch",
+    "Plen",
+    "Garrinski"
+  ],
+  "f3_win": [],
+  "f3_loss": [],
+  "winner": "Mafia"
+}

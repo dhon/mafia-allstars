@@ -1,0 +1,46 @@
+{
+  "id": "04/24/2019 G2",
+  "mafia": [ "Dave Dob", "Jan", "Rolfe" ],
+  "kill": [
+    [ "Rollo", "Younguns" ],
+    [ "RJ", "Tyler" ],
+    [ "Garrinski" ]
+  ],
+  "cop": "Garrinski",
+  "check": [
+    "Younguns",
+    "Rolfe",
+    "Ryuzilla"
+  ],
+  "medic": "Steep",
+  "save": [
+    "Ryuzilla",
+    "Jordan",
+    "Garrinski"
+  ],
+  "vigilante": "Greg",
+  "shot": [
+    "NONE",
+    "NONE",
+    "Jan"
+  ],
+  "vanilla_town": [
+    "Colin",
+    "Jordan",
+    "Nydus",
+    "Pope",
+    "RJ",
+    "Rollo",
+    "Ryuzilla",
+    "Tyler",
+    "Younguns"
+  ],
+  "lynched": [
+    "Pope",
+    "Rolfe",
+    "Dave Dob"
+  ],
+  "f3_win": [],
+  "f3_loss": [],
+  "winner": "Town"
+}

@@ -1,0 +1,49 @@
+
+{
+  "id": "05/22/2019 G2",
+  "mafia": [ "RJ", "Rich", "Rollo" ],
+  "kill": [
+    [ "Ghost 1", "Ghost 2" ],
+    [ "Nydus", "Nydus" ],
+    [ "Jan" ],
+    [ "Pope" ]
+  ],
+  "cop": "Pope",
+  "check": [
+    "Plen",
+    "Nydus",
+    "Colin",
+    "Ryuzilla"
+  ],
+  "medic": "Jan",
+  "save": [
+    "NONE",
+    "Ryuzilla",
+    "Pope"
+  ],
+  "vigilante": "Plen",
+  "shot": [
+    "NONE",
+    "Rich"
+  ],
+  "vanilla_town": [
+    "Ryuzilla",
+    "Pooch",
+    "Nydus",
+    "Tyler",
+    "Kiwi",
+    "Colin",
+    "Rolfe",
+    "Ghost 1",
+    "Ghost 2"
+  ],
+  "lynched": [
+    "SLEEP",
+    "RJ",
+    "Rolfe",
+    "Rollo"
+  ],
+  "f3_win": [],
+  "f3_loss": [],
+  "winner": "Town"
+}

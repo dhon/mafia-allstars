@@ -1,0 +1,43 @@
+{
+  "id": "04/17/2019 G2",
+  "mafia": [ "dLGN", "Rollo", "JumpRopes" ],
+  "kill": [
+    [ "Colin", "Vanity" ],
+    [ "Benji", "Plen" ],
+    [ "Jordan", "Rich" ]
+  ],
+  "cop": "Colin",
+  "check": [
+    "Ryuzilla"
+  ],
+  "medic": "Ryuzilla",
+  "save": [
+    "dLGN",
+    "JumpRopes",
+    "Kevin"
+  ],
+  "vigilante": "Kevin",
+  "shot": [
+    "NONE",
+    "NONE",
+    "Jan"
+  ],
+  "vanilla_town": [
+    "Vanity",
+    "Jordan",
+    "Steep",
+    "Rich",
+    "Benji",
+    "Rolfe",
+    "Mal",
+    "Plen",
+    "Jan"
+  ],
+  "lynched": [
+    "Steep",
+    "Rolfe"
+  ],
+  "f3_win": [],
+  "f3_loss": [],
+  "winner": "Mafia"
+}

@@ -1,0 +1,51 @@
+{
+  "id": "02/06/2019 G2",
+  "mafia": [ "Pope", "Rich", "Robik" ],
+  "kill": [
+    [ "dLGN", "Ghost 1" ],
+    [ "dLGN" ],
+    [ "Ryuzilla" ],
+    [ "Ryuzilla" ]
+  ],
+  "cop": "Aquilla",
+  "check": [
+    "dLGN",
+    "Rollo",
+    "Colin",
+    "Pope"
+  ],
+  "medic": "Younguns",
+  "save": [
+    "dLGN",
+    "Garrinski",
+    "Ryuzilla",
+    "Aquilla"
+  ],
+  "vigilante": "Ryuzilla",
+  "shot": [
+    "NONE",
+    "NONE",
+    "NONE",
+    "NONE"
+  ],
+  "vanilla_town": [
+    "Colin",
+    "Vanity",
+    "Garrinski",
+    "Rolfe",
+    "dLGN",
+    "Rob Alloy",
+    "Rollo",
+    "Plen",
+    "Ghost 1"
+  ],
+  "lynched": [
+    "Rich",
+    "Rob Alloy",
+    "Robik",
+    "Pope"
+  ],
+  "f3_win": [],
+  "f3_loss": [],
+  "winner": "Town"
+}

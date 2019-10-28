@@ -1,0 +1,49 @@
+{
+  "id": "06/05/2019 G2",
+  "mafia": [ "Creatchee", "Greg", "Vanity" ],
+  "kill": [
+    [ "Beny", "JumpRopes" ],
+    [ "Ryuzilla" ],
+    [ "Stockton" ],
+    [ "Stockton" ]
+  ],
+  "cop": "Stockton",
+  "check": [
+    "Duke",
+    "Plen",
+    "Kitty"
+  ],
+  "medic": "Colin",
+  "save": [
+    "Plen",
+    "Ryuzilla",
+    "Stockton",
+    "Stockton"
+  ],
+  "vigilante": "Kitty",
+  "shot": [
+    "NONE",
+    "NONE",
+    "Jan"
+  ],
+  "vanilla_town": [
+    "Beny",
+    "JumpRopes",
+    "Ryuzilla",
+    "Rich",
+    "Duke",
+    "Jan",
+    "Rollo",
+    "Pooch",
+    "Plen"
+  ],
+  "lynched": [
+    "Vanity",
+    "Rich",
+    "Greg",
+    "Creatchee"
+  ],
+  "f3_win": [],
+  "f3_loss": [],
+  "winner": "Town"
+}

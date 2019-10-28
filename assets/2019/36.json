@@ -1,0 +1,50 @@
+{
+  "id": "05/08/2019 G2",
+  "mafia": [ "Jan", "Jordan", "Rich" ],
+  "kill": [
+    [ "Colin", "RJ" ],
+    [ "Duke", "Rob Alloy" ],
+    [ "Rollo" ],
+    [ "Nydus" ],
+    [ "Garrinski" ],
+    [ "Ryuzilla" ]
+  ],
+  "cop": "Nydus",
+  "check": [
+    "Ryuzilla",
+    "Garrinski",
+    "Jordan",
+    "Jan"
+  ],
+  "medic": "RJ",
+  "save": [
+    "Nydus"
+  ],
+  "vigilante": "Rob Alloy",
+  "shot": [
+    "NONE",
+    "Rich"
+  ],
+  "vanilla_town": [
+    "Colin",
+    "Duke",
+    "Garrinski",
+    "Plen",
+    "Rollo",
+    "Ryuzilla",
+    "Shindigs",
+    "Steep",
+    "Tyler"
+  ],
+  "lynched": [
+    "SLEEP",
+    "Steep",
+    "Jordan",
+    "Shindigs",
+    "SLEEP",
+    "Plen"
+  ],
+  "f3_win": [ "Jan" ],
+  "f3_loss": [ "Plen", "Tyler" ],
+  "winner": "Mafia"
+}
