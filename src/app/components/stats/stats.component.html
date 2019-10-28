@@ -1,78 +1,170 @@
-<table class="table auto sortable">
-  <thead>
-    <tr class="sticky">
-      <th>Name</th>
-      <th>Gs</th>
-      <th>W</th>
-      <th>L</th>
-      <th>Win%</th>
-      <th>T<br>W</th>
-      <th>T<br>L</th>
-      <th>Town<br>Win%</th>
-      <th>M<br>W</th>
-      <th>M<br>L</th>
-      <th>Mafia<br>Win%</th>
-      <th>n0</th>
-      <th>n0<br>s</th>
-      <th>F3<br>W</th>
-      <th>F3<br>L</th>
-      <th>Vig<br>Cop</th>
-      <th>Vig<br>Med</th>
-      <th>Vig<br>VT</th>
-      <th>Vig<br>Maf</th>
-      <th>Cop<br>Ly</th>
-      <th>Med<br>Ly</th>
-      <th>Vig<br>Ly</th>
-      <th>VT<br>Ly</th>
-      <th>Maf<br>Ly</th>
-      <th>Cop<br>Sh</th>
-      <th>Med<br>Sh</th>
-      <th>VT<br>Sh</th>
-      <th>Mf<br>Sh</th>
-      <th>C</th>
-      <th>M</th>
-      <th>V</th>
-      <th>% Tn</th>
-      <th>% PR</th>
-    </tr>
-  </thead>
-  <tbody>
-    <ng-container *ngFor="let player of statsService?.playerStats | keyvalue">
-      <tr *ngIf="player?.value?.games >= 10">
-        <td><b>{{player?.value?.name}}</b></td>
-        <td>{{player?.value?.games}}</td>
-        <td class="left">{{player?.value?.totalWins}}</td>
-        <td>{{player?.value?.totalLosses}}</td>
-        <td>{{player?.value?.totalWinPercentage}}</td>
-        <td class="left">{{player?.value?.townWins}}</td>
-        <td>{{player?.value?.townLosses}}</td>
-        <td>{{player?.value?.townWinPercentage}}</td>
-        <td class="left">{{player?.value?.mafiaWins}}</td>
-        <td>{{player?.value?.mafiaLosses}}</td>
-        <td>{{player?.value?.mafiaWinPercentage}}</td>
-        <td class="left">{{player?.value?.n0ed}}</td>
-        <td>{{player?.value?.n0Saved}}</td>
-        <td class="left">{{player?.value?.final3Wins}}</td>
-        <td>{{player?.value?.final3Losses}}</td>
-        <td class="left">{{player?.value?.vigilanteShotCop}}</td>
-        <td>{{player?.value?.vigilanteShotMedic}}</td>
-        <td>{{player?.value?.vigilanteShotVT}}</td>
-        <td>{{player?.value?.vigilanteShotMafia}}</td>
-        <td class="left">{{player?.value?.lynchedAsCop}}</td>
-        <td>{{player?.value?.lynchedAsMedic}}</td>
-        <td>{{player?.value?.lynchedAsVigilante}}</td>
-        <td>{{player?.value?.lynchedAsVT}}</td>
-        <td>{{player?.value?.lynchedAsMafia}}</td>
-        <td class="left">{{player?.value?.shotAsCop}}</td>
-        <td>{{player?.value?.shotAsMedic}}</td>
-        <td>{{player?.value?.shotAsVT}}</td>
-        <td>{{player?.value?.shotAsMafia}}</td>
-        <td class="left">{{player?.value?.rolledCop}}</td>
-        <td>{{player?.value?.rolledMedic}}</td>
-        <td>{{player?.value?.rolledVigilante}}</td>
-        <td class="left">{{player?.value?.townPercentage}}</td>
-        <td>{{player?.value?.prPercentage}}</td>
-      </tr>
-    </ng-container>
-	</tbody>
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="games">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Gs </th>
+    <td mat-cell *matCellDef="let element"> {{element.games}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="totalWins">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> W </th>
+    <td mat-cell *matCellDef="let element"> {{element.totalWins}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="totalLosses">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> L </th>
+    <td mat-cell *matCellDef="let element"> {{element.totalLosses}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="totalWinPercentage">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Win% </th>
+    <td mat-cell *matCellDef="let element"> {{element.totalWinPercentage}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="townWins">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> T W </th>
+    <td mat-cell *matCellDef="let element"> {{element.townWins}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="townLosses">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> T L </th>
+    <td mat-cell *matCellDef="let element"> {{element.townLosses}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="townWinPercentage">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Town Win% </th>
+    <td mat-cell *matCellDef="let element"> {{element.townWinPercentage}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="mafiaWins">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> M W </th>
+    <td mat-cell *matCellDef="let element"> {{element.mafiaWins}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="mafiaLosses">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> M L </th>
+    <td mat-cell *matCellDef="let element"> {{element.mafiaLosses}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="mafiaWinPercentage">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> M Win% </th>
+    <td mat-cell *matCellDef="let element"> {{element.mafiaWinPercentage}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="n0ed">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> n0 </th>
+    <td mat-cell *matCellDef="let element"> {{element.n0ed}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="n0Saved">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> n0 S </th>
+    <td mat-cell *matCellDef="let element"> {{element.n0Saved}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="final3Wins">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> F3 W </th>
+    <td mat-cell *matCellDef="let element"> {{element.final3Wins}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="final3Losses">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> F3 L </th>
+    <td mat-cell *matCellDef="let element"> {{element.final3Losses}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="vigilanteShotCop">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Vig Cop </th>
+    <td mat-cell *matCellDef="let element"> {{element.vigilanteShotCop}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="vigilanteShotMedic">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Vig Med </th>
+    <td mat-cell *matCellDef="let element"> {{element.vigilanteShotMedic}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="vigilanteShotVT">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Vig VT </th>
+    <td mat-cell *matCellDef="let element"> {{element.vigilanteShotVT}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="vigilanteShotMafia">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Vig Maf </th>
+    <td mat-cell *matCellDef="let element"> {{element.vigilanteShotMafia}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="lynchedAsCop">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Cop Ly </th>
+    <td mat-cell *matCellDef="let element"> {{element.lynchedAsCop}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="lynchedAsMedic">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Med Ly </th>
+    <td mat-cell *matCellDef="let element"> {{element.lynchedAsMedic}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="lynchedAsVigilante">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Vig Ly </th>
+    <td mat-cell *matCellDef="let element"> {{element.lynchedAsVigilante}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="lynchedAsVT">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> VT Ly </th>
+    <td mat-cell *matCellDef="let element"> {{element.lynchedAsVT}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="lynchedAsMafia">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Maf Ly </th>
+    <td mat-cell *matCellDef="let element"> {{element.lynchedAsMafia}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="shotAsCop">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Cop Sh </th>
+    <td mat-cell *matCellDef="let element"> {{element.shotAsCop}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="shotAsMedic">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Med Sh </th>
+    <td mat-cell *matCellDef="let element"> {{element.shotAsMedic}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="shotAsVT">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> VT Sh </th>
+    <td mat-cell *matCellDef="let element"> {{element.shotAsVT}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="shotAsMafia">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Maf Sh </th>
+    <td mat-cell *matCellDef="let element"> {{element.shotAsMafia}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="rolledCop">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> C </th>
+    <td mat-cell *matCellDef="let element"> {{element.rolledCop}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="rolledMedic">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> M </th>
+    <td mat-cell *matCellDef="let element"> {{element.rolledMedic}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="rolledVigilante">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> V </th>
+    <td mat-cell *matCellDef="let element"> {{element.rolledVigilante}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="townPercentage">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> % Tn </th>
+    <td mat-cell *matCellDef="let element"> {{element.townPercentage}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="prPercentage">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> % PR </th>
+    <td mat-cell *matCellDef="let element"> {{element.prPercentage}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>

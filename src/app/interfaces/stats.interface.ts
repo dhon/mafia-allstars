@@ -59,3 +59,39 @@ export interface PlayerStats {
   townPercentage: string;
   prPercentage: string;
 }
+
+export const PlayerStatsArray = [
+  'name',
+  'games',
+  'totalWins',
+  'totalLosses',
+  'totalWinPercentage',
+  'townWins',
+  'townLosses',
+  'townWinPercentage',
+  'mafiaWins',
+  'mafiaLosses',
+  'mafiaWinPercentage',
+  'n0ed',
+  'n0Saved',
+  'final3Wins',
+  'final3Losses',
+  'vigilanteShotCop',
+  'vigilanteShotMedic',
+  'vigilanteShotVT',
+  'vigilanteShotMafia',
+  'lynchedAsCop',
+  'lynchedAsMedic',
+  'lynchedAsVigilante',
+  'lynchedAsVT',
+  'lynchedAsMafia',
+  'shotAsCop',
+  'shotAsMedic',
+  'shotAsVT',
+  'shotAsMafia',
+  'rolledCop',
+  'rolledMedic',
+  'rolledVigilante',
+  'townPercentage',
+  'prPercentage'
+];
