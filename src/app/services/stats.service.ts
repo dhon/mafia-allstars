@@ -253,16 +253,16 @@ export class StatsService {
       player.totalWins = player.townWins + player.mafiaWins;
       player.totalLosses = player.townLosses + player.mafiaLosses;
       player.townWins + player.townLosses !== 0
-        ? player.townWinPercentage = ((player.townWins / (player.townWins + player.townLosses)) * 100).toFixed(0) + ' %'
+        ? player.townWinPercentage = Math.round(((player.townWins / (player.townWins + player.townLosses)) * 100))
         : player.townWinPercentage = null;
       player.mafiaWins + player.mafiaLosses !== 0
-        ? player.mafiaWinPercentage = ((player.mafiaWins / (player.mafiaWins + player.mafiaLosses)) * 100).toFixed(0) + ' %'
+        ? player.mafiaWinPercentage = Math.round(((player.mafiaWins / (player.mafiaWins + player.mafiaLosses)) * 100))
         : player.mafiaWinPercentage = null;
       player.totalWins + player.totalLosses !== 0
-        ? player.totalWinPercentage = ((player.totalWins / (player.totalWins + player.totalLosses)) * 100).toFixed(0) + ' %'
+        ? player.totalWinPercentage = Math.round(((player.totalWins / (player.totalWins + player.totalLosses)) * 100))
         : player.totalWinPercentage = null;
-      player.townPercentage = (((player.games - player.mafiaWins - player.mafiaLosses) / player.games) * 100).toFixed(0) + ' %';
-      player.prPercentage = (((player.rolledCop + player.rolledMedic + player.rolledVigilante) / player.games) * 100).toFixed(0) + ' %';
+      player.townPercentage = Math.round((((player.games - player.mafiaWins - player.mafiaLosses) / player.games) * 100));
+      player.prPercentage = Math.round((((player.rolledCop + player.rolledMedic + player.rolledVigilante) / player.games) * 100));
     });
   }
 

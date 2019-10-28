@@ -29,13 +29,13 @@ export interface PlayerStats {
   games: number;
   totalWins: number;
   totalLosses: number;
-  totalWinPercentage: string;
+  totalWinPercentage: number;
   townWins: number;
   townLosses: number;
-  townWinPercentage: string;
+  townWinPercentage: number;
   mafiaWins: number;
   mafiaLosses: number;
-  mafiaWinPercentage: string;
+  mafiaWinPercentage: number;
   n0ed: number;
   n0Saved: number;
   final3Wins: number;
@@ -56,8 +56,8 @@ export interface PlayerStats {
   rolledCop: number;
   rolledMedic: number;
   rolledVigilante: number;
-  townPercentage: string;
-  prPercentage: string;
+  townPercentage: number;
+  prPercentage: number;
 }
 
 export const PlayerStatsArray = [

@@ -22,7 +22,7 @@
 
   <ng-container matColumnDef="totalWinPercentage">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> Win% </th>
-    <td mat-cell *matCellDef="let element"> {{element.totalWinPercentage}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.totalWinPercentage}}% </td>
   </ng-container>
 
   <ng-container matColumnDef="townWins">
@@ -37,7 +37,7 @@
 
   <ng-container matColumnDef="townWinPercentage">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> Town Win% </th>
-    <td mat-cell *matCellDef="let element"> {{element.townWinPercentage}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.townWinPercentage}}% </td>
   </ng-container>
 
   <ng-container matColumnDef="mafiaWins">
@@ -51,8 +51,8 @@
   </ng-container>
 
   <ng-container matColumnDef="mafiaWinPercentage">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header> M Win% </th>
-    <td mat-cell *matCellDef="let element"> {{element.mafiaWinPercentage}} </td>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Mafia Win% </th>
+    <td mat-cell *matCellDef="let element"> {{element.mafiaWinPercentage}}% </td>
   </ng-container>
 
   <ng-container matColumnDef="n0ed">
@@ -156,13 +156,13 @@
   </ng-container>
 
   <ng-container matColumnDef="townPercentage">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header> % Tn </th>
-    <td mat-cell *matCellDef="let element"> {{element.townPercentage}} </td>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Tn% </th>
+    <td mat-cell *matCellDef="let element"> {{element.townPercentage}}% </td>
   </ng-container>
 
   <ng-container matColumnDef="prPercentage">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header> % PR </th>
-    <td mat-cell *matCellDef="let element"> {{element.prPercentage}} </td>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> PR% </th>
+    <td mat-cell *matCellDef="let element"> {{element.prPercentage}}% </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
