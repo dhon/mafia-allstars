@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
-import { MatSort, MatTableDataSource } from '@angular/material';
+import { MatSort, MatTableDataSource, MatSortable } from '@angular/material';
 import * as Schemas from 'src/app/interfaces/stats.interface';
 
 @Component({
@@ -19,6 +19,10 @@ export class StatsTableComponent implements OnInit {
     this.displayedColumns = Schemas.PlayerStatsArray;
     this.dataSource = new MatTableDataSource(this.players);
     this.dataSource.sort = this.sort;
+    this.sort.sort({
+      id: 'games',
+      start: 'desc'
+    } as MatSortable);
   }
 
 }
