@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatSort, MatTableDataSource } from '@angular/material';
+import { Component, OnInit } from '@angular/core';
 import { StatsService } from 'src/app/services/stats.service';
 import * as Schemas from 'src/app/interfaces/stats.interface';
 
@@ -9,14 +8,15 @@ import * as Schemas from 'src/app/interfaces/stats.interface';
   styleUrls: ['./stats.component.scss']
 })
 export class StatsComponent implements OnInit {
-  @ViewChild(MatSort, {static: true}) private sort: MatSort;
-  public displayedColumns: string[] = Schemas.PlayerStatsArray;
-  public dataSource = new MatTableDataSource(Array.from(this.statsService.playerStats.values()));
+  public lowPlayers: Schemas.PlayerStats[];
+  public highPlayers: Schemas.PlayerStats[];
+  private readonly minimumGames = 10;
 
   constructor(private statsService: StatsService) { }
 
   ngOnInit() {
-    this.dataSource.sort = this.sort;
+    this.lowPlayers = Array.from(this.statsService.playerStats.values()).filter(player => player.games < this.minimumGames);
+    this.highPlayers = Array.from(this.statsService.playerStats.values()).filter(player => player.games >= this.minimumGames);
   }
 
 }

@@ -10,6 +10,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { HomeComponent } from './components/home/home.component';
 import { PlayersComponent } from './components/players/players.component';
 import { StatsComponent } from './components/stats/stats.component';
+import { StatsTableComponent } from './components/stats/stats-table/stats-table.component';
 import { StatsService } from './services/stats.service';
 
 @NgModule({
@@ -20,7 +21,8 @@ import { StatsService } from './services/stats.service';
     SidenavComponent,
     HomeComponent,
     PlayersComponent,
-    StatsComponent
+    StatsComponent,
+    StatsTableComponent
   ],
   imports: [
     BrowserModule,
