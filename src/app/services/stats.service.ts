@@ -252,11 +252,17 @@ export class StatsService {
     this.playerStats.forEach(player => {
       player.totalWins = player.townWins + player.mafiaWins;
       player.totalLosses = player.townLosses + player.mafiaLosses;
-      player.townWinPercentage = ((player.townWins / (player.townWins + player.townLosses)) * 100).toFixed(0);
-      player.mafiaWinPercentage = ((player.mafiaWins / (player.mafiaWins + player.mafiaLosses)) * 100).toFixed(0);
-      player.totalWinPercentage = ((player.totalWins / (player.totalWins + player.totalLosses)) * 100).toFixed(0);
-      player.townPercentage = (((player.games - player.mafiaWins - player.mafiaLosses) / player.games) * 100).toFixed(0);
-      player.prPercentage = (((player.rolledCop + player.rolledMedic + player.rolledVigilante) / player.games) * 100).toFixed(0);
+      player.townWins + player.townLosses !== 0
+        ? player.townWinPercentage = ((player.townWins / (player.townWins + player.townLosses)) * 100).toFixed(0) + ' %'
+        : player.townWinPercentage = null;
+      player.mafiaWins + player.mafiaLosses !== 0
+        ? player.mafiaWinPercentage = ((player.mafiaWins / (player.mafiaWins + player.mafiaLosses)) * 100).toFixed(0) + ' %'
+        : player.mafiaWinPercentage = null;
+      player.totalWins + player.totalLosses !== 0
+        ? player.totalWinPercentage = ((player.totalWins / (player.totalWins + player.totalLosses)) * 100).toFixed(0) + ' %'
+        : player.totalWinPercentage = null;
+      player.townPercentage = (((player.games - player.mafiaWins - player.mafiaLosses) / player.games) * 100).toFixed(0) + ' %';
+      player.prPercentage = (((player.rolledCop + player.rolledMedic + player.rolledVigilante) / player.games) * 100).toFixed(0) + ' %';
     });
   }
 
