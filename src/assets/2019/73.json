@@ -1,0 +1,50 @@
+{
+  "id": "10/16/2019 G1",
+  "mafia": [ "Kevin", "Rolfe", "Colin" ],
+  "kill": [
+    [ "Plen", "Stockton" ],
+    [ "Ryuzilla" ],
+    [ "Siggywiggy" ],
+    [ "Rollo" ],
+    [ "Vanity" ]
+  ],
+  "cop": "Greg",
+  "check": [
+    "Rollo",
+    "Siggywiggy",
+    "Tyler",
+    "Rolfe",
+    "RJ"
+  ],
+  "medic": "Plen",
+  "save": [
+    "Rolfe"
+  ],
+  "vigilante": "Vanity",
+  "shot": [
+    "NONE",
+    "NONE",
+    "Aquilla"
+  ],
+  "vanilla_town": [
+    "Ryuzilla",
+    "Ramza",
+    "Siggywiggy",
+    "RJ",
+    "Tyler",
+    "Stockton",
+    "Guy",
+    "Rollo",
+    "Aquilla"
+  ],
+  "lynched": [
+    "Colin",
+    "Kevin",
+    "Ramza",
+    "SLEEP",
+    "Rolfe"
+  ],
+  "f3_win": [],
+  "f3_loss": [],
+  "winner": "Town"
+}

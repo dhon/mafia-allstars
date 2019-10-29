@@ -1,0 +1,48 @@
+{
+  "id": "10/16/2019 G2",
+  "mafia": [ "Kevin", "Pope", "Trevel" ],
+  "kill": [
+    [ "CarsonGarden", "Rollo" ],
+    [ "Wemboe", "Rezzivaer" ],
+    [ "Rolfe" ],
+    [ "Storm" ],
+    [ "Ryuzilla" ]
+  ],
+  "cop": "Greg",
+  "check": [
+    "Pope"
+  ],
+  "medic": "Rezzivaer",
+  "save": [
+    "Colin",
+    "Rolfe"
+  ],
+  "vigilante": "Ryuzilla",
+  "shot": [
+    "NONE",
+    "NONE",
+    "NONE",
+    "Colin"
+  ],
+  "vanilla_town": [
+    "Colin",
+    "CarsonGarden",
+    "Garrinski",
+    "Hybrid",
+    "Rolfe",
+    "Rollo",
+    "Stockton",
+    "Storm",
+    "Wemboe"
+  ],
+  "lynched": [
+    "Greg",
+    "Pope",
+    "Stockton",
+    "Kevin",
+    "Garrinski"
+  ],
+  "f3_win": [ "Trevel" ],
+  "f3_loss": [ "Garrinski", "Hybrid" ],
+  "winner": "Mafia"
+}
