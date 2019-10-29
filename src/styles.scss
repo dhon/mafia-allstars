@@ -15,6 +15,15 @@ body {
   margin: auto;
 }
 
-.mat-sort-header-button ~ .mat-sort-header-arrow {
-  display: none
+.mat-sort-header-container {
+  .mat-sort-header-arrow {
+    display: none;
+  }
+
+  &.mat-sort-header-sorted {
+    .mat-sort-header-arrow {
+      display: block;
+      color: #212529;
+    }
+  }
 }
