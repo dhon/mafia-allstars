@@ -75,26 +75,6 @@
     <td mat-cell *matCellDef="let element"> {{element.final3Losses}} </td>
   </ng-container>
 
-  <ng-container matColumnDef="vigilanteShotCop">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header> Cop </th>
-    <td mat-cell *matCellDef="let element"> {{element.vigilanteShotCop}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="vigilanteShotMedic">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header> Medic </th>
-    <td mat-cell *matCellDef="let element"> {{element.vigilanteShotMedic}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="vigilanteShotVT">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header> VT </th>
-    <td mat-cell *matCellDef="let element"> {{element.vigilanteShotVT}} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="vigilanteShotMafia">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header> Mafia </th>
-    <td mat-cell *matCellDef="let element"> {{element.vigilanteShotMafia}} </td>
-  </ng-container>
-
   <ng-container matColumnDef="lynchedAsCop">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> Cop </th>
     <td mat-cell *matCellDef="let element"> {{element.lynchedAsCop}} </td>
@@ -138,6 +118,26 @@
   <ng-container matColumnDef="shotAsMafia">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> Mafia </th>
     <td mat-cell *matCellDef="let element"> {{element.shotAsMafia}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="vigilanteShotCop">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Cop </th>
+    <td mat-cell *matCellDef="let element"> {{element.vigilanteShotCop}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="vigilanteShotMedic">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Medic </th>
+    <td mat-cell *matCellDef="let element"> {{element.vigilanteShotMedic}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="vigilanteShotVT">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> VT </th>
+    <td mat-cell *matCellDef="let element"> {{element.vigilanteShotVT}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="vigilanteShotMafia">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Mafia </th>
+    <td mat-cell *matCellDef="let element"> {{element.vigilanteShotMafia}} </td>
   </ng-container>
 
   <ng-container matColumnDef="rolledCop">
@@ -189,17 +189,17 @@
   <ng-container matColumnDef="header-row-group-6">
     <th mat-header-cell *matHeaderCellDef [attr.colspan]="2"> Final Three </th>
   </ng-container>
-
-  <ng-container matColumnDef="header-row-group-7">
-    <th mat-header-cell *matHeaderCellDef [attr.colspan]="4"> Vigilante Shot </th>
-  </ng-container>
     
-  <ng-container matColumnDef="header-row-group-8">
+  <ng-container matColumnDef="header-row-group-7">
     <th mat-header-cell *matHeaderCellDef [attr.colspan]="5"> Lynched As </th>
   </ng-container>
 
-  <ng-container matColumnDef="header-row-group-9">
+  <ng-container matColumnDef="header-row-group-8">
     <th mat-header-cell *matHeaderCellDef [attr.colspan]="4"> Shot As </th>
+  </ng-container>
+
+  <ng-container matColumnDef="header-row-group-9">
+    <th mat-header-cell *matHeaderCellDef [attr.colspan]="4"> Vigilante Shot </th>
   </ng-container>
 
   <ng-container matColumnDef="header-row-group-10">

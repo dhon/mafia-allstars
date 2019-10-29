@@ -40,10 +40,6 @@ export interface PlayerStats {
   n0Saved: number;
   final3Wins: number;
   final3Losses: number;
-  vigilanteShotCop: number;
-  vigilanteShotMedic: number;
-  vigilanteShotVT: number;
-  vigilanteShotMafia: number;
   lynchedAsCop: number;
   lynchedAsMedic: number;
   lynchedAsVigilante: number;
@@ -53,6 +49,10 @@ export interface PlayerStats {
   shotAsMedic: number;
   shotAsVT: number;
   shotAsMafia: number;
+  vigilanteShotCop: number;
+  vigilanteShotMedic: number;
+  vigilanteShotVT: number;
+  vigilanteShotMafia: number;
   rolledCop: number;
   rolledMedic: number;
   rolledVigilante: number;
@@ -76,10 +76,6 @@ export const PlayerStatsArray = [
   'n0Saved',
   'final3Wins',
   'final3Losses',
-  'vigilanteShotCop',
-  'vigilanteShotMedic',
-  'vigilanteShotVT',
-  'vigilanteShotMafia',
   'lynchedAsCop',
   'lynchedAsMedic',
   'lynchedAsVigilante',
@@ -89,6 +85,10 @@ export const PlayerStatsArray = [
   'shotAsMedic',
   'shotAsVT',
   'shotAsMafia',
+  'vigilanteShotCop',
+  'vigilanteShotMedic',
+  'vigilanteShotVT',
+  'vigilanteShotMafia',
   'rolledCop',
   'rolledMedic',
   'rolledVigilante',

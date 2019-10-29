@@ -98,9 +98,9 @@ export class StatsService {
       this.getGames(game);
       this.getRolled(game);
       this.getWinsLosses(game);
-      this.getShots(game);
-      this.getLynched(game);
       this.getN0(game);
+      this.getLynched(game);
+      this.getShots(game);
       this.getFinal3(game);
     });
     this.getTotals();
@@ -145,10 +145,6 @@ export class StatsService {
         n0Saved: 0,
         final3Wins: 0,
         final3Losses: 0,
-        vigilanteShotCop: 0,
-        vigilanteShotMedic: 0,
-        vigilanteShotVT: 0,
-        vigilanteShotMafia: 0,
         lynchedAsCop: 0,
         lynchedAsMedic: 0,
         lynchedAsVigilante: 0,
@@ -158,6 +154,10 @@ export class StatsService {
         shotAsMedic: 0,
         shotAsVT: 0,
         shotAsMafia: 0,
+        vigilanteShotCop: 0,
+        vigilanteShotMedic: 0,
+        vigilanteShotVT: 0,
+        vigilanteShotMafia: 0,
         rolledCop: 0,
         rolledMedic: 0,
         rolledVigilante: 0,
@@ -195,27 +195,10 @@ export class StatsService {
     }
   }
 
-  private getShots(game: Schemas.MafiaGame): void {
-    const shotPlayer = game.shot[game.shot.length - 1];
-    if (shotPlayer !== Schemas.NONE) {
-      const roll = this.getRoll(shotPlayer, game);
-      if (roll === Schemas.COP) {
-        this.playerStats.get(game.vigilante).vigilanteShotCop++;
-        this.playerStats.get(shotPlayer).shotAsCop++;
-      } else if (roll === Schemas.MEDIC) {
-        this.playerStats.get(game.vigilante).vigilanteShotMedic++;
-        this.playerStats.get(shotPlayer).shotAsMedic++;
-      } else if (roll === Schemas.VIGILANTE) {
-        console.log('Warning: Vigilante shot himself.');
-      } else if (roll === Schemas.VT) {
-        this.playerStats.get(game.vigilante).vigilanteShotVT++;
-        this.playerStats.get(shotPlayer).shotAsVT++;
-      } else if (roll === Schemas.MAFIA) {
-        this.playerStats.get(game.vigilante).vigilanteShotMafia++;
-        this.playerStats.get(shotPlayer).shotAsMafia++;
-      } else {
-        console.log('Warning: Shot player does not have a roll.');
-      }
+  private getN0(game: Schemas.MafiaGame): void {
+    game.kill[0].forEach(player => this.playerStats.get(player).n0ed++);
+    if (game.save[0] !== Schemas.NONE) {
+      this.playerStats.get(game.save[0]).n0Saved++;
     }
   }
 
@@ -238,10 +221,27 @@ export class StatsService {
     });
   }
 
-  private getN0(game: Schemas.MafiaGame): void {
-    game.kill[0].forEach(player => this.playerStats.get(player).n0ed++);
-    if (game.save[0] !== Schemas.NONE) {
-      this.playerStats.get(game.save[0]).n0Saved++;
+  private getShots(game: Schemas.MafiaGame): void {
+    const shotPlayer = game.shot[game.shot.length - 1];
+    if (shotPlayer !== Schemas.NONE) {
+      const roll = this.getRoll(shotPlayer, game);
+      if (roll === Schemas.COP) {
+        this.playerStats.get(game.vigilante).vigilanteShotCop++;
+        this.playerStats.get(shotPlayer).shotAsCop++;
+      } else if (roll === Schemas.MEDIC) {
+        this.playerStats.get(game.vigilante).vigilanteShotMedic++;
+        this.playerStats.get(shotPlayer).shotAsMedic++;
+      } else if (roll === Schemas.VIGILANTE) {
+        console.log('Warning: Vigilante shot himself.');
+      } else if (roll === Schemas.VT) {
+        this.playerStats.get(game.vigilante).vigilanteShotVT++;
+        this.playerStats.get(shotPlayer).shotAsVT++;
+      } else if (roll === Schemas.MAFIA) {
+        this.playerStats.get(game.vigilante).vigilanteShotMafia++;
+        this.playerStats.get(shotPlayer).shotAsMafia++;
+      } else {
+        console.log('Warning: Shot player does not have a roll.');
+      }
     }
   }
 
