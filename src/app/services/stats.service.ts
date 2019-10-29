@@ -69,6 +69,7 @@ import g68 from '../../assets/2019/68.json';
 import g69 from '../../assets/2019/69.json';
 import g70 from '../../assets/2019/70.json';
 import g71 from '../../assets/2019/71.json';
+import g72 from '../../assets/2019/72.json';
 import * as Schemas from '../interfaces/stats.interface';
 
 export class StatsService {
@@ -85,7 +86,7 @@ export class StatsService {
       g41, g42, g43, g44, g45, g46, g47, g48, g49, g50,
       g51, g52, g53, g54, g55, g56, g57, g58, g59, g60,
       g61, g62, g63, g64, g65, g66, g67, g68, g69, g70,
-      g71
+      g71, g72
     ];
     this.playerNames = this.getPlayerNames();
     this.playerStats = this.initPlayerStats();
