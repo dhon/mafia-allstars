@@ -1,50 +1,52 @@
 {
-  "id": "01/02/2019 G1",
-  "mafia": [ "Pope", "Wiggles", "Colin" ],
+  "id": "00/00/2019 G1",
+  "mafia": [ "player", "player", "player" ],
   "kill": [
-    [ "Rolfe", "Garrinski" ],
-    [ "Guy", "Rollo" ],
-    [ "Striker", "Striker" ],
-    [ "Ryuzilla" ],
-    [ "Alesh" ],
-    [ "Steve" ]
+    [ "player", "player" ],
+    [ "player", "player" ],
+    [ "player", "player" ],
+    [ "player" ],
+    [ "player" ],
+    [ "player" ]
   ],
-  "cop": "Striker",
+  "cop": "player",
   "check": [
-    "Plen",
-    "Rich",
-    "Steve"
+    "player",
+    "player",
+    "player"
   ],
-  "medic": "Rolfe",
+  "medic": "player",
   "save": [
-    "Joey"
+    "player",
+    "player",
+    "player"
   ],
-  "vigilante": "Ryuzilla",
+  "vigilante": "player",
   "shot": [
     "NONE",
     "NONE",
-    "Pope"
+    "player"
   ],
   "vanilla_town": [
-    "Alesh",
-    "Joey",
-    "Plen",
-    "Rollo",
-    "Rich",
-    "Garrinski",
-    "dLGN",
-    "Guy",
-    "Steve"
+    "player",
+    "player",
+    "player",
+    "player",
+    "player",
+    "player",
+    "player",
+    "player",
+    "player"
   ],
   "lynched": [
-    "SLEEP",
-    "Joey",
-    "Colin",
-    "SLEEP",
-    "Plen",
-    "SLEEP"
+    "player",
+    "player",
+    "player",
+    "player",
+    "player",
+    "player"
   ],
-  "f3_win": [ "Wiggles" ],
-  "f3_loss": [ "dLGN", "Rich" ],
-  "winner": "Mafia"
+  "f3_win": [],
+  "f3_loss": [],
+  "winner": "Team"
 }
