@@ -8,6 +8,7 @@ import * as Schemas from 'src/app/interfaces/stats.interface';
   styleUrls: ['./stats-table.component.scss']
 })
 export class StatsTableComponent implements OnInit {
+  @Input() public title: string;
   @Input() private players: Schemas.PlayerStats[];
   @ViewChild(MatSort, {static: true}) private sort: MatSort;
   public dataSource: MatTableDataSource<Schemas.PlayerStats>;

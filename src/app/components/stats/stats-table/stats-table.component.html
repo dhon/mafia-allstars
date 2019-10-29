@@ -167,7 +167,7 @@
 
   <!-- Headers -->
   <ng-container matColumnDef="header-row-group-1">
-    <th mat-header-cell *matHeaderCellDef [attr.colspan]="1">  </th>
+    <th mat-header-cell *matHeaderCellDef [attr.colspan]="1"> {{title}} </th>
   </ng-container>
     
   <ng-container matColumnDef="header-row-group-2">
@@ -221,8 +221,8 @@
     'header-row-group-8',
     'header-row-group-9',
     'header-row-group-10',
-    'header-row-group-11'
-    ]"></tr>
+    'header-row-group-11']">
+  </tr>
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
