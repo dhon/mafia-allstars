@@ -1,0 +1,45 @@
+{
+  "id": "10/23/2019 G2",
+  "mafia": [ "Storm", "Jordan", "Pope" ],
+  "kill": [
+    [ "Ryuzilla", "Trevel" ],
+    [ "Colin", "Thore" ],
+    [ "Garrinski", "Garrinski" ],
+    [ "Ringabel" ]
+  ],
+  "cop": "Garrinski",
+  "check": [
+    "Rolfe",
+    "Ringabel",
+    "Pope"
+  ],
+  "medic": "Thore",
+  "save": [
+    "Colin",
+    "Jordan"
+  ],
+  "vigilante": "Ryuzilla",
+  "shot": [
+    "NONE"
+  ],
+  "vanilla_town": [
+    "Wemboe",
+    "Plen",
+    "Creatchee",
+    "Steep",
+    "Ringabel",
+    "Rolfe",
+    "Rollo",
+    "Trevel",
+    "Colin"
+  ],
+  "lynched": [
+    "Steep",
+    "Rollo",
+    "Jordan",
+    "Creatchee"
+  ],
+  "f3_win": [],
+  "f3_loss": [],
+  "winner": "Mafia"
+}

@@ -1,0 +1,53 @@
+{
+  "id": "10/09/2019 G2",
+  "mafia": [ "Ryan", "Plen", "Augi" ],
+  "kill": [
+    [ "Jan", "Kevin" ],
+    [ "Storm" ],
+    [ "RJ" ],
+    [ "Rollo" ],
+    [ "5" ],
+    [ "Striker" ]
+  ],
+  "cop": "Storm",
+  "check": [
+    "Colin",
+    "Plen"
+  ],
+  "medic": "5",
+  "save": [
+    "Pope",
+    "Ryuzilla",
+    "Rollo",
+    "Striker",
+    "Pope"
+  ],
+  "vigilante": "Rollo",
+  "shot": [
+    "NONE",
+    "NONE",
+    "Plen"
+  ],
+  "vanilla_town": [
+    "Jan",
+    "Kevin",
+    "RJ",
+    "Striker",
+    "Garrinski",
+    "Ryuzilla",
+    "Stockton",
+    "Pope",
+    "Colin"
+  ],
+  "lynched": [
+    "Ryan",
+    "SLEEP",
+    "Garrinski",
+    "Ryuzilla",
+    "Stockton",
+    "SLEEP"
+  ],
+  "f3_win": [ "Augi" ],
+  "f3_loss": [ "Pope", "Colin" ],
+  "winner": "Mafia"
+}
