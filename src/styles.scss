@@ -3,6 +3,11 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+.mat-sort-header-button {
+  text-align: center;
+  margin: auto;
+}
+
 .mat-sort-header-button ~ .mat-sort-header-arrow {
   display: none
 }
