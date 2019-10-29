@@ -1,9 +1,14 @@
-<app-stats-table
-  title="10+ Games"
-  [players]="highPlayers">
-</app-stats-table>
-<p></p>
-<app-stats-table
-  title="1-9 Games"
-  [players]="lowPlayers">
-</app-stats-table>
+<div class="content">
+  <div>
+    <app-stats-table
+      title="10+ Games"
+      [players]="highPlayers">
+    </app-stats-table>
+  </div>
+  <div class="mt-3">
+    <app-stats-table
+      title="1-9 Games"
+      [players]="lowPlayers">
+    </app-stats-table>
+  </div>
+</div>
