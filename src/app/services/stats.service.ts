@@ -1,116 +1,31 @@
-import g01 from '../../assets/2019/01.json';
-import g02 from '../../assets/2019/02.json';
-import g03 from '../../assets/2019/03.json';
-import g04 from '../../assets/2019/04.json';
-import g05 from '../../assets/2019/05.json';
-import g06 from '../../assets/2019/06.json';
-import g07 from '../../assets/2019/07.json';
-import g08 from '../../assets/2019/08.json';
-import g09 from '../../assets/2019/09.json';
-import g10 from '../../assets/2019/10.json';
-import g11 from '../../assets/2019/11.json';
-import g12 from '../../assets/2019/12.json';
-import g13 from '../../assets/2019/13.json';
-import g14 from '../../assets/2019/14.json';
-import g15 from '../../assets/2019/15.json';
-import g16 from '../../assets/2019/16.json';
-import g17 from '../../assets/2019/17.json';
-import g18 from '../../assets/2019/18.json';
-import g19 from '../../assets/2019/19.json';
-import g20 from '../../assets/2019/20.json';
-import g21 from '../../assets/2019/21.json';
-import g22 from '../../assets/2019/22.json';
-import g23 from '../../assets/2019/23.json';
-import g24 from '../../assets/2019/24.json';
-import g25 from '../../assets/2019/25.json';
-import g26 from '../../assets/2019/26.json';
-import g27 from '../../assets/2019/27.json';
-import g28 from '../../assets/2019/28.json';
-import g29 from '../../assets/2019/29.json';
-import g30 from '../../assets/2019/30.json';
-import g31 from '../../assets/2019/31.json';
-import g32 from '../../assets/2019/32.json';
-import g33 from '../../assets/2019/33.json';
-import g34 from '../../assets/2019/34.json';
-import g35 from '../../assets/2019/35.json';
-import g36 from '../../assets/2019/36.json';
-import g37 from '../../assets/2019/37.json';
-import g38 from '../../assets/2019/38.json';
-import g39 from '../../assets/2019/39.json';
-import g40 from '../../assets/2019/40.json';
-import g41 from '../../assets/2019/41.json';
-import g42 from '../../assets/2019/42.json';
-import g43 from '../../assets/2019/43.json';
-import g44 from '../../assets/2019/44.json';
-import g45 from '../../assets/2019/45.json';
-import g46 from '../../assets/2019/46.json';
-import g47 from '../../assets/2019/47.json';
-import g48 from '../../assets/2019/48.json';
-import g49 from '../../assets/2019/49.json';
-import g50 from '../../assets/2019/50.json';
-import g51 from '../../assets/2019/51.json';
-import g52 from '../../assets/2019/52.json';
-import g53 from '../../assets/2019/53.json';
-import g54 from '../../assets/2019/54.json';
-import g55 from '../../assets/2019/55.json';
-import g56 from '../../assets/2019/56.json';
-import g57 from '../../assets/2019/57.json';
-import g58 from '../../assets/2019/58.json';
-import g59 from '../../assets/2019/59.json';
-import g60 from '../../assets/2019/60.json';
-import g61 from '../../assets/2019/61.json';
-import g62 from '../../assets/2019/62.json';
-import g63 from '../../assets/2019/63.json';
-import g64 from '../../assets/2019/64.json';
-import g65 from '../../assets/2019/65.json';
-import g66 from '../../assets/2019/66.json';
-import g67 from '../../assets/2019/67.json';
-import g68 from '../../assets/2019/68.json';
-import g69 from '../../assets/2019/69.json';
-import g70 from '../../assets/2019/70.json';
-import g71 from '../../assets/2019/71.json';
-import g72 from '../../assets/2019/72.json';
-import g73 from '../../assets/2019/73.json';
-import g74 from '../../assets/2019/74.json';
-import g75 from '../../assets/2019/75.json';
-import g76 from '../../assets/2019/76.json';
+import { stats2019 } from './stats-2019';
 import * as Schemas from '../interfaces/stats.interface';
 
 export class StatsService {
-  public readonly mafiaGames: Schemas.MafiaGame[];
-  public readonly playerNames: string[];
-  public readonly playerStats: Map<string, Schemas.PlayerStats>;
 
-  constructor() {
-    this.mafiaGames = [
-      g01, g02, g03, g04, g05, g06, g07, g08, g09, g10,
-      g11, g12, g13, g14, g15, g16, g17, g18, g19, g20,
-      g21, g22, g23, g24, g25, g26, g27, g28, g29, g30,
-      g31, g32, g33, g34, g35, g36, g37, g38, g39, g40,
-      g41, g42, g43, g44, g45, g46, g47, g48, g49, g50,
-      g51, g52, g53, g54, g55, g56, g57, g58, g59, g60,
-      g61, g62, g63, g64, g65, g66, g67, g68, g69, g70,
-      g71, g72, g73, g74, g75, g76
-    ];
-    this.playerNames = this.getPlayerNames();
-    this.playerStats = this.initPlayerStats();
-    this.mafiaGames.forEach(game => {
-      this.getGames(game);
-      this.getRolled(game);
-      this.getWinsLosses(game);
-      this.getN0(game);
-      this.getLynched(game);
-      this.getShots(game);
-      this.getFinal3(game);
+  constructor() {}
+
+  public getPlayerStats(year: '2017' | '2018' | '2019'): Map<string, Schemas.PlayerStats> {
+    const mafiaGames = stats2019;
+    const playerNames = this.initPlayerNames(mafiaGames);
+    const playerStats = this.initPlayerStats(playerNames);
+    mafiaGames.forEach(game => {
+      this.getGames(playerStats, game);
+      this.getRolled(playerStats, game);
+      this.getWinsLosses(playerStats, game);
+      this.getN0(playerStats, game);
+      this.getLynched(playerStats, game);
+      this.getShots(playerStats, game);
+      this.getFinal3(playerStats, game);
     });
-    this.getTotals();
-    this.playerStats = this.sortMap(this.playerStats);
-    this.validateNames();
+    this.getTotals(playerStats);
+    this.validateNames(mafiaGames);
+    return this.sortMap(playerStats);
   }
 
-  private getPlayerNames(): string[] {
+  private initPlayerNames(mafiaGames: Schemas.MafiaGame[]): string[] {
     const names: string[] = [];
-    this.mafiaGames.forEach(game => {
+    mafiaGames.forEach(game => {
       names.push(game.cop);
       names.push(game.medic);
       names.push(game.vigilante);
@@ -126,9 +41,9 @@ export class StatsService {
     return uniqueNames;
   }
 
-  private initPlayerStats(): Map<string, Schemas.PlayerStats> {
+  private initPlayerStats(playerNames: string[]): Map<string, Schemas.PlayerStats> {
     const map = new Map<string, Schemas.PlayerStats>();
-    this.playerNames.forEach(name =>
+    playerNames.forEach(name =>
       map.set(name, {
         name,
         games: 0,
@@ -168,94 +83,94 @@ export class StatsService {
     return map;
   }
 
-  private getGames(game: Schemas.MafiaGame): void {
-    this.playerStats.get(game.cop).games++;
-    this.playerStats.get(game.medic).games++;
-    this.playerStats.get(game.vigilante).games++;
-    game.vanilla_town.forEach(player => this.playerStats.get(player).games++);
-    game.mafia.forEach(player => this.playerStats.get(player).games++);
+  private getGames(playerStats: Map<string, Schemas.PlayerStats>, game: Schemas.MafiaGame): void {
+    playerStats.get(game.cop).games++;
+    playerStats.get(game.medic).games++;
+    playerStats.get(game.vigilante).games++;
+    game.vanilla_town.forEach(player => playerStats.get(player).games++);
+    game.mafia.forEach(player => playerStats.get(player).games++);
   }
 
-  private getRolled(game: Schemas.MafiaGame): void {
-    this.playerStats.get(game.cop).rolledCop++;
-    this.playerStats.get(game.medic).rolledMedic++;
-    this.playerStats.get(game.vigilante).rolledVigilante++;
+  private getRolled(playerStats: Map<string, Schemas.PlayerStats>, game: Schemas.MafiaGame): void {
+    playerStats.get(game.cop).rolledCop++;
+    playerStats.get(game.medic).rolledMedic++;
+    playerStats.get(game.vigilante).rolledVigilante++;
   }
 
-  private getWinsLosses(game: Schemas.MafiaGame): void {
+  private getWinsLosses(playerStats: Map<string, Schemas.PlayerStats>, game: Schemas.MafiaGame): void {
     const town = [game.cop, game.medic, game.vigilante, ...game.vanilla_town];
     if (game.winner === Schemas.TOWN) {
-      town.filter(player => this.survivedN0(player, game)).forEach(player => this.playerStats.get(player).townWins++);
-      game.mafia.forEach(player => this.playerStats.get(player).mafiaLosses++);
+      town.filter(player => this.survivedN0(player, game)).forEach(player => playerStats.get(player).townWins++);
+      game.mafia.forEach(player => playerStats.get(player).mafiaLosses++);
     } else if (game.winner === Schemas.MAFIA) {
-      town.filter(player => this.survivedN0(player, game)).forEach(player => this.playerStats.get(player).townLosses++);
-      game.mafia.forEach(player => this.playerStats.get(player).mafiaWins++);
+      town.filter(player => this.survivedN0(player, game)).forEach(player => playerStats.get(player).townLosses++);
+      game.mafia.forEach(player => playerStats.get(player).mafiaWins++);
     } else {
       console.log('Warning: Winning team has invalid input.');
     }
   }
 
-  private getN0(game: Schemas.MafiaGame): void {
-    game.kill[0].forEach(player => this.playerStats.get(player).n0ed++);
+  private getN0(playerStats: Map<string, Schemas.PlayerStats>, game: Schemas.MafiaGame): void {
+    game.kill[0].forEach(player => playerStats.get(player).n0ed++);
     if (game.save[0] !== Schemas.NONE) {
-      this.playerStats.get(game.save[0]).n0Saved++;
+      playerStats.get(game.save[0]).n0Saved++;
     }
   }
 
-  private getLynched(game: Schemas.MafiaGame): void {
+  private getLynched(playerStats: Map<string, Schemas.PlayerStats>, game: Schemas.MafiaGame): void {
     game.lynched.filter(lynch => lynch !== Schemas.SLEEP).forEach(lynch => {
       const roll = this.getRoll(lynch, game);
       if (roll === Schemas.COP) {
-        this.playerStats.get(lynch).lynchedAsCop++;
+        playerStats.get(lynch).lynchedAsCop++;
       } else if (roll === Schemas.MEDIC) {
-        this.playerStats.get(lynch).lynchedAsMedic++;
+        playerStats.get(lynch).lynchedAsMedic++;
       } else if (roll === Schemas.VIGILANTE) {
-        this.playerStats.get(lynch).lynchedAsVigilante++;
+        playerStats.get(lynch).lynchedAsVigilante++;
       } else if (roll === Schemas.VT) {
-        this.playerStats.get(lynch).lynchedAsVT++;
+        playerStats.get(lynch).lynchedAsVT++;
       } else if (roll === Schemas.MAFIA) {
-        this.playerStats.get(lynch).lynchedAsMafia++;
+        playerStats.get(lynch).lynchedAsMafia++;
       } else {
         console.log('Warning: Lynched player does not have a roll.');
       }
     });
   }
 
-  private getShots(game: Schemas.MafiaGame): void {
+  private getShots(playerStats: Map<string, Schemas.PlayerStats>, game: Schemas.MafiaGame): void {
     const shotPlayer = game.shot[game.shot.length - 1];
     if (shotPlayer !== Schemas.NONE) {
       const roll = this.getRoll(shotPlayer, game);
       if (roll === Schemas.COP) {
-        this.playerStats.get(game.vigilante).vigilanteShotCop++;
-        this.playerStats.get(shotPlayer).shotAsCop++;
+        playerStats.get(game.vigilante).vigilanteShotCop++;
+        playerStats.get(shotPlayer).shotAsCop++;
       } else if (roll === Schemas.MEDIC) {
-        this.playerStats.get(game.vigilante).vigilanteShotMedic++;
-        this.playerStats.get(shotPlayer).shotAsMedic++;
+        playerStats.get(game.vigilante).vigilanteShotMedic++;
+        playerStats.get(shotPlayer).shotAsMedic++;
       } else if (roll === Schemas.VIGILANTE) {
         console.log('Warning: Vigilante shot himself.');
       } else if (roll === Schemas.VT) {
-        this.playerStats.get(game.vigilante).vigilanteShotVT++;
-        this.playerStats.get(shotPlayer).shotAsVT++;
+        playerStats.get(game.vigilante).vigilanteShotVT++;
+        playerStats.get(shotPlayer).shotAsVT++;
       } else if (roll === Schemas.MAFIA) {
-        this.playerStats.get(game.vigilante).vigilanteShotMafia++;
-        this.playerStats.get(shotPlayer).shotAsMafia++;
+        playerStats.get(game.vigilante).vigilanteShotMafia++;
+        playerStats.get(shotPlayer).shotAsMafia++;
       } else {
         console.log('Warning: Shot player does not have a roll.');
       }
     }
   }
 
-  private getFinal3(game: Schemas.MafiaGame): void {
+  private getFinal3(playerStats: Map<string, Schemas.PlayerStats>, game: Schemas.MafiaGame): void {
     if (game.f3_win && game.f3_loss) {
-      game.f3_win.forEach(player => this.playerStats.get(player).final3Wins++);
-      game.f3_loss.forEach(player => this.playerStats.get(player).final3Losses++);
+      game.f3_win.forEach(player => playerStats.get(player).final3Wins++);
+      game.f3_loss.forEach(player => playerStats.get(player).final3Losses++);
     } else if ((game.f3_win && !game.f3_loss) || (!game.f3_win && game.f3_loss)) {
       console.log('Warning: Final 3 data is missing');
     }
   }
 
-  private getTotals(): void {
-    this.playerStats.forEach(player => {
+  private getTotals(playerStats: Map<string, Schemas.PlayerStats>): void {
+    playerStats.forEach(player => {
       player.totalWins = player.townWins + player.mafiaWins;
       player.totalLosses = player.townLosses + player.mafiaLosses;
       player.townWins + player.townLosses !== 0
@@ -319,48 +234,48 @@ export class StatsService {
     return new Map(array.map(obj => [obj.name, obj]));
   }
 
-  private validateNames(): void {
-    for (let i = 0; i < this.mafiaGames.length; i++) {
+  private validateNames(mafiaGames: Schemas.MafiaGame[]): void {
+    for (let i = 0; i < mafiaGames.length; i++) {
       const names: string[] = [];
-      names.push(this.mafiaGames[i].cop);
-      names.push(this.mafiaGames[i].medic);
-      names.push(this.mafiaGames[i].vigilante);
-      this.mafiaGames[i].vanilla_town.forEach(vt => names.push(vt));
-      this.mafiaGames[i].mafia.forEach(mafia => names.push(mafia));
+      names.push(mafiaGames[i].cop);
+      names.push(mafiaGames[i].medic);
+      names.push(mafiaGames[i].vigilante);
+      mafiaGames[i].vanilla_town.forEach(vt => names.push(vt));
+      mafiaGames[i].mafia.forEach(mafia => names.push(mafia));
       const uniqueNames = Array.from(new Set(names)); // Remove duplicates
       if (names.length !== uniqueNames.length) {
-        console.log(`Warning: Name duplication error. Game ${i = 1}`);
+        console.log(`Warning: Name duplication error. Game ${i + 1}`);
       }
 
-      for (let x = 0; x < this.mafiaGames[i].check.length; x++) {
-        if (!names.includes(this.mafiaGames[i].check[x])) {
+      for (let x = 0; x < mafiaGames[i].check.length; x++) {
+        if (!names.includes(mafiaGames[i].check[x])) {
           console.log(`Warning: Name error. Game ${i + 1} Check ${x}`);
         }
       }
-      for (let x = 0; x < this.mafiaGames[i].save.length; x++) {
-        if (!names.includes(this.mafiaGames[i].save[x]) && this.mafiaGames[i].save[x] !== Schemas.NONE) {
+      for (let x = 0; x < mafiaGames[i].save.length; x++) {
+        if (!names.includes(mafiaGames[i].save[x]) && mafiaGames[i].save[x] !== Schemas.NONE) {
           console.log(`Warning: Name error. Game ${i + 1} Save ${x}`);
         }
       }
-      for (let x = 0; x < this.mafiaGames[i].shot.length; x++) {
-        if (!names.includes(this.mafiaGames[i].shot[x]) && this.mafiaGames[i].shot[x] !== Schemas.NONE) {
+      for (let x = 0; x < mafiaGames[i].shot.length; x++) {
+        if (!names.includes(mafiaGames[i].shot[x]) && mafiaGames[i].shot[x] !== Schemas.NONE) {
           console.log(`Warning: Name error. Game ${i + 1} Shot ${x}`);
         }
       }
-      for (let x = 0; x < this.mafiaGames[i].kill.length; x++) {
-        for (let y = 0; y < this.mafiaGames[i].kill[x].length; y++) {
-          if (!names.includes(this.mafiaGames[i].kill[x][y])) {
+      for (let x = 0; x < mafiaGames[i].kill.length; x++) {
+        for (let y = 0; y < mafiaGames[i].kill[x].length; y++) {
+          if (!names.includes(mafiaGames[i].kill[x][y])) {
             console.log(`Warning: Name error. Game ${i + 1} Kill ${x}${y}`);
           }
         }
       }
-      for (let x = 0; x < this.mafiaGames[i].f3_win.length; x++) {
-        if (!names.includes(this.mafiaGames[i].f3_win[x])) {
+      for (let x = 0; x < mafiaGames[i].f3_win.length; x++) {
+        if (!names.includes(mafiaGames[i].f3_win[x])) {
           console.log(`Warning: Name error. Game ${i + 1} Final 3 Winner ${x}`);
         }
       }
-      for (let x = 0; x < this.mafiaGames[i].f3_loss.length; x++) {
-        if (!names.includes(this.mafiaGames[i].f3_loss[x])) {
+      for (let x = 0; x < mafiaGames[i].f3_loss.length; x++) {
+        if (!names.includes(mafiaGames[i].f3_loss[x])) {
           console.log(`Warning: Name error. Game ${i + 1} Final 3 Loser ${x}`);
         }
       }

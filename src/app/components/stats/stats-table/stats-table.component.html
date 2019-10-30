@@ -37,7 +37,7 @@
 
   <ng-container matColumnDef="townWinPercentage">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> % </th>
-    <td mat-cell *matCellDef="let element"> {{element.townWinPercentage !== null ? element.totalWinPercentage + '%' : null}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.townWinPercentage !== null ? element.townWinPercentage + '%' : null}} </td>
   </ng-container>
 
   <ng-container matColumnDef="mafiaWins">
@@ -52,7 +52,7 @@
 
   <ng-container matColumnDef="mafiaWinPercentage">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> % </th>
-    <td mat-cell *matCellDef="let element"> {{element.mafiaWinPercentage !== null ? element.totalWinPercentage + '%' : null}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.mafiaWinPercentage !== null ? element.mafiaWinPercentage + '%' : null}} </td>
   </ng-container>
 
   <ng-container matColumnDef="n0ed">
