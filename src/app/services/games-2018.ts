@@ -91,7 +91,7 @@ import g90 from '../../assets/2018/90.json';
 import g91 from '../../assets/2018/91.json';
 import g92 from '../../assets/2018/92.json';
 
-export const stats2018 = [
+export const games2018 = [
   g01, g02, g03, g04, g05, g06, g07, g08, g09, g10,
   g11, g12, g13, g14, g15, g16, g17, g18, g19, g20,
   g21, g22, g23, g24, g25, g26, g27, g28, g29, g30,

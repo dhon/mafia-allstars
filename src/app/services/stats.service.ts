@@ -1,6 +1,6 @@
-import { stats2017 } from './stats-2017';
-import { stats2018 } from './stats-2018';
-import { stats2019 } from './stats-2019';
+import { games2017 } from './games-2017';
+import { games2018 } from './games-2018';
+import { games2019 } from './games-2019';
 import * as Schemas from '../interfaces/stats.interface';
 
 export class StatsService {
@@ -10,13 +10,13 @@ export class StatsService {
   public getPlayerStats(year: '2017' | '2018' | '2019' | 'all'): Map<string, Schemas.PlayerStats> {
     let mafiaGames = [];
     if (year === '2017') {
-      mafiaGames = stats2017;
+      mafiaGames = games2017;
     } else if (year === '2018') {
-      mafiaGames = stats2018;
+      mafiaGames = games2018;
     } else if (year === '2019') {
-      mafiaGames = stats2019;
+      mafiaGames = games2019;
     } else if (year === 'all') {
-      mafiaGames = [...stats2017, ...stats2018, ...stats2019];
+      mafiaGames = [...games2017, ...games2018, ...games2019];
     } else {
       console.log('Warning: Year is not valid.');
     }
