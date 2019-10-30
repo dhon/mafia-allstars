@@ -9,7 +9,7 @@
 		"Turtle",
 		"Dave Dob",
 		"Trump",
-		"Kny",
+		"kny",
 		"Fletch",
 		"Danny",
 		"Double A"
@@ -21,7 +21,7 @@
 	],
 	"kill": [ [ "Rollo", "5" ] ],
 	"check": [],
-	"save": [ "Kny" ],
+	"save": [ "kny" ],
 	"shot": [ "Ryuzilla" ],
 	"lynched": [
 		"Wes",

@@ -5,7 +5,7 @@
 	"vigilante": "Ryuzilla",
 	"vanilla_town": [
 		"Turtle",
-		"Kny",
+		"kny",
 		"Nydus",
 		"Wiggles",
 		"Jan",
@@ -19,7 +19,7 @@
 		"5",
 		"Cron"
 	],
-	"kill": [ [ "Kny", "Wiggles" ] ],
+	"kill": [ [ "kny", "Wiggles" ] ],
 	"check": [],
 	"save": [ "Steve" ],
 	"shot": [ "Turtle" ],

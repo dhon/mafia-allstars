@@ -10,7 +10,7 @@
 		"5",
 		"Jan",
 		"David",
-		"Kny",
+		"kny",
 		"Rollo",
 		"Ryan"
 	],
@@ -22,7 +22,7 @@
 	"kill": [ [ "Jan", "Striker" ] ],
 	"check": [],
 	"save": [ "Fletch" ],
-	"shot": [ "Kny" ],
+	"shot": [ "kny" ],
 	"lynched": [
 		"Fletch",
 		"Ryuzilla",

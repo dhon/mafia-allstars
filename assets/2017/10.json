@@ -9,7 +9,7 @@
 		"5",
 		"Captain",
 		"Noah",
-		"Kny",
+		"kny",
 		"Demon",
 		"Fonti",
 		"Erik"
@@ -19,7 +19,7 @@
 		"Jan",
 		"Wiggles"
 	],
-	"kill": [ [ "Ryuzilla", "Kny" ] ],
+	"kill": [ [ "Ryuzilla", "kny" ] ],
 	"check": [],
 	"save": [ "5" ],
 	"shot": [ "Justice" ],

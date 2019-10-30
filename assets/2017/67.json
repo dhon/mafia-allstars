@@ -10,7 +10,7 @@
 		"Ramza",
 		"Striker",
 		"Guy",
-		"Kny",
+		"kny",
 		"dLGN",
 		"Pope"
 	],
@@ -22,7 +22,7 @@
 	"kill": [ [ "Guy", "Ramza" ] ],
 	"check": [],
 	"save": [ "dLGN" ],
-	"shot": [ "Kny" ],
+	"shot": [ "kny" ],
 	"lynched": [
 		"Rollo",
 		"Ryuzilla",

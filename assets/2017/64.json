@@ -1,6 +1,6 @@
 {
 	"id": "08_09_2017_G2",
-	"cop": "Kny",
+	"cop": "kny",
 	"medic": "Guy",
 	"vigilante": "Rollo",
 	"vanilla_town": [
@@ -19,7 +19,7 @@
 		"Dave Dob",
 		"Noah"
 	],
-	"kill": [ [ "Kny", "Gilbert" ] ],
+	"kill": [ [ "kny", "Gilbert" ] ],
 	"check": [],
 	"save": [ "Rollo" ],
 	"shot": [ "Dave Dob" ],

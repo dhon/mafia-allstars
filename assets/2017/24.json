@@ -2,7 +2,7 @@
 	"id": "03_22_2017_G2",
 	"cop": "Optic",
 	"medic": "Dave Dob",
-	"vigilante": "Kny",
+	"vigilante": "kny",
 	"vanilla_town": [
 		"Garrinski",
 		"5",
@@ -19,7 +19,7 @@
 		"Steve",
 		"Noah"
 	],
-	"kill": [ [ "Nydus", "Kny" ] ],
+	"kill": [ [ "Nydus", "kny" ] ],
 	"check": [],
 	"save": [ "Mal" ],
 	"shot": [ "NONE" ],

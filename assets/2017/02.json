@@ -17,14 +17,14 @@
 	"mafia": [
 		"Jon Paul",
 		"Wiggles",
-		"Kny"
+		"kny"
 	],
 	"kill": [ [ "Jan", "Striker" ] ],
 	"check": [],
 	"save": [ "Striker" ],
 	"shot": [ "Jon Paul" ],
 	"lynched": [
-		"Kny",
+		"kny",
 		"Wiggles",
 		"Noah",
 		"5"
