@@ -12,7 +12,7 @@
 		"Fonti",
 		"Jaleb",
 		"Freak",
-		"Kny"
+		"kny"
 	],
 	"mafia": [
 		"Tana",
@@ -22,7 +22,7 @@
 	"kill": [ [ "Noah", "Pope" ] ],
 	"check": [],
 	"save": [ "Wiggles" ],
-	"shot": [ "Kny" ],
+	"shot": [ "kny" ],
 	"lynched": [
 		"Tana",
 		"Rollo",

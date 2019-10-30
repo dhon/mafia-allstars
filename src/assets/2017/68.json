@@ -12,14 +12,14 @@
 		"CJ",
 		"Ryan",
 		"Colin",
-		"Kny"
+		"kny"
 	],
 	"mafia": [
 		"Fonti",
 		"David",
 		"Wiggles"
 	],
-	"kill": [ [ "Colin", "Kny" ] ],
+	"kill": [ [ "Colin", "kny" ] ],
 	"check": [],
 	"save": [ "David" ],
 	"shot": [ "Ryan" ],

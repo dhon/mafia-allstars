@@ -7,7 +7,7 @@ export class StatsService {
 
   constructor() {}
 
-  public getPlayerStats(year: '2017' | '2018' | '2019'): Map<string, Schemas.PlayerStats> {
+  public getPlayerStats(year: '2017' | '2018' | '2019' | 'all'): Map<string, Schemas.PlayerStats> {
     let mafiaGames = [];
     if (year === '2017') {
       mafiaGames = stats2017;
@@ -15,6 +15,8 @@ export class StatsService {
       mafiaGames = stats2018;
     } else if (year === '2019') {
       mafiaGames = stats2019;
+    } else if (year === 'all') {
+      mafiaGames = [...stats2017, ...stats2018, ...stats2019];
     } else {
       console.log('Warning: Year is not valid.');
     }

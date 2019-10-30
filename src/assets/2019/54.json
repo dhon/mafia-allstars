@@ -1,6 +1,6 @@
 {
   "id": "07/31/2019 G2",
-  "mafia": [ "Steep", "Thor", "Ryan" ],
+  "mafia": [ "Steep", "Thore", "Ryan" ],
   "kill": [
     [ "Duke", "Plen" ],
     [ "Rob Alloy", "Rob Alloy" ],
@@ -24,7 +24,7 @@
   "shot": [
     "NONE",
     "NONE",
-    "Thor"
+    "Thore"
   ],
   "vanilla_town": [
     "Colin",
