@@ -1,0 +1,34 @@
+{
+	"id": "08_23_2017_G1",
+	"cop": "Fonti",
+	"medic": "Colin",
+	"vigilante": "Jan",
+	"vanilla_town": [
+		"Ryan",
+		"David",
+		"Joey",
+		"Ramza",
+		"Striker",
+		"Guy",
+		"Kny",
+		"dLGN",
+		"Pope"
+	],
+	"mafia": [
+		"Ryuzilla",
+		"Rollo",
+		"Pat"
+	],
+	"kill": [ [ "Guy", "Ramza" ] ],
+	"check": [],
+	"save": [ "dLGN" ],
+	"shot": [ "Kny" ],
+	"lynched": [
+		"Rollo",
+		"Ryuzilla",
+		"Pat"
+	],
+	"f3_win": [],
+	"f3_loss": [],
+	"winner": "Town"
+}

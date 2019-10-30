@@ -1,0 +1,36 @@
+{
+	"id": "08_03_2017_G2",
+	"cop": "Adam",
+	"medic": "Pope",
+	"vigilante": "Garrinski",
+	"vanilla_town": [
+		"Ryuzilla",
+		"Younguns",
+		"Kny",
+		"Watacolter",
+		"Rollo",
+		"Double A",
+		"Ryan",
+		"Wes",
+		"Siggywiggy"
+	],
+	"mafia": [
+		"Duke",
+		"Niltak",
+		"Josh"
+	],
+	"kill": [ [ "Rollo", "Younguns" ] ],
+	"check": [],
+	"save": [ "Siggywiggy" ],
+	"shot": [ "Josh" ],
+	"lynched": [
+		"Wes",
+		"Duke",
+		"Ryan",
+		"Ryuzilla",
+		"Niltak"
+	],
+	"f3_win": [],
+	"f3_loss": [],
+	"winner": "Town"
+}

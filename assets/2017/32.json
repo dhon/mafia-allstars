@@ -1,0 +1,34 @@
+{
+	"id": "04_19_2017_G2",
+	"cop": "Freak",
+	"medic": "Banks",
+	"vigilante": "Rollo",
+	"vanilla_town": [
+		"Ryuzilla",
+		"Garrinski",
+		"Cron",
+		"Pope",
+		"Ocane",
+		"Kny",
+		"5",
+		"Pozzai",
+		"Trump"
+	],
+	"mafia": [
+		"Wes",
+		"Bstee",
+		"Danny"
+	],
+	"kill": [ [ "Pope", "5" ] ],
+	"check": [],
+	"save": [ "Ryuzilla" ],
+	"shot": [ "NONE" ],
+	"lynched": [
+		"Wes",
+		"Ocane",
+		"Kny"
+	],
+	"f3_win": [],
+	"f3_loss": [],
+	"winner": "Mafia"
+}

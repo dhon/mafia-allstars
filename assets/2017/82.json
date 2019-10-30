@@ -1,0 +1,34 @@
+{
+	"id": "10_11_2017_G2",
+	"cop": "Dave Dob",
+	"medic": "Optic",
+	"vigilante": "CJ",
+	"vanilla_town": [
+		"Ryuzilla",
+		"Striker",
+		"Rollo",
+		"BaehreX",
+		"Duke",
+		"Gilbert",
+		"Ocane",
+		"Pope",
+		"David"
+	],
+	"mafia": [
+		"dLGN",
+		"Cron",
+		"Younguns"
+	],
+	"kill": [ [ "Dave Dob", "Ryuzilla" ] ],
+	"check": [],
+	"save": [ "Younguns" ],
+	"shot": [ "BaehreX" ],
+	"lynched": [
+		"Duke",
+		"Gilbert",
+		"David"
+	],
+	"f3_win": [],
+	"f3_loss": [],
+	"winner": "Mafia"
+}

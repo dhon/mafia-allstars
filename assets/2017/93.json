@@ -1,0 +1,34 @@
+{
+	"id": "11_29_2017_G1",
+	"cop": "Ryuzilla",
+	"medic": "5",
+	"vigilante": "Ramza",
+	"vanilla_town": [
+		"Mattchew",
+		"Siggywiggy",
+		"Jordan",
+		"Dave Dob",
+		"Ryan",
+		"Colin",
+		"Pope",
+		"Guy",
+		"Pat"
+	],
+	"mafia": [
+		"Rollo",
+		"Joey",
+		"Double A"
+	],
+	"kill": [ [ "Colin", "Ryan" ] ],
+	"check": [],
+	"save": [ "Joey" ],
+	"shot": [ "NONE" ],
+	"lynched": [
+		"Mattchew",
+		"5",
+		"Pat"
+	],
+	"f3_win": [],
+	"f3_loss": [],
+	"winner": "Mafia"
+}

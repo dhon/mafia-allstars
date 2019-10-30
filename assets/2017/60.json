@@ -1,0 +1,37 @@
+{
+	"id": "07_26_2017_G2",
+	"cop": "Rollo",
+	"medic": "Watacolter",
+	"vigilante": "David",
+	"vanilla_town": [
+		"Siggywiggy",
+		"Niltak",
+		"Double A",
+		"Pope",
+		"Garrinski",
+		"Adam",
+		"Wes",
+		"Jan",
+		"Ryuzilla"
+	],
+	"mafia": [
+		"Dave Dob",
+		"Wiggles",
+		"Guy"
+	],
+	"kill": [ [ "David", "Jan" ] ],
+	"check": [],
+	"save": [ "Wes" ],
+	"shot": [ "NONE" ],
+	"lynched": [
+		"Dave Dob",
+		"Guy",
+		"Adam",
+		"Siggywiggy",
+		"Wes",
+		"Pope"
+	],
+	"f3_win": [ "Wiggles" ],
+	"f3_loss": [ "Pope", "Double A" ],
+	"winner": "Mafia"
+}

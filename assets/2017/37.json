@@ -1,0 +1,34 @@
+{
+	"id": "01_04_2017_G1",
+	"cop": "Cron",
+	"medic": "Justice",
+	"vigilante": "Captain",
+	"vanilla_town": [
+		"Double A",
+		"Rollo",
+		"David",
+		"Greg",
+		"Pope",
+		"Turtle",
+		"Joey",
+		"5",
+		"Ryuzilla"
+	],
+	"mafia": [
+		"Nukey",
+		"Guy",
+		"Ramza"
+	],
+	"kill": [ [ "Justice", "Rollo" ] ],
+	"check": [],
+	"save": [ "Pope" ],
+	"shot": [ "NONE" ],
+	"lynched": [
+		"Nukey",
+		"Guy",
+		"Ramza"
+	],
+	"f3_win": [],
+	"f3_loss": [],
+	"winner": "Town"
+}

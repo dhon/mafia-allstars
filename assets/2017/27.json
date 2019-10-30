@@ -1,0 +1,37 @@
+{
+	"id": "04_05_2017_G1",
+	"cop": "Kny",
+	"medic": "Unctious",
+	"vigilante": "Cron",
+	"vanilla_town": [
+		"Ryan",
+		"Dave Dob",
+		"Wes",
+		"Ryuzilla",
+		"Nydus",
+		"Erik",
+		"Ramza",
+		"Nukey",
+		"Guy"
+	],
+	"mafia": [
+		"Ben",
+		"5",
+		"Jan"
+	],
+	"kill": [ [ "Erik", "Guy" ] ],
+	"check": [],
+	"save": [ "Guy" ],
+	"shot": [ "Wes" ],
+	"lynched": [
+		"Ben",
+		"5",
+		"Nukey",
+		"Ryan",
+		"Ramza",
+		"Unctious"
+	],
+	"f3_win": [ "Jan" ],
+	"f3_loss": [ "Ramza", "Nydus" ],
+	"winner": "Mafia"
+}

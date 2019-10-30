@@ -1,0 +1,33 @@
+{
+	"id": "09_27_2017_G2",
+	"cop": "Rollo",
+	"medic": "Pope",
+	"vigilante": "Slip",
+	"vanilla_town": [
+		"Jan",
+		"Colin",
+		"Peeperz",
+		"Striker",
+		"Gnome",
+		"5",
+		"Ryan",
+		"BaehreX",
+		"Siggywiggy"
+	],
+	"mafia": [
+		"Ryuzilla",
+		"Kny",
+		"Fonti"
+	],
+	"kill": [ [ "Rollo", "Siggywiggy" ] ],
+	"check": [],
+	"save": [ "Slip" ],
+	"shot": [ "NONE" ],
+	"lynched": [
+		"Gnome",
+		"BaehreX"
+	],
+	"f3_win": [],
+	"f3_loss": [],
+	"winner": "Mafia"
+}

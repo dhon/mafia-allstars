@@ -1,0 +1,35 @@
+{
+	"id": "09_20_2017_G2",
+	"cop": "Fonti",
+	"medic": "Younguns",
+	"vigilante": "Rollo",
+	"vanilla_town": [
+		"Ryuzilla",
+		"Tunak",
+		"Jan",
+		"Colin",
+		"Dave Dob",
+		"Danimal",
+		"Pope",
+		"CJ",
+		"Siggywiggy"
+	],
+	"mafia": [
+		"Captain",
+		"Duke",
+		"Reign"
+	],
+	"kill": [ [ "CJ", "Dave Dob" ] ],
+	"check": [],
+	"save": [ "Captain" ],
+	"shot": [ "Duke" ],
+	"lynched": [
+		"Tunak",
+		"Pope",
+		"Captain",
+		"Reign"
+	],
+	"f3_win": [ "Siggywiggy", "Jan" ],
+	"f3_loss": [ "Reign" ],
+	"winner": "Town"
+}

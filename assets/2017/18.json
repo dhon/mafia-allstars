@@ -1,0 +1,34 @@
+{
+	"id": "03_01_2017_G2",
+	"cop": "5",
+	"medic": "Noah",
+	"vigilante": "Striker",
+	"vanilla_town": [
+		"Captain",
+		"Onionknight",
+		"Sora",
+		"Trump",
+		"Cron",
+		"Slip",
+		"Rollo",
+		"Jan",
+		"Pope"
+	],
+	"mafia": [
+		"Ryuzilla",
+		"Fonti",
+		"Lt"
+	],
+	"kill": [ [ "Onionknight", "Noah" ] ],
+	"check": [],
+	"save": [ "Cron" ],
+	"shot": [ "NONE" ],
+	"lynched": [
+		"Trump",
+		"Jan",
+		"Cron"
+	],
+	"f3_win": [],
+	"f3_loss": [],
+	"winner": "Mafia"
+}

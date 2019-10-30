@@ -1,0 +1,37 @@
+{
+	"id": "10_04_2017_G1",
+	"cop": "Joey",
+	"medic": "Striker",
+	"vigilante": "Rollo",
+	"vanilla_town": [
+		"Ryan",
+		"Duke",
+		"Gnome",
+		"Siggywiggy",
+		"Pat",
+		"Ryuzilla",
+		"Ramza",
+		"Colin",
+		"Peeperz"
+	],
+	"mafia": [
+		"Dave Dob",
+		"Pope",
+		"Guy"
+	],
+	"kill": [ [ "Ryan", "Siggywiggy" ] ],
+	"check": [],
+	"save": [ "Colin" ],
+	"shot": [ "NONE" ],
+	"lynched": [
+		"Pope",
+		"Ramza",
+		"Colin",
+		"Gnome",
+		"Guy",
+		"Ryuzilla"
+	],
+	"f3_win": [ "Dave Dob" ],
+	"f3_loss": [ "Ryuzilla", "Pat" ],
+	"winner": "Mafia"
+}

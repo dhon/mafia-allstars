@@ -1,0 +1,34 @@
+{
+	"id": "11_08_2017_G2",
+	"cop": "Ryuzilla",
+	"medic": "Pozzai",
+	"vigilante": "Pope",
+	"vanilla_town": [
+		"Mavelost",
+		"Reign",
+		"CJ",
+		"Dave Dob",
+		"BaehreX",
+		"Younguns",
+		"Colin",
+		"dLGN",
+		"Garrinski"
+	],
+	"mafia": [
+		"Rollo",
+		"Siggywiggy",
+		"Jojo"
+	],
+	"kill": [ [ "Mavelost", "Reign" ] ],
+	"check": [],
+	"save": [ "Ryuzilla" ],
+	"shot": [ "NONE" ],
+	"lynched": [
+		"Garrinski",
+		"dLGN",
+		"CJ"
+	],
+	"f3_win": [],
+	"f3_loss": [],
+	"winner": "Mafia"
+}

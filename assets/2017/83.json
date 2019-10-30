@@ -1,0 +1,34 @@
+{
+	"id": "10_18_2017_G1",
+	"cop": "Captain",
+	"medic": "Jordan",
+	"vigilante": "Pat",
+	"vanilla_town": [
+		"Dave Dob",
+		"Onionknight",
+		"Paperscraps",
+		"dLGN",
+		"Ramza",
+		"Siggywiggy",
+		"Striker",
+		"Tambo",
+		"Joey"
+	],
+	"mafia": [
+		"BaehreX",
+		"Rollo",
+		"Ryuzilla"
+	],
+	"kill": [ [ "dLGN", "Joey" ] ],
+	"check": [],
+	"save": [ "Captain" ],
+	"shot": [ "Onionknight" ],
+	"lynched": [
+		"Rollo",
+		"Ryuzilla",
+		"BaehreX"
+	],
+	"f3_win": [],
+	"f3_loss": [],
+	"winner": "Town"
+}

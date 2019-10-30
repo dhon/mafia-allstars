@@ -1,0 +1,33 @@
+{
+	"id": "03_22_2017_G1",
+	"cop": "Rollo",
+	"medic": "Steve",
+	"vigilante": "Ryuzilla",
+	"vanilla_town": [
+		"5",
+		"Cron",
+		"Joey",
+		"Pope",
+		"Mal",
+		"Ramza",
+		"Fonti",
+		"Greg",
+		"dLGN"
+	],
+	"mafia": [
+		"Ben",
+		"Noah",
+		"Nydus"
+	],
+	"kill": [ [ "Steve", "Rollo" ] ],
+	"check": [],
+	"save": [ "Mal" ],
+	"shot": [ "5" ],
+	"lynched": [
+		"Joey",
+		"dLGN"
+	],
+	"f3_win": [],
+	"f3_loss": [],
+	"winner": "Mafia"
+}

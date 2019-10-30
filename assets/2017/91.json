@@ -1,0 +1,35 @@
+{
+	"id": "11_15_2017_G1",
+	"cop": "Dave Dob",
+	"medic": "Pat",
+	"vigilante": "Rollo",
+	"vanilla_town": [
+		"EffinNipples",
+		"Unctious",
+		"Ramza",
+		"Jordan",
+		"Striker",
+		"Guy",
+		"Captain",
+		"David",
+		"Ryuzilla"
+	],
+	"mafia": [
+		"dLGN",
+		"Kny",
+		"Pope"
+	],
+	"kill": [ [ "Rollo", "Ryuzilla" ] ],
+	"check": [],
+	"save": [ "Dave Dob" ],
+	"shot": [ "NONE" ],
+	"lynched": [
+		"Kny",
+		"Striker",
+		"Pope",
+		"dLGN"
+	],
+	"f3_win": [],
+	"f3_loss": [],
+	"winner": "Town"
+}

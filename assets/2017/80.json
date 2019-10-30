@@ -1,0 +1,34 @@
+{
+	"id": "10_04_2017_G2",
+	"cop": "Rollo",
+	"medic": "Siggywiggy",
+	"vigilante": "Ryuzilla",
+	"vanilla_town": [
+		"Fonti",
+		"Dave Dob",
+		"Tunak",
+		"Noah",
+		"Owner",
+		"Garrinski",
+		"Striker",
+		"BaehreX",
+		"Colin"
+	],
+	"mafia": [
+		"Duke",
+		"Jan",
+		"Reign"
+	],
+	"kill": [ [ "Colin", "Ryuzilla" ] ],
+	"check": [],
+	"save": [ "Duke" ],
+	"shot": [ "NONE" ],
+	"lynched": [
+		"Jan",
+		"Noah",
+		"Striker"
+	],
+	"f3_win": [],
+	"f3_loss": [],
+	"winner": "Mafia"
+}

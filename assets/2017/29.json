@@ -1,0 +1,36 @@
+{
+	"id": "04_12_2017_G1",
+	"cop": "Ramza",
+	"medic": "dLGN",
+	"vigilante": "Captain",
+	"vanilla_town": [
+		"Ryan",
+		"Guy",
+		"Double A",
+		"Noah",
+		"Bstee",
+		"Jan",
+		"Ryuzilla",
+		"Striker",
+		"Pope"
+	],
+	"mafia": [
+		"Steve",
+		"Dave Dob",
+		"Cron"
+	],
+	"kill": [ [ "Captain", "Double A" ] ],
+	"check": [],
+	"save": [ "Steve" ],
+	"shot": [ "NONE" ],
+	"lynched": [
+		"Dave Dob",
+		"Steve",
+		"Ryan",
+		"Jan",
+		"Striker"
+	],
+	"f3_win": [ "Cron" ],
+	"f3_loss": [ "Guy", "Noah" ],
+	"winner": "Mafia"
+}

@@ -1,0 +1,33 @@
+{
+	"id": "03_08_2017_G2",
+	"cop": "Pope",
+	"medic": "Kny",
+	"vigilante": "Striker",
+	"vanilla_town": [
+		"Bstee",
+		"Freak",
+		"Boone",
+		"Ryan",
+		"Double A",
+		"Pozzai",
+		"Ryuzilla",
+		"Rollo",
+		"Ben"
+	],
+	"mafia": [
+		"Tana",
+		"Wiggles",
+		"Slip"
+	],
+	"kill": [ [ "Freak", "Ryuzilla" ] ],
+	"check": [],
+	"save": [ "Slip" ],
+	"shot": [ "Wiggles" ],
+	"lynched": [
+		"Tana",
+		"Slip"
+	],
+	"f3_win": [],
+	"f3_loss": [],
+	"winner": "Town"
+}

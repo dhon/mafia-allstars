@@ -1,0 +1,34 @@
+{
+	"id": "01_25_2017_G2",
+	"cop": "dLGN",
+	"medic": "Jan",
+	"vigilante": "Cron",
+	"vanilla_town": [
+		"Noah",
+		"Turtle",
+		"Pope",
+		"Wiggles",
+		"Ryan",
+		"Tana",
+		"Pozzai",
+		"Demon",
+		"Dave Dob"
+	],
+	"mafia": [
+		"Trump",
+		"Ryuzilla",
+		"Steve"
+	],
+	"kill": [ [ "Jan", "Noah" ] ],
+	"check": [],
+	"save": [ "Steve" ],
+	"shot": [ "NONE" ],
+	"lynched": [
+		"Steve",
+		"Pozzai",
+		"Demon"
+	],
+	"f3_win": [],
+	"f3_loss": [],
+	"winner": "Mafia"
+}
