@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChange, SimpleChanges, Input, ViewChild } from '@angular/core';
 import { MatSort, MatTableDataSource } from '@angular/material';
 import * as Schemas from 'src/app/interfaces/stats.interface';
 
@@ -7,7 +7,7 @@ import * as Schemas from 'src/app/interfaces/stats.interface';
   templateUrl: './stats-table.component.html',
   styleUrls: ['./stats-table.component.scss']
 })
-export class StatsTableComponent implements OnInit {
+export class StatsTableComponent implements OnInit, OnChanges {
   @Input() public title: string;
   @Input() private players: Schemas.PlayerStats[];
   @ViewChild(MatSort, {static: true}) private sort: MatSort;
@@ -18,6 +18,11 @@ export class StatsTableComponent implements OnInit {
 
   ngOnInit() {
     this.displayedColumns = Schemas.PlayerStatsArray;
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    const players: SimpleChange = changes.players;
+    this.players = players.currentValue;
     this.dataSource = new MatTableDataSource(this.players);
     this.dataSource.sort = this.sort;
   }
