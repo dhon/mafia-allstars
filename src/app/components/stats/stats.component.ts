@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { StatsService } from 'src/app/services/stats.service';
-import * as Schemas from 'src/app/interfaces/stats.interface';
 
 @Component({
   selector: 'app-stats',
@@ -8,15 +6,10 @@ import * as Schemas from 'src/app/interfaces/stats.interface';
   styleUrls: ['./stats.component.scss']
 })
 export class StatsComponent implements OnInit {
-  public lowPlayers: Schemas.PlayerStats[];
-  public highPlayers: Schemas.PlayerStats[];
-  private readonly minimumGames = 10;
 
-  constructor(private statsService: StatsService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.lowPlayers = Array.from(this.statsService.getPlayerStats('2018').values()).filter(player => player.games < this.minimumGames);
-    this.highPlayers = Array.from(this.statsService.getPlayerStats('2018').values()).filter(player => player.games >= this.minimumGames);
   }
 
 }

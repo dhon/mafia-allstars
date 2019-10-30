@@ -9,7 +9,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { PlayersComponent } from './components/players/players.component';
 import { StatsComponent } from './components/stats/stats.component';
-import { StatsTableComponent } from './components/stats/stats-table/stats-table.component';
+import { StatsYearComponent } from './components/stats/stats-year/stats-year.component';
+import { StatsTableComponent } from './components/stats/stats-year/stats-table/stats-table.component';
 import { StatsService } from './services/stats.service';
 
 @NgModule({
@@ -20,6 +21,7 @@ import { StatsService } from './services/stats.service';
     HomeComponent,
     PlayersComponent,
     StatsComponent,
+    StatsYearComponent,
     StatsTableComponent
   ],
   imports: [
