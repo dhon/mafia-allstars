@@ -15,8 +15,8 @@ export class StatsComponent implements OnInit {
   constructor(private statsService: StatsService) { }
 
   ngOnInit() {
-    this.lowPlayers = Array.from(this.statsService.getPlayerStats('2019').values()).filter(player => player.games < this.minimumGames);
-    this.highPlayers = Array.from(this.statsService.getPlayerStats('2019').values()).filter(player => player.games >= this.minimumGames);
+    this.lowPlayers = Array.from(this.statsService.getPlayerStats('2018').values()).filter(player => player.games < this.minimumGames);
+    this.highPlayers = Array.from(this.statsService.getPlayerStats('2018').values()).filter(player => player.games >= this.minimumGames);
   }
 
 }
