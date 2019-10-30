@@ -19,12 +19,10 @@
 		"Pat",
 		"Guy"
 	],
-	"n0": [
-		"Ghost 1",
-		"Ghost 2"
-	],
-	"n0_save": "",
-	"shot": "Adam",
+	"kill": [ [ "Ghost 1", "Ghost 2" ] ],
+	"check": [],
+	"save": [ "NONE" ],
+	"shot": [ "Adam" ],
 	"lynched": [
 		"Guy",
 		"Noah",

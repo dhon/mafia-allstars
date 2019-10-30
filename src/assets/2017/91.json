@@ -19,12 +19,10 @@
 		"Kny",
 		"Pope"
 	],
-	"n0": [
-		"Rollo",
-		"Ryuzilla"
-	],
-	"n0_save": "Dave Dob",
-	"shot": "",
+	"kill": [ [ "Rollo", "Ryuzilla" ] ],
+	"check": [],
+	"save": [ "Dave Dob" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Kny",
 		"Striker",

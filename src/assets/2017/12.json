@@ -19,12 +19,10 @@
 		"Fonti",
 		"Ryuzilla"
 	],
-	"n0": [
-		"Nydus",
-		"Guy"
-	],
-	"n0_save": "Jan",
-	"shot": "Trump",
+	"kill": [ [ "Nydus", "Guy" ] ],
+	"check": [],
+	"save": [ "Jan" ],
+	"shot": [ "Trump" ],
 	"lynched": [
 		"Fonti",
 		"Jan",

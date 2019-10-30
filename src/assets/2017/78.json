@@ -19,12 +19,10 @@
 		"Kny",
 		"Fonti"
 	],
-	"n0": [
-		"Rollo",
-		"Siggywiggy"
-	],
-	"n0_save": "Slip",
-	"shot": "",
+	"kill": [ [ "Rollo", "Siggywiggy" ] ],
+	"check": [],
+	"save": [ "Slip" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Gnome",
 		"BaehreX"

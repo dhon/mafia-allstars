@@ -19,12 +19,10 @@
 		"Fonti",
 		"Pope"
 	],
-	"n0": [
-		"Dave Dob",
-		"Danny"
-	],
-	"n0_save": "Fonti",
-	"shot": "",
+	"kill": [ [ "Dave Dob", "Danny" ] ],
+	"check": [],
+	"save": [ "Fonti" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Pope",
 		"5",

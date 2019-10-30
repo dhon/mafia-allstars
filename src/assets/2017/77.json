@@ -19,12 +19,10 @@
 		"Cron",
 		"Pope"
 	],
-	"n0": [
-		"Ramza",
-		"5"
-	],
-	"n0_save": "Siggywiggy",
-	"shot": "",
+	"kill": [ [ "Ramza", "5" ] ],
+	"check": [],
+	"save": [ "Siggywiggy" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Slip",
 		"Rollo",

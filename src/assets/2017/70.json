@@ -19,12 +19,10 @@
 		"Fonti",
 		"Wes"
 	],
-	"n0": [
-		"Ryuzilla",
-		"David"
-	],
-	"n0_save": "Unctious",
-	"shot": "Fonti",
+	"kill": [ [ "Ryuzilla", "David" ] ],
+	"check": [],
+	"save": [ "Unctious" ],
+	"shot": [ "Fonti" ],
 	"lynched": [
 		"Beruru",
 		"CJ",

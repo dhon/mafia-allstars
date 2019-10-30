@@ -19,12 +19,10 @@
 		"Wes",
 		"Siggywiggy"
 	],
-	"n0": [
-		"Guy",
-		"Rollo"
-	],
-	"n0_save": "Guy",
-	"shot": "Ryuzilla",
+	"kill": [ [ "Guy", "Rollo" ] ],
+	"check": [],
+	"save": [ "Guy" ],
+	"shot": [ "Ryuzilla" ],
 	"lynched": [
 		"David",
 		"Pope",

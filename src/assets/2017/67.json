@@ -19,12 +19,10 @@
 		"Rollo",
 		"Pat"
 	],
-	"n0": [
-		"Guy",
-		"Ramza"
-	],
-	"n0_save": "dLGN",
-	"shot": "Kny",
+	"kill": [ [ "Guy", "Ramza" ] ],
+	"check": [],
+	"save": [ "dLGN" ],
+	"shot": [ "Kny" ],
 	"lynched": [
 		"Rollo",
 		"Ryuzilla",

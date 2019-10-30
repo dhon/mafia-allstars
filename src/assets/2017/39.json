@@ -19,12 +19,10 @@
 		"Fonti",
 		"Ryuzilla"
 	],
-	"n0": [
-		"David",
-		"Ghost 1"
-	],
-	"n0_save": "Kane",
-	"shot": "",
+	"kill": [ [ "David", "Ghost 1" ] ],
+	"check": [],
+	"save": [ "Kane" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Ryuzilla",
 		"Bstee",

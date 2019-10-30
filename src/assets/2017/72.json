@@ -19,12 +19,10 @@
 		"Colin",
 		"Joey"
 	],
-	"n0": [
-		"Noah",
-		"5"
-	],
-	"n0_save": "Joey",
-	"shot": "",
+	"kill": [ [ "Noah", "5" ] ],
+	"check": [],
+	"save": [ "Joey" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Cron",
 		"Colin",

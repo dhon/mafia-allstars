@@ -19,12 +19,10 @@
 		"Zocide",
 		"Erik"
 	],
-	"n0": [
-		"Joey",
-		"Pope"
-	],
-	"n0_save": "Ramza",
-	"shot": "Pat",
+	"kill": [ [ "Joey", "Pope" ] ],
+	"check": [],
+	"save": [ "Ramza" ],
+	"shot": [ "Pat" ],
 	"lynched": [
 		"Danny",
 		"Ryan",

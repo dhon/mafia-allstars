@@ -19,12 +19,10 @@
 		"Ryuzilla",
 		"Double A"
 	],
-	"n0": [
-		"Noah",
-		"Pope"
-	],
-	"n0_save": "Wiggles",
-	"shot": "Kny",
+	"kill": [ [ "Noah", "Pope" ] ],
+	"check": [],
+	"save": [ "Wiggles" ],
+	"shot": [ "Kny" ],
 	"lynched": [
 		"Tana",
 		"Rollo",

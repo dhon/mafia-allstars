@@ -19,12 +19,10 @@
 		"Rollo",
 		"Ryuzilla"
 	],
-	"n0": [
-		"dLGN",
-		"Joey"
-	],
-	"n0_save": "Captain",
-	"shot": "Onionknight",
+	"kill": [ [ "dLGN", "Joey" ] ],
+	"check": [],
+	"save": [ "Captain" ],
+	"shot": [ "Onionknight" ],
 	"lynched": [
 		"Rollo",
 		"Ryuzilla",

@@ -19,12 +19,10 @@
 		"Radial",
 		"dLGN"
 	],
-	"n0": [
-		"Joey",
-		"Trump"
-	],
-	"n0_save": "Trump",
-	"shot": "",
+	"kill": [ [ "Joey", "Trump" ] ],
+	"check": [],
+	"save": [ "Trump" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Radial",
 		"Ocane",

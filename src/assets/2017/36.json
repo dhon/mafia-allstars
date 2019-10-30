@@ -19,12 +19,10 @@
 		"Mattchew",
 		"Pope"
 	],
-	"n0": [
-		"Danny",
-		"Guy"
-	],
-	"n0_save": "Guy",
-	"shot": "Turtle",
+	"kill": [ [ "Danny", "Guy" ] ],
+	"check": [],
+	"save": [ "Guy" ],
+	"shot": [ "Turtle" ],
 	"lynched": [
 		"Mattchew",
 		"Pope"

@@ -19,12 +19,10 @@
 		"Ryan",
 		"Pat"
 	],
-	"n0": [
-		"Younguns",
-		"Ghost 1"
-	],
-	"n0_save": "Pat",
-	"shot": "Pope",
+	"kill": [ [ "Younguns", "Ghost 1" ] ],
+	"check": [],
+	"save": [ "Pat" ],
+	"shot": [ "Pope" ],
 	"lynched": [
 		"Dave Dob",
 		"Pat",

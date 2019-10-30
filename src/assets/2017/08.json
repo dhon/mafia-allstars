@@ -19,12 +19,10 @@
 		"Ryuzilla",
 		"Steve"
 	],
-	"n0": [
-		"Jan",
-		"Noah"
-	],
-	"n0_save": "Steve",
-	"shot": "",
+	"kill": [ [ "Jan", "Noah" ] ],
+	"check": [],
+	"save": [ "Steve" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Steve",
 		"Pozzai",

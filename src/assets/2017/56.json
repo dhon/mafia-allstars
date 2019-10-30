@@ -19,12 +19,10 @@
 		"Gilbert",
 		"Steve"
 	],
-	"n0": [
-		"Pat",
-		"Jan"
-	],
-	"n0_save": "Jan",
-	"shot": "Ocane",
+	"kill": [ [ "Pat", "Jan" ] ],
+	"check": [],
+	"save": [ "Jan" ],
+	"shot": [ "Ocane" ],
 	"lynched": [
 		"Gilbert",
 		"Steve"

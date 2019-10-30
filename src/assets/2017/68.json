@@ -19,12 +19,10 @@
 		"David",
 		"Wiggles"
 	],
-	"n0": [
-		"Colin",
-		"Kny"
-	],
-	"n0_save": "David",
-	"shot": "Ryan",
+	"kill": [ [ "Colin", "Kny" ] ],
+	"check": [],
+	"save": [ "David" ],
+	"shot": [ "Ryan" ],
 	"lynched": [
 		"Fonti",
 		"Siggywiggy",

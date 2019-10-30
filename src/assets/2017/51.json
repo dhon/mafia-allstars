@@ -19,12 +19,10 @@
 		"Trump",
 		"David"
 	],
-	"n0": [
-		"Striker",
-		"Joey"
-	],
-	"n0_save": "Double A",
-	"shot": "Pope",
+	"kill": [ [ "Striker", "Joey" ] ],
+	"check": [],
+	"save": [ "Double A" ],
+	"shot": [ "Pope" ],
 	"lynched": [
 		"Trump",
 		"Cron",

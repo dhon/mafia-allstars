@@ -19,12 +19,10 @@
 		"5",
 		"Cron"
 	],
-	"n0": [
-		"Kny",
-		"Wiggles"
-	],
-	"n0_save": "Steve",
-	"shot": "Turtle",
+	"kill": [ [ "Kny", "Wiggles" ] ],
+	"check": [],
+	"save": [ "Steve" ],
+	"shot": [ "Turtle" ],
 	"lynched": [
 		"5",
 		"Cron",

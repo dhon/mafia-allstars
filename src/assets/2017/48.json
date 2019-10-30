@@ -19,12 +19,10 @@
 		"Pope",
 		"Striker"
 	],
-	"n0": [
-		"Jan",
-		"Ryuzilla"
-	],
-	"n0_save": "Rollo",
-	"shot": "",
+	"kill": [ [ "Jan", "Ryuzilla" ] ],
+	"check": [],
+	"save": [ "Rollo" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Pat",
 		"Pope",

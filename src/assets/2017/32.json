@@ -19,12 +19,10 @@
 		"Bstee",
 		"Danny"
 	],
-	"n0": [
-		"Pope",
-		"5"
-	],
-	"n0_save": "Ryuzilla",
-	"shot": "",
+	"kill": [ [ "Pope", "5" ] ],
+	"check": [],
+	"save": [ "Ryuzilla" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Wes",
 		"Ocane",

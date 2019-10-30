@@ -19,12 +19,10 @@
 		"Pope",
 		"Pozzai"
 	],
-	"n0": [
-		"Ryuzilla",
-		"Ocane"
-	],
-	"n0_save": "Pope",
-	"shot": "",
+	"kill": [ [ "Ryuzilla", "Ocane" ] ],
+	"check": [],
+	"save": [ "Pope" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Duke",
 		"CJ",

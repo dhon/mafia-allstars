@@ -19,12 +19,10 @@
 		"Mal",
 		"Jan"
 	],
-	"n0": [
-		"Noah",
-		"Cron"
-	],
-	"n0_save": "Mal",
-	"shot": "Erik",
+	"kill": [ [ "Noah", "Cron" ] ],
+	"check": [],
+	"save": [ "Mal" ],
+	"shot": [ "Erik" ],
 	"lynched": [
 		"Mal",
 		"Jan",

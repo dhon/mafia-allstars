@@ -19,12 +19,10 @@
 		"Wiggles",
 		"Kny"
 	],
-	"n0": [
-		"Jan",
-		"Striker"
-	],
-	"n0_save": "Striker",
-	"shot": "Jon Paul",
+	"kill": [ [ "Jan", "Striker" ] ],
+	"check": [],
+	"save": [ "Striker" ],
+	"shot": [ "Jon Paul" ],
 	"lynched": [
 		"Kny",
 		"Wiggles",

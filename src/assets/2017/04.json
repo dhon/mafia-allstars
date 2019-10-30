@@ -19,12 +19,10 @@
 		"Noah",
 		"Ryan"
 	],
-	"n0": [
-		"Jaleb",
-		"Dave Dob"
-	],
-	"n0_save": "Noah",
-	"shot": "Fonti",
+	"kill": [ [ "Jaleb", "Dave Dob" ] ],
+	"check": [],
+	"save": [ "Noah" ],
+	"shot": [ "Fonti" ],
 	"lynched": [
 		"Optic",
 		"Noah",

@@ -19,12 +19,10 @@
 		"Joey",
 		"Double A"
 	],
-	"n0": [
-		"Colin",
-		"Ryan"
-	],
-	"n0_save": "Joey",
-	"shot": "",
+	"kill": [ [ "Colin", "Ryan" ] ],
+	"check": [],
+	"save": [ "Joey" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Mattchew",
 		"5",

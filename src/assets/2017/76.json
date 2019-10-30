@@ -19,12 +19,10 @@
 		"Duke",
 		"Reign"
 	],
-	"n0": [
-		"CJ",
-		"Dave Dob"
-	],
-	"n0_save": "Captain",
-	"shot": "Duke",
+	"kill": [ [ "CJ", "Dave Dob" ] ],
+	"check": [],
+	"save": [ "Captain" ],
+	"shot": [ "Duke" ],
 	"lynched": [
 		"Tunak",
 		"Pope",

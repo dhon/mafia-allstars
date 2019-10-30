@@ -19,12 +19,10 @@
 		"Jan",
 		"Ryuzilla"
 	],
-	"n0": [
-		"Fonti",
-		"Joey"
-	],
-	"n0_save": "Jan",
-	"shot": "David",
+	"kill": [ [ "Fonti", "Joey" ] ],
+	"check": [],
+	"save": [ "Jan" ],
+	"shot": [ "David" ],
 	"lynched": [
 		"Jan",
 		"Ryan",

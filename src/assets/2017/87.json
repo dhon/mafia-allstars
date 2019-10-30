@@ -19,12 +19,10 @@
 		"Guy",
 		"Pope"
 	],
-	"n0": [
-		"5",
-		"Joey"
-	],
-	"n0_save": "Striker",
-	"shot": "Ocane",
+	"kill": [ [ "5", "Joey" ] ],
+	"check": [],
+	"save": [ "Striker" ],
+	"shot": [ "Ocane" ],
 	"lynched": [
 		"Colin",
 		"Gnome"

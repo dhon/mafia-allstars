@@ -19,12 +19,10 @@
 		"Fonti",
 		"Lt"
 	],
-	"n0": [
-		"Onionknight",
-		"Noah"
-	],
-	"n0_save": "Cron",
-	"shot": "",
+	"kill": [ [ "Onionknight", "Noah" ] ],
+	"check": [],
+	"save": [ "Cron" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Trump",
 		"Jan",

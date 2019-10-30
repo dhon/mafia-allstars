@@ -19,12 +19,10 @@
 		"Freak",
 		"Slip"
 	],
-	"n0": [
-		"dLGN",
-		"Ryuzilla"
-	],
-	"n0_save": "Noah",
-	"shot": "Freak",
+	"kill": [ [ "dLGN", "Ryuzilla" ] ],
+	"check": [],
+	"save": [ "Noah" ],
+	"shot": [ "Freak" ],
 	"lynched": [
 		"Slip",
 		"Jan",

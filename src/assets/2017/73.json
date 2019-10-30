@@ -19,12 +19,10 @@
 		"Fonti",
 		"Siggywiggy"
 	],
-	"n0": [
-		"Onionknight",
-		"Ryuzilla"
-	],
-	"n0_save": "Ryuzilla",
-	"shot": "Colin",
+	"kill": [ [ "Onionknight", "Ryuzilla" ] ],
+	"check": [],
+	"save": [ "Ryuzilla" ],
+	"shot": [ "Colin" ],
 	"lynched": [
 		"Kub Kub",
 		"Fonti",

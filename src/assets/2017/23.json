@@ -19,12 +19,10 @@
 		"Noah",
 		"Nydus"
 	],
-	"n0": [
-		"Steve",
-		"Rollo"
-	],
-	"n0_save": "Mal",
-	"shot": "5",
+	"kill": [ [ "Steve", "Rollo" ] ],
+	"check": [],
+	"save": [ "Mal" ],
+	"shot": [ "5" ],
 	"lynched": [
 		"Joey",
 		"dLGN"

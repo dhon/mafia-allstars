@@ -19,12 +19,10 @@
 		"Niltak",
 		"Josh"
 	],
-	"n0": [
-		"Rollo",
-		"Younguns"
-	],
-	"n0_save": "Siggywiggy",
-	"shot": "Josh",
+	"kill": [ [ "Rollo", "Younguns" ] ],
+	"check": [],
+	"save": [ "Siggywiggy" ],
+	"shot": [ "Josh" ],
 	"lynched": [
 		"Wes",
 		"Duke",

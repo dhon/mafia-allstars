@@ -19,12 +19,10 @@
 		"Joey",
 		"Pat"
 	],
-	"n0": [
-		"dLGN",
-		"Ghost 1"
-	],
-	"n0_save": "Joey",
-	"shot": "Ryuzilla",
+	"kill": [ [ "dLGN", "Ghost 1" ] ],
+	"check": [],
+	"save": [ "Joey" ],
+	"shot": [ "Ryuzilla" ],
 	"lynched": [
 		"Pope",
 		"Joey",

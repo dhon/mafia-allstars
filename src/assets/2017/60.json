@@ -19,12 +19,10 @@
 		"Wiggles",
 		"Guy"
 	],
-	"n0": [
-		"David",
-		"Jan"
-	],
-	"n0_save": "Wes",
-	"shot": "",
+	"kill": [ [ "David", "Jan" ] ],
+	"check": [],
+	"save": [ "Wes" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Dave Dob",
 		"Guy",

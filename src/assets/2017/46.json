@@ -19,12 +19,10 @@
 		"Cron",
 		"Pope"
 	],
-	"n0": [
-		"David",
-		"Pat"
-	],
-	"n0_save": "Turtle",
-	"shot": "",
+	"kill": [ [ "David", "Pat" ] ],
+	"check": [],
+	"save": [ "Turtle" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Cron",
 		"Wiggles",

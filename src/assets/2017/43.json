@@ -19,12 +19,10 @@
 		"Jan",
 		"Ryan"
 	],
-	"n0": [
-		"Striker",
-		"Cron"
-	],
-	"n0_save": "Ramza",
-	"shot": "Mattchew",
+	"kill": [ [ "Striker", "Cron" ] ],
+	"check": [],
+	"save": [ "Ramza" ],
+	"shot": [ "Mattchew" ],
 	"lynched": [
 		"Ryan",
 		"dLGN",

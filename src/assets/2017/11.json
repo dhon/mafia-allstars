@@ -19,12 +19,10 @@
 		"Slip",
 		"Pope"
 	],
-	"n0": [
-		"Wiggles",
-		"Nydus"
-	],
-	"n0_save": "Nydus",
-	"shot": "Pope",
+	"kill": [ [ "Wiggles", "Nydus" ] ],
+	"check": [],
+	"save": [ "Nydus" ],
+	"shot": [ "Pope" ],
 	"lynched": [
 		"Joey",
 		"Storrzerg",

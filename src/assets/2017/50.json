@@ -19,12 +19,10 @@
 		"Ryan",
 		"Owner"
 	],
-	"n0": [
-		"Pope",
-		"Captain"
-	],
-	"n0_save": "Fonti",
-	"shot": "Fletch",
+	"kill": [ [ "Pope", "Captain" ] ],
+	"check": [],
+	"save": [ "Fonti" ],
+	"shot": [ "Fletch" ],
 	"lynched": [
 		"Ryan",
 		"Double A",

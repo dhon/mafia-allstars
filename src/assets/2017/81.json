@@ -19,12 +19,10 @@
 		"Pope",
 		"Ocane"
 	],
-	"n0": [
-		"Cron",
-		"Joey"
-	],
-	"n0_save": "Rollo",
-	"shot": "Striker",
+	"kill": [ [ "Cron", "Joey" ] ],
+	"check": [],
+	"save": [ "Rollo" ],
+	"shot": [ "Striker" ],
 	"lynched": [
 		"Rollo",
 		"Pope",

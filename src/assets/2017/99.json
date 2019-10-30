@@ -19,12 +19,10 @@
 		"Dave Dob",
 		"Ryuzilla"
 	],
-	"n0": [
-		"Joey",
-		"Guy"
-	],
-	"n0_save": "Ocane",
-	"shot": "",
+	"kill": [ [ "Joey", "Guy" ] ],
+	"check": [],
+	"save": [ "Ocane" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Ocane",
 		"Striker",

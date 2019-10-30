@@ -19,12 +19,10 @@
 		"Noah",
 		"Ramza"
 	],
-	"n0": [
-		"Siggywiggy",
-		"Ryuzilla"
-	],
-	"n0_save": "Joey",
-	"shot": "Joey",
+	"kill": [ [ "Siggywiggy", "Ryuzilla" ] ],
+	"check": [],
+	"save": [ "Joey" ],
+	"shot": [ "Joey" ],
 	"lynched": [
 		"Gnome",
 		"5"

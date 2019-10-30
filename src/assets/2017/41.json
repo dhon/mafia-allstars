@@ -19,12 +19,10 @@
 		"Kane",
 		"Ryuzilla"
 	],
-	"n0": [
-		"Rollo",
-		"5"
-	],
-	"n0_save": "Kny",
-	"shot": "Ryuzilla",
+	"kill": [ [ "Rollo", "5" ] ],
+	"check": [],
+	"save": [ "Kny" ],
+	"shot": [ "Ryuzilla" ],
 	"lynched": [
 		"Wes",
 		"Turtle",

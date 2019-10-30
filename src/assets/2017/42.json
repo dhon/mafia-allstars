@@ -19,12 +19,10 @@
 		"Kny",
 		"Danny"
 	],
-	"n0": [
-		"Ryuzilla",
-		"Ryuzilla"
-	],
-	"n0_save": "Ryuzilla",
-	"shot": "Fletch",
+	"kill": [ [ "Ryuzilla", "Ryuzilla" ] ],
+	"check": [],
+	"save": [ "Ryuzilla" ],
+	"shot": [ "Fletch" ],
 	"lynched": [
 		"Pope",
 		"Kny",

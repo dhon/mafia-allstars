@@ -19,12 +19,10 @@
 		"Striker",
 		"Younguns"
 	],
-	"n0": [
-		"Pope",
-		"Noah"
-	],
-	"n0_save": "Joey",
-	"shot": "",
+	"kill": [ [ "Pope", "Noah" ] ],
+	"check": [],
+	"save": [ "Joey" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Colin",
 		"Striker",

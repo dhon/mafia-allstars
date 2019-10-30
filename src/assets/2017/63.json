@@ -19,12 +19,10 @@
 		"Siggywiggy",
 		"Noah"
 	],
-	"n0": [
-		"Striker",
-		"Fonti"
-	],
-	"n0_save": "Joey",
-	"shot": "",
+	"kill": [ [ "Striker", "Fonti" ] ],
+	"check": [],
+	"save": [ "Joey" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Double A",
 		"Guy"

@@ -1,3 +1,4 @@
+import { stats2017 } from './stats-2017';
 import { stats2018 } from './stats-2018';
 import { stats2019 } from './stats-2019';
 import * as Schemas from '../interfaces/stats.interface';
@@ -9,13 +10,13 @@ export class StatsService {
   public getPlayerStats(year: '2017' | '2018' | '2019'): Map<string, Schemas.PlayerStats> {
     let mafiaGames = [];
     if (year === '2017') {
-      mafiaGames = stats2018; // Temp
+      mafiaGames = stats2017;
     } else if (year === '2018') {
       mafiaGames = stats2018;
     } else if (year === '2019') {
       mafiaGames = stats2019;
     } else {
-      console.log('Warning: Calling getPlayerStats with invalid year.');
+      console.log('Warning: Year is not valid.');
     }
     const playerNames = this.initPlayerNames(mafiaGames);
     const playerStats = this.initPlayerStats(playerNames);

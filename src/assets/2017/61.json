@@ -19,12 +19,10 @@
 		"Greg",
 		"Joey"
 	],
-	"n0": [
-		"Double A",
-		"Colin"
-	],
-	"n0_save": "Duke",
-	"shot": "Guy",
+	"kill": [ [ "Double A", "Colin" ] ],
+	"check": [],
+	"save": [ "Duke" ],
+	"shot": [ "Guy" ],
 	"lynched": [
 		"Niltak",
 		"Jan"

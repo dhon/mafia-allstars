@@ -19,12 +19,10 @@
 		"Slip",
 		"5"
 	],
-	"n0": [
-		"Pope",
-		"dLGN"
-	],
-	"n0_save": "Joey",
-	"shot": "5",
+	"kill": [ [ "Pope", "dLGN" ] ],
+	"check": [],
+	"save": [ "Joey" ],
+	"shot": [ "5" ],
 	"lynched": [
 		"Slip",
 		"Joey",

@@ -19,12 +19,10 @@
 		"Vert",
 		"Captain"
 	],
-	"n0": [
-		"Double A",
-		"Pope"
-	],
-	"n0_save": "Guy",
-	"shot": "Striker",
+	"kill": [ [ "Double A", "Pope" ] ],
+	"check": [],
+	"save": [ "Guy" ],
+	"shot": [ "Striker" ],
 	"lynched": [
 		"Captain",
 		"Vert",

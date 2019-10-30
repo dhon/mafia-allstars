@@ -19,12 +19,10 @@
 		"Double A",
 		"BaehreX"
 	],
-	"n0": [
-		"Captain",
-		"Pope"
-	],
-	"n0_save": "Pope",
-	"shot": "",
+	"kill": [ [ "Captain", "Pope" ] ],
+	"check": [],
+	"save": [ "Pope" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Rollo",
 		"Fletch",

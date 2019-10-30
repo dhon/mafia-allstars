@@ -19,12 +19,10 @@
 		"Pope",
 		"Guy"
 	],
-	"n0": [
-		"Ryan",
-		"Siggywiggy"
-	],
-	"n0_save": "Colin",
-	"shot": "",
+	"kill": [ [ "Ryan", "Siggywiggy" ] ],
+	"check": [],
+	"save": [ "Colin" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Pope",
 		"Ramza",

@@ -19,12 +19,10 @@
 		"Younguns",
 		"Guy"
 	],
-	"n0": [
-		"Pope",
-		"Noah"
-	],
-	"n0_save": "Guy",
-	"shot": "Captain",
+	"kill": [ [ "Pope", "Noah" ] ],
+	"check": [],
+	"save": [ "Guy" ],
+	"shot": [ "Captain" ],
 	"lynched": [
 		"Younguns",
 		"Nukey",

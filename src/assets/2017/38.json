@@ -19,12 +19,10 @@
 		"Optic",
 		"Peeperz"
 	],
-	"n0": [
-		"Cron",
-		"Guy"
-	],
-	"n0_save": "Ryuzilla",
-	"shot": "",
+	"kill": [ [ "Cron", "Guy" ] ],
+	"check": [],
+	"save": [ "Ryuzilla" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Andy",
 		"Optic",

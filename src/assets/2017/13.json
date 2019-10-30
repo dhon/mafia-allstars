@@ -19,12 +19,10 @@
 		"Wiggles",
 		"Joey"
 	],
-	"n0": [
-		"Captain",
-		"Noah"
-	],
-	"n0_save": "Noah",
-	"shot": "",
+	"kill": [ [ "Captain", "Noah" ] ],
+	"check": [],
+	"save": [ "Noah" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Joey",
 		"Ryuzilla",

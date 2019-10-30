@@ -19,12 +19,10 @@
 		"dLGN",
 		"Fonti"
 	],
-	"n0": [
-		"Ryuzilla",
-		"Joey"
-	],
-	"n0_save": "Pope",
-	"shot": "",
+	"kill": [ [ "Ryuzilla", "Joey" ] ],
+	"check": [],
+	"save": [ "Pope" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"dLGN",
 		"Erik",

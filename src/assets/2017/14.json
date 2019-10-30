@@ -19,12 +19,10 @@
 		"Captain",
 		"Freak"
 	],
-	"n0": [
-		"Slip",
-		"5"
-	],
-	"n0_save": "Ryuzilla",
-	"shot": "Mattchew",
+	"kill": [ [ "Slip", "5" ] ],
+	"check": [],
+	"save": [ "Ryuzilla" ],
+	"shot": [ "Mattchew" ],
 	"lynched": [
 		"Captain",
 		"Freak",

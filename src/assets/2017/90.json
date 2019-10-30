@@ -19,12 +19,10 @@
 		"Siggywiggy",
 		"Jojo"
 	],
-	"n0": [
-		"Mavelost",
-		"Reign"
-	],
-	"n0_save": "Ryuzilla",
-	"shot": "",
+	"kill": [ [ "Mavelost", "Reign" ] ],
+	"check": [],
+	"save": [ "Ryuzilla" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Garrinski",
 		"dLGN",

@@ -19,12 +19,10 @@
 		"Wiggles",
 		"Kny"
 	],
-	"n0": [
-		"Optic",
-		"Lt"
-	],
-	"n0_save": "Nydus",
-	"shot": "Wiggles",
+	"kill": [ [ "Optic", "Lt" ] ],
+	"check": [],
+	"save": [ "Nydus" ],
+	"shot": [ "Wiggles" ],
 	"lynched": [
 		"Kny",
 		"Jon Paul",

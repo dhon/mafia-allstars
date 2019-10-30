@@ -19,12 +19,10 @@
 		"Jan",
 		"Reign"
 	],
-	"n0": [
-		"Colin",
-		"Ryuzilla"
-	],
-	"n0_save": "Duke",
-	"shot": "",
+	"kill": [ [ "Colin", "Ryuzilla" ] ],
+	"check": [],
+	"save": [ "Duke" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Jan",
 		"Noah",

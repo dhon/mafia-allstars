@@ -19,12 +19,10 @@
 		"Dave Dob",
 		"Cron"
 	],
-	"n0": [
-		"Captain",
-		"Double A"
-	],
-	"n0_save": "Steve",
-	"shot": "",
+	"kill": [ [ "Captain", "Double A" ] ],
+	"check": [],
+	"save": [ "Steve" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Dave Dob",
 		"Steve",

@@ -19,12 +19,10 @@
 		"Colin",
 		"Gilbert"
 	],
-	"n0": [
-		"Mattchew",
-		"Captain"
-	],
-	"n0_save": "Steve",
-	"shot": "Dakng",
+	"kill": [ [ "Mattchew", "Captain" ] ],
+	"check": [],
+	"save": [ "Steve" ],
+	"shot": [ "Dakng" ],
 	"lynched": [
 		"Gilbert",
 		"Colin"

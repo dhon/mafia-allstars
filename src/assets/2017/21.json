@@ -19,12 +19,10 @@
 		"Ramza",
 		"Pope"
 	],
-	"n0": [
-		"Joey",
-		"5"
-	],
-	"n0_save": "Double A",
-	"shot": "Younguns",
+	"kill": [ [ "Joey", "5" ] ],
+	"check": [],
+	"save": [ "Double A" ],
+	"shot": [ "Younguns" ],
 	"lynched": [
 		"Greg",
 		"Steve"

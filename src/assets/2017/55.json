@@ -19,12 +19,10 @@
 		"Captain",
 		"dLGN"
 	],
-	"n0": [
-		"Ryuzilla",
-		"Rollo"
-	],
-	"n0_save": "David",
-	"shot": "Noah",
+	"kill": [ [ "Ryuzilla", "Rollo" ] ],
+	"check": [],
+	"save": [ "David" ],
+	"shot": [ "Noah" ],
 	"lynched": [
 		"David",
 		"dLGN",

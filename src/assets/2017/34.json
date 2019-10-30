@@ -19,12 +19,10 @@
 		"Jan",
 		"5"
 	],
-	"n0": [
-		"Alesh",
-		"Optic"
-	],
-	"n0_save": "Pope",
-	"shot": "Rollo",
+	"kill": [ [ "Alesh", "Optic" ] ],
+	"check": [],
+	"save": [ "Pope" ],
+	"shot": [ "Rollo" ],
 	"lynched": [
 		"Jan",
 		"Ryan",

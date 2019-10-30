@@ -19,12 +19,10 @@
 		"Pope",
 		"Pat"
 	],
-	"n0": [
-		"Ghost 1",
-		"Ghost 2"
-	],
-	"n0_save": "",
-	"shot": "",
+	"kill": [ [ "Ghost 1", "Ghost 2" ] ],
+	"check": [],
+	"save": [ "NONE" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Siggywiggy",
 		"Pat",

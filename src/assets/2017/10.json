@@ -19,12 +19,10 @@
 		"Jan",
 		"Wiggles"
 	],
-	"n0": [
-		"Ryuzilla",
-		"Kny"
-	],
-	"n0_save": "5",
-	"shot": "Justice",
+	"kill": [ [ "Ryuzilla", "Kny" ] ],
+	"check": [],
+	"save": [ "5" ],
+	"shot": [ "Justice" ],
 	"lynched": [
 		"Wiggles",
 		"Jan",

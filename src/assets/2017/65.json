@@ -19,12 +19,10 @@
 		"Pope",
 		"Andy"
 	],
-	"n0": [
-		"Ryuzilla",
-		"EffinNipples"
-	],
-	"n0_save": "Joey",
-	"shot": "Jan",
+	"kill": [ [ "Ryuzilla", "EffinNipples" ] ],
+	"check": [],
+	"save": [ "Joey" ],
+	"shot": [ "Jan" ],
 	"lynched": [
 		"Ryan",
 		"Colin",

@@ -19,12 +19,10 @@
 		"Dave Dob",
 		"Noah"
 	],
-	"n0": [
-		"Kny",
-		"Gilbert"
-	],
-	"n0_save": "Rollo",
-	"shot": "Dave Dob",
+	"kill": [ [ "Kny", "Gilbert" ] ],
+	"check": [],
+	"save": [ "Rollo" ],
+	"shot": [ "Dave Dob" ],
 	"lynched": [
 		"Wes",
 		"Peeperz",

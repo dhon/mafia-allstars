@@ -19,12 +19,10 @@
 		"Ryuzilla",
 		"Pope"
 	],
-	"n0": [
-		"Colin",
-		"Younguns"
-	],
-	"n0_save": "Peeperz",
-	"shot": "",
+	"kill": [ [ "Colin", "Younguns" ] ],
+	"check": [],
+	"save": [ "Peeperz" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"David",
 		"Tunak",

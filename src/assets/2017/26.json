@@ -19,12 +19,10 @@
 		"Captain",
 		"Pope"
 	],
-	"n0": [
-		"Ben",
-		"Optic"
-	],
-	"n0_save": "Noah",
-	"shot": "Captain",
+	"kill": [ [ "Ben", "Optic" ] ],
+	"check": [],
+	"save": [ "Noah" ],
+	"shot": [ "Captain" ],
 	"lynched": [
 		"Garrinski",
 		"Pope",

@@ -19,12 +19,10 @@
 		"FattDamon",
 		"Ocane"
 	],
-	"n0": [
-		"Wiggles",
-		"Templar"
-	],
-	"n0_save": "Ocane",
-	"shot": "Trump",
+	"kill": [ [ "Wiggles", "Templar" ] ],
+	"check": [],
+	"save": [ "Ocane" ],
+	"shot": [ "Trump" ],
 	"lynched": [
 		"FattDamon",
 		"Ryuzilla",

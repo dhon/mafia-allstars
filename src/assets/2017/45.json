@@ -19,12 +19,10 @@
 		"Striker",
 		"Cron"
 	],
-	"n0": [
-		"dLGN",
-		"5"
-	],
-	"n0_save": "Ryuzilla",
-	"shot": "Pope",
+	"kill": [ [ "dLGN", "5" ] ],
+	"check": [],
+	"save": [ "Ryuzilla" ],
+	"shot": [ "Pope" ],
 	"lynched": [
 		"Steve",
 		"David"

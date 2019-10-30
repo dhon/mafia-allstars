@@ -19,12 +19,10 @@
 		"Cron",
 		"FattDamon"
 	],
-	"n0": [
-		"5",
-		"Pope"
-	],
-	"n0_save": "Pope",
-	"shot": "",
+	"kill": [ [ "5", "Pope" ] ],
+	"check": [],
+	"save": [ "Pope" ],
+	"shot": [ "NONE" ],
 	"lynched": [
 		"Boone",
 		"FattDamon",
