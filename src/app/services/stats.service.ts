@@ -131,7 +131,7 @@ export class StatsService {
   }
 
   private getLynched(playerStats: Map<string, Schemas.PlayerStats>, game: Schemas.MafiaGame): void {
-    game.lynched.filter(lynch => lynch !== Schemas.SLEEP).forEach(lynch => {
+    game.lynched.filter(lynch => lynch !== Schemas.NONE).forEach(lynch => {
       const roll = this.getRoll(lynch, game);
       if (roll === Schemas.COP) {
         playerStats.get(lynch).lynchedAsCop++;

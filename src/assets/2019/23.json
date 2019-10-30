@@ -42,13 +42,13 @@
     "Younguns"
   ],
   "lynched": [
-    "SLEEP",
+    "NONE",
     "Jan",
     "Colin",
     "Rich",
-    "SLEEP",
+    "NONE",
     "Greg",
-    "SLEEP"
+    "NONE"
   ],
   "f3_win": [ "dLGN" ],
   "f3_loss": [ "David", "Plen" ],

@@ -37,12 +37,12 @@
     "Steve"
   ],
   "lynched": [
-    "SLEEP",
+    "NONE",
     "Joey",
     "Colin",
-    "SLEEP",
+    "NONE",
     "Plen",
-    "SLEEP"
+    "NONE"
   ],
   "f3_win": [ "Wiggles" ],
   "f3_loss": [ "dLGN", "Rich" ],

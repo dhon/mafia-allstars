@@ -5,7 +5,6 @@ export const MEDIC = 'Medic';
 export const VIGILANTE = 'Vigilante';
 export const VT = 'VT';
 export const NONE = 'NONE';
-export const SLEEP = 'SLEEP';
 
 export interface MafiaGame {
   id: string;
