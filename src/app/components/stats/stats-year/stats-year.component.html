@@ -1,14 +1,14 @@
 <div class="content">
-  <div>
+  <p>
     <app-stats-table
       title="20+ Games"
       [players]="highPlayers$ | async">
     </app-stats-table>
-  </div>
-  <div class="mt-3">
+  </p>
+  <p>
     <app-stats-table
       title="1-19 Games"
       [players]="lowPlayers$ | async">
     </app-stats-table>
-  </div>
+  </p>
 </div>
