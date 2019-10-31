@@ -1,16 +1,16 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand text-white" (click)="routeHome()">Super Mafia AllStars</a>
+    <a class="navbar-brand text-white" [routerLink]="['/']">Super Mafia AllStars</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link" (click)="routeHome()">Home</a>
-        <a class="nav-item nav-link" (click)="routeStatsYear('2019')">2019 Stats</a>
-        <a class="nav-item nav-link" (click)="routeStatsYear('2018')">2018 Stats</a>
-        <a class="nav-item nav-link" (click)="routeStatsYear('2017')">2017 Stats</a>
-        <a class="nav-item nav-link" (click)="routeStatsYear('all')">All Stats</a>
+        <a class="nav-item nav-link" [routerLink]="['/']">Home</a>
+        <a class="nav-item nav-link" [routerLink]="['/stats/2019']">2019 Stats</a>
+        <a class="nav-item nav-link" [routerLink]="['/stats/2018']">2018 Stats</a>
+        <a class="nav-item nav-link" [routerLink]="['/stats/2017']">2017 Stats</a>
+        <a class="nav-item nav-link" [routerLink]="['/stats/all']">All Stats</a>
         <!-- <a class="nav-item nav-link" (click)="routePlayers()">Players</a> -->
         <!-- <a class="nav-item nav-link" (click)="routeStats()">Stats</a> -->
       </div>
