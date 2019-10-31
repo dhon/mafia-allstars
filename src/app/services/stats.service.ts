@@ -38,7 +38,7 @@ export class StatsService {
     return this.sortMap(playerStats);
   }
 
-  private getMafiaGames(year: '2017' | '2018' | '2019' | 'all'): Schemas.MafiaGame[] {
+  public getMafiaGames(year: '2017' | '2018' | '2019' | 'all'): Schemas.MafiaGame[] {
     if (year === '2017') {
       return games2017;
     } else if (year === '2018') {

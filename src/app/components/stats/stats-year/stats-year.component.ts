@@ -44,5 +44,4 @@ export class StatsYearComponent implements OnInit {
       console.log('Warning: Year has an invalid value.');
     }
   }
-
 }

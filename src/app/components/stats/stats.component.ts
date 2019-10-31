@@ -11,5 +11,4 @@ export class StatsComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

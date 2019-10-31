@@ -26,5 +26,4 @@ export class PlayerStatsTableComponent implements OnInit, OnChanges {
     this.dataSource = new MatTableDataSource(this.players);
     this.dataSource.sort = this.sort;
   }
-
 }
