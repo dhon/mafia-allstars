@@ -1,5 +1,10 @@
 <div class="content">
   <p>
+    <app-game-stats-table
+      [gameStats]="gameStats$ | async">
+    </app-game-stats-table>
+  </p>
+  <p>
     <app-player-stats-table
       title="20+ Games"
       [players]="highPlayers$ | async">

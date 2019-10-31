@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { PlayersComponent } from './components/players/players.component';
 import { StatsComponent } from './components/stats/stats.component';
 import { StatsYearComponent } from './components/stats/stats-year/stats-year.component';
+import { GameStatsTableComponent } from './components/stats/stats-year/game-stats-table/game-stats-table.component';
 import { PlayerStatsTableComponent } from './components/stats/stats-year/player-stats-table/player-stats-table.component';
 import { StatsService } from './services/stats.service';
 
@@ -22,6 +23,7 @@ import { StatsService } from './services/stats.service';
     PlayersComponent,
     StatsComponent,
     StatsYearComponent,
+    GameStatsTableComponent,
     PlayerStatsTableComponent
   ],
   imports: [

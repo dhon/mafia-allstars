@@ -11,6 +11,7 @@ import * as Schemas from 'src/app/interfaces/stats.interface';
   styleUrls: ['./stats-year.component.scss']
 })
 export class StatsYearComponent implements OnInit {
+  public gameStats$: Observable<Schemas.GameStats>;
   public highPlayers$: Observable<Schemas.PlayerStats[]>;
   public lowPlayers$: Observable<Schemas.PlayerStats[]>;
   private readonly minimumGames = 20;
@@ -18,11 +19,18 @@ export class StatsYearComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private statsService: StatsService) { }
 
   ngOnInit() {
-    this.highPlayers$ = this.activatedRoute.params.pipe(map(params => this.getPlayers(params.year, 'high')));
-    this.lowPlayers$ = this.activatedRoute.params.pipe(map(params => this.getPlayers(params.year, 'low')));
+    this.gameStats$ = this.activatedRoute.params.pipe(map(params => this.getGameStats(params.year)));
+    this.highPlayers$ = this.activatedRoute.params.pipe(map(params => this.getPlayerStats(params.year, 'high')));
+    this.lowPlayers$ = this.activatedRoute.params.pipe(map(params => this.getPlayerStats(params.year, 'low')));
   }
 
-  private getPlayers(year: '2017' | '2018' | '2019' | 'all', amount: 'high' | 'low'): Schemas.PlayerStats[] {
+  private getGameStats(year: '2017' | '2018' | '2019' | 'all'): Schemas.GameStats {
+    if (['2017', '2018', '2019', 'all'].includes(year)) {
+      return this.statsService.getGameStats(year);
+    }
+  }
+
+  private getPlayerStats(year: '2017' | '2018' | '2019' | 'all', amount: 'high' | 'low'): Schemas.PlayerStats[] {
     if (['2017', '2018', '2019', 'all'].includes(year)) {
       const playerStats = Array.from(this.statsService.getPlayerStats(year).values());
       if (amount === 'high') {

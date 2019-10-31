@@ -1,0 +1,13 @@
+table, th, tr, td {
+  border: 1px solid gray;
+  padding: 10px
+}
+tr:nth-child(odd){
+  background-color: #ccc;
+}
+tr:nth-child(even){
+  background-color: #e6e6e6;
+}
+table tr td {
+  text-align: right;
+}

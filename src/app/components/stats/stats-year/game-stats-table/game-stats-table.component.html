@@ -1,0 +1,30 @@
+<table>
+  <tr>
+    <th></th>
+    <th>Town Wins</th>
+    <th>Mafia Wins</th>
+    <th>Town Win %</th>
+    <th *ngIf="gameStats?.totalDayOneTwoSleeps !== 0">D1/2 Sleeps</th>
+  </tr>
+  <tr>
+    <th>G1</th>
+    <td>{{gameStats?.game1TownWins}}</td>
+    <td>{{gameStats?.game1MafiaWins}}</td>
+    <td>{{gameStats?.game1TownWinPercentage}}%</td>
+    <td *ngIf="gameStats?.totalDayOneTwoSleeps !== 0">{{gameStats?.game1DayOneTwoSleeps}}</td>
+  </tr>
+  <tr>
+    <th>G2</th>
+    <td>{{gameStats?.game2TownWins}}</td>
+    <td>{{gameStats?.game2MafiaWins}}</td>
+    <td>{{gameStats?.game2TownWinPercentage}}%</td>
+    <td *ngIf="gameStats?.totalDayOneTwoSleeps !== 0">{{gameStats?.game2DayOneTwoSleeps}}</td>
+  </tr>
+  <tr>
+    <th>Total</th>
+    <td>{{gameStats?.totalTownWins}}</td>
+    <td>{{gameStats?.totalMafiaWins}}</td>
+    <td>{{gameStats?.totalTownWinPercentage}}%</td>
+    <td *ngIf="gameStats?.totalDayOneTwoSleeps !== 0">{{gameStats?.totalDayOneTwoSleeps}}</td>
+  </tr>
+</table>
