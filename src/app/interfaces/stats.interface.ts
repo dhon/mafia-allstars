@@ -23,6 +23,21 @@ export interface MafiaGame {
   winner: string;
 }
 
+export interface GameStats {
+  game1TownWins: number;
+  game2TownWins: number;
+  totalTownWins: number;
+  game1MafiaWins: number;
+  game2MafiaWins: number;
+  totalMafiaWins: number;
+  game1TownWinPercentage: number;
+  game2TownWinPercentage: number;
+  totalTownWinPercentage: number;
+  game1DayOneTwoSleeps: number;
+  game2DayOneTwoSleeps: number;
+  totalDayOneTwoSleeps: number;
+}
+
 export interface PlayerStats {
   name: string;
   games: number;

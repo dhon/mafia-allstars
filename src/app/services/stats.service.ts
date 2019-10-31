@@ -7,33 +7,66 @@ export class StatsService {
 
   constructor() {}
 
+  public getGameStats(year: '2017' | '2018' | '2019' | 'all'): Schemas.GameStats {
+    const mafiaGames = this.getMafiaGames(year);
+    const gameStats = this.initGameStats(year);
+    mafiaGames.forEach(game => {
+      this.addGameWinner(gameStats, game);
+      if (year !== '2017') {
+        this.addGameSleeps(gameStats, game);
+      }
+    });
+    this.calculateGameTotals(gameStats);
+    return gameStats;
+  }
+
   public getPlayerStats(year: '2017' | '2018' | '2019' | 'all'): Map<string, Schemas.PlayerStats> {
-    let mafiaGames = [];
-    if (year === '2017') {
-      mafiaGames = games2017;
-    } else if (year === '2018') {
-      mafiaGames = games2018;
-    } else if (year === '2019') {
-      mafiaGames = games2019;
-    } else if (year === 'all') {
-      mafiaGames = [...games2017, ...games2018, ...games2019];
-    } else {
-      console.log('Warning: Year is not valid.');
-    }
+    const mafiaGames = this.getMafiaGames(year);
     const playerNames = this.initPlayerNames(mafiaGames);
     const playerStats = this.initPlayerStats(playerNames);
     mafiaGames.forEach(game => {
-      this.getGames(playerStats, game);
-      this.getRolled(playerStats, game);
-      this.getWinsLosses(playerStats, game);
-      this.getN0(playerStats, game);
-      this.getLynched(playerStats, game);
-      this.getShots(playerStats, game);
-      this.getFinal3(playerStats, game);
+      this.addGames(playerStats, game);
+      this.addRolled(playerStats, game);
+      this.addWinsLosses(playerStats, game);
+      this.addN0(playerStats, game);
+      this.addLynched(playerStats, game);
+      this.addShots(playerStats, game);
+      this.addFinal3(playerStats, game);
     });
-    this.getTotals(playerStats);
+    this.calculateTotals(playerStats);
     this.validateNames(mafiaGames);
     return this.sortMap(playerStats);
+  }
+
+  private getMafiaGames(year: '2017' | '2018' | '2019' | 'all'): Schemas.MafiaGame[] {
+    if (year === '2017') {
+      return games2017;
+    } else if (year === '2018') {
+      return games2018;
+    } else if (year === '2019') {
+      return games2019;
+    } else if (year === 'all') {
+      return [...games2017, ...games2018, ...games2019];
+    } else {
+      console.log('Warning: Year is not valid.');
+    }
+  }
+
+  private initGameStats(year: '2017' | '2018' | '2019' | 'all'): Schemas.GameStats {
+    return {
+      game1TownWins: 0,
+      game2TownWins: 0,
+      totalTownWins: 0,
+      game1MafiaWins: 0,
+      game2MafiaWins: 0,
+      totalMafiaWins: 0,
+      game1TownWinPercentage: null,
+      game2TownWinPercentage: null,
+      totalTownWinPercentage: null,
+      game1DayOneTwoSleeps: 0,
+      game2DayOneTwoSleeps: 0,
+      totalDayOneTwoSleeps: 0
+    };
   }
 
   private initPlayerNames(mafiaGames: Schemas.MafiaGame[]): string[] {
@@ -96,7 +129,42 @@ export class StatsService {
     return map;
   }
 
-  private getGames(playerStats: Map<string, Schemas.PlayerStats>, game: Schemas.MafiaGame): void {
+  private addGameWinner(gameStats: Schemas.GameStats, game: Schemas.MafiaGame): void {
+    if (game.id.includes('G1') && game.winner === Schemas.TOWN) {
+      gameStats.game1TownWins++;
+    } else if (game.id.includes('G2') && game.winner === Schemas.TOWN) {
+      gameStats.game2TownWins++;
+    } else if (game.id.includes('G1') && game.winner === Schemas.MAFIA) {
+      gameStats.game1MafiaWins++;
+    } else if (game.id.includes('G2') && game.winner === Schemas.MAFIA) {
+      gameStats.game2MafiaWins++;
+    } else {
+      console.log('Warning: Game Number or Winner is invalid.');
+    }
+  }
+
+  private addGameSleeps(gameStats: Schemas.GameStats, game: Schemas.MafiaGame): void {
+    for (let i = 0; i < 2; i++) {
+      if (game.id.includes('G1') && game.lynched[i] === Schemas.NONE) {
+        gameStats.game1DayOneTwoSleeps++;
+      } else if (game.id.includes('G2') && game.lynched[i] === Schemas.NONE) {
+        gameStats.game2DayOneTwoSleeps++;
+      } else {
+        console.log('Warning: Game Number is invalid.');
+      }
+    }
+  }
+
+  private calculateGameTotals(gameStats: Schemas.GameStats): void {
+    gameStats.totalTownWins = gameStats.game1TownWins + gameStats.game2TownWins;
+    gameStats.totalMafiaWins = gameStats.game1MafiaWins + gameStats.game2MafiaWins;
+    gameStats.totalDayOneTwoSleeps = gameStats.game1DayOneTwoSleeps + gameStats.game2DayOneTwoSleeps;
+    gameStats.game1TownWinPercentage = Math.round(((gameStats.game1TownWins / (gameStats.game1TownWins + gameStats.game1MafiaWins)) * 100));
+    gameStats.game2TownWinPercentage = Math.round(((gameStats.game2TownWins / (gameStats.game2TownWins + gameStats.game2MafiaWins)) * 100));
+    gameStats.totalTownWinPercentage = Math.round(((gameStats.totalTownWins / (gameStats.totalTownWins + gameStats.totalMafiaWins)) * 100));
+  }
+
+  private addGames(playerStats: Map<string, Schemas.PlayerStats>, game: Schemas.MafiaGame): void {
     playerStats.get(game.cop).games++;
     playerStats.get(game.medic).games++;
     playerStats.get(game.vigilante).games++;
@@ -104,13 +172,13 @@ export class StatsService {
     game.mafia.forEach(player => playerStats.get(player).games++);
   }
 
-  private getRolled(playerStats: Map<string, Schemas.PlayerStats>, game: Schemas.MafiaGame): void {
+  private addRolled(playerStats: Map<string, Schemas.PlayerStats>, game: Schemas.MafiaGame): void {
     playerStats.get(game.cop).rolledCop++;
     playerStats.get(game.medic).rolledMedic++;
     playerStats.get(game.vigilante).rolledVigilante++;
   }
 
-  private getWinsLosses(playerStats: Map<string, Schemas.PlayerStats>, game: Schemas.MafiaGame): void {
+  private addWinsLosses(playerStats: Map<string, Schemas.PlayerStats>, game: Schemas.MafiaGame): void {
     const town = [game.cop, game.medic, game.vigilante, ...game.vanilla_town];
     if (game.winner === Schemas.TOWN) {
       town.filter(player => this.survivedN0(player, game)).forEach(player => playerStats.get(player).townWins++);
@@ -123,14 +191,14 @@ export class StatsService {
     }
   }
 
-  private getN0(playerStats: Map<string, Schemas.PlayerStats>, game: Schemas.MafiaGame): void {
+  private addN0(playerStats: Map<string, Schemas.PlayerStats>, game: Schemas.MafiaGame): void {
     game.kill[0].forEach(player => playerStats.get(player).n0ed++);
     if (game.save[0] !== Schemas.NONE) {
       playerStats.get(game.save[0]).n0Saved++;
     }
   }
 
-  private getLynched(playerStats: Map<string, Schemas.PlayerStats>, game: Schemas.MafiaGame): void {
+  private addLynched(playerStats: Map<string, Schemas.PlayerStats>, game: Schemas.MafiaGame): void {
     game.lynched.filter(lynch => lynch !== Schemas.NONE).forEach(lynch => {
       const roll = this.getRoll(lynch, game);
       if (roll === Schemas.COP) {
@@ -149,7 +217,7 @@ export class StatsService {
     });
   }
 
-  private getShots(playerStats: Map<string, Schemas.PlayerStats>, game: Schemas.MafiaGame): void {
+  private addShots(playerStats: Map<string, Schemas.PlayerStats>, game: Schemas.MafiaGame): void {
     const shotPlayer = game.shot[game.shot.length - 1];
     if (shotPlayer !== Schemas.NONE) {
       const roll = this.getRoll(shotPlayer, game);
@@ -173,7 +241,7 @@ export class StatsService {
     }
   }
 
-  private getFinal3(playerStats: Map<string, Schemas.PlayerStats>, game: Schemas.MafiaGame): void {
+  private addFinal3(playerStats: Map<string, Schemas.PlayerStats>, game: Schemas.MafiaGame): void {
     if (game.f3_win && game.f3_loss) {
       game.f3_win.forEach(player => playerStats.get(player).final3Wins++);
       game.f3_loss.forEach(player => playerStats.get(player).final3Losses++);
@@ -182,7 +250,7 @@ export class StatsService {
     }
   }
 
-  private getTotals(playerStats: Map<string, Schemas.PlayerStats>): void {
+  private calculateTotals(playerStats: Map<string, Schemas.PlayerStats>): void {
     playerStats.forEach(player => {
       player.totalWins = player.townWins + player.mafiaWins;
       player.totalLosses = player.townLosses + player.mafiaLosses;
