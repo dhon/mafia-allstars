@@ -169,7 +169,7 @@
   <ng-container matColumnDef="header-row-group-1">
     <th mat-header-cell *matHeaderCellDef [attr.colspan]="1"> {{title}} </th>
   </ng-container>
-    
+
   <ng-container matColumnDef="header-row-group-2">
     <th mat-header-cell *matHeaderCellDef [attr.colspan]="4"> Total </th>
   </ng-container>
@@ -177,7 +177,7 @@
   <ng-container matColumnDef="header-row-group-3">
     <th mat-header-cell *matHeaderCellDef [attr.colspan]="3"> Town </th>
   </ng-container>
-    
+
   <ng-container matColumnDef="header-row-group-4">
     <th mat-header-cell *matHeaderCellDef [attr.colspan]="3"> Mafia </th>
   </ng-container>
@@ -185,11 +185,11 @@
   <ng-container matColumnDef="header-row-group-5">
     <th mat-header-cell *matHeaderCellDef [attr.colspan]="2"> N0 </th>
   </ng-container>
-    
+
   <ng-container matColumnDef="header-row-group-6">
     <th mat-header-cell *matHeaderCellDef [attr.colspan]="2"> F3 </th>
   </ng-container>
-    
+
   <ng-container matColumnDef="header-row-group-7">
     <th mat-header-cell *matHeaderCellDef [attr.colspan]="5"> Lynched As </th>
   </ng-container>
@@ -205,7 +205,7 @@
   <ng-container matColumnDef="header-row-group-10">
     <th mat-header-cell *matHeaderCellDef [attr.colspan]="3"> Rolled </th>
   </ng-container>
-    
+
   <ng-container matColumnDef="header-row-group-11">
     <th mat-header-cell *matHeaderCellDef [attr.colspan]="2"> Alignment </th>
   </ng-container>
@@ -221,8 +221,8 @@
     'header-row-group-8',
     'header-row-group-9',
     'header-row-group-10',
-    'header-row-group-11']">
+    'header-row-group-11']; sticky: true">
   </tr>
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>

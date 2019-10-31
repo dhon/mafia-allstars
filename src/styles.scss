@@ -9,21 +9,3 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-
-.mat-sort-header-button {
-  text-align: center;
-  margin: auto;
-}
-
-.mat-sort-header-container {
-  .mat-sort-header-arrow {
-    display: none;
-  }
-
-  &.mat-sort-header-sorted {
-    .mat-sort-header-arrow {
-      display: block;
-      color: #212529;
-    }
-  }
-}

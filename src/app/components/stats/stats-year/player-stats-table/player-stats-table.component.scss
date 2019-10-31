@@ -1,5 +1,37 @@
-tr:nth-child(odd){
-  background-color: #e6e6e6;
+::ng-deep {
+  thead tr:nth-child(odd) {
+    background-color: #bbb;
+  }
+
+  thead tr:nth-child(even) {
+    background-color: #bbb;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: #ddd;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #fff;
+  }
+
+  .mat-sort-header-button {
+    text-align: center;
+    margin: auto;
+  }
+
+  .mat-sort-header-container {
+    .mat-sort-header-arrow {
+      display: none;
+    }
+
+    &.mat-sort-header-sorted {
+      .mat-sort-header-arrow {
+        display: block;
+        color: #212529;
+      }
+    }
+  }
 }
 
 table {
