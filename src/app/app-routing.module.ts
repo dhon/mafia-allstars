@@ -4,6 +4,8 @@ import { HomeComponent } from './components/home/home.component';
 import { PlayersComponent } from './components/players/players.component';
 import { StatsComponent } from './components/stats/stats.component';
 import { StatsYearComponent } from './components/stats/stats-year/stats-year.component';
+import { GamesComponent } from './components/games/games.component';
+import { GamesDisplayComponent } from './components/games/games-display/games-display.component';
 
 const routes: Routes = [
   {
@@ -25,7 +27,17 @@ const routes: Routes = [
     path: 'stats/:year',
     component: StatsYearComponent,
     pathMatch: 'full'
-  }
+  },
+  {
+    path: 'games',
+    component: GamesComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'games/:year/:game',
+    component: GamesDisplayComponent,
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({

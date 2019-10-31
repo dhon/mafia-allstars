@@ -12,7 +12,9 @@ import { StatsComponent } from './components/stats/stats.component';
 import { StatsYearComponent } from './components/stats/stats-year/stats-year.component';
 import { GameStatsTableComponent } from './components/stats/stats-year/game-stats-table/game-stats-table.component';
 import { PlayerStatsTableComponent } from './components/stats/stats-year/player-stats-table/player-stats-table.component';
+import { GamesComponent } from './components/games/games.component';
 import { StatsService } from './services/stats.service';
+import { GamesDisplayComponent } from './components/games/games-display/games-display.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { StatsService } from './services/stats.service';
     StatsComponent,
     StatsYearComponent,
     GameStatsTableComponent,
-    PlayerStatsTableComponent
+    PlayerStatsTableComponent,
+    GamesComponent,
+    GamesDisplayComponent
   ],
   imports: [
     BrowserModule,
