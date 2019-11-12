@@ -1,3 +1,78 @@
 <div class="text-white">
-  {{gameData$ | async | json}}
+  <div class="mb-3">
+    <div>Id: {{ (gameData$ | async)?.id }}</div>
+    <div>Mafia: {{ (gameData$ | async)?.mafia[0] }}, {{ (gameData$ | async)?.mafia[1] }}, and {{ (gameData$ | async)?.mafia[2] }}</div>
+    <div>Cop: {{ (gameData$ | async)?.cop }}</div>
+    <div>Medic: {{ (gameData$ | async)?.medic }}</div>
+    <div>Vigilante: {{ (gameData$ | async)?.vigilante }}</div>
+    <div>
+      Vanilla Town: 
+      {{ (gameData$ | async)?.vanilla_town[0] }}, {{ (gameData$ | async)?.vanilla_town[1] }}, {{ (gameData$ | async)?.vanilla_town[2] }},
+      {{ (gameData$ | async)?.vanilla_town[3] }}, {{ (gameData$ | async)?.vanilla_town[4] }}, {{ (gameData$ | async)?.vanilla_town[5] }},
+      {{ (gameData$ | async)?.vanilla_town[6] }}, {{ (gameData$ | async)?.vanilla_town[7] }}, and {{ (gameData$ | async)?.vanilla_town[8] }}
+    </div>
+  </div>
+
+  <div class="mb-3" *ngIf="(gameData$ | async)?.id?.includes('2017'); else normal">
+    <div>Night 0 Kills: {{ (gameData$ | async)?.kill[0][0] }} and {{ (gameData$ | async)?.kill[0][1] }}</div>
+    <div>Night 0 Save: {{ (gameData$ | async)?.save[0] }}</div>
+    <div>Vigilante Shot: {{ (gameData$ | async)?.shot[0] }}</div>
+    <div>
+      Town Lynched: 
+      <span *ngFor="let lynch of (gameData$ | async)?.lynched; let last = last">
+        <ng-container *ngIf="!last">
+          {{ lynch }}, 
+        </ng-container>
+        <ng-container *ngIf="last">
+          and {{ lynch }}
+        </ng-container>
+      </span>
+    </div>
+  </div>
+  <ng-template #normal>
+    <div *ngFor="let kill of (gameData$ | async)?.kill; let i = index">
+      <div class="mb-3">
+        <div><b>Night {{ i }}</b></div>
+        <div *ngIf="(gameData$ | async)?.kill?.length > i && (gameData$ | async)?.kill[i]?.length === 2">
+          Mafia kill {{ (gameData$ | async)?.kill[i][0] }} and {{ (gameData$ | async)?.kill[i][1] }}
+        </div>
+        <div *ngIf="(gameData$ | async)?.kill?.length > i && (gameData$ | async)?.kill[i]?.length === 1">
+          Mafia kill {{ (gameData$ | async)?.kill[i][0] }}
+        </div>
+        <div *ngIf="(gameData$ | async)?.check?.length > i && (gameData$ | async)?.check[i]">
+          {{ (gameData$ | async)?.cop }} checks {{ (gameData$ | async)?.check[i] }}
+        </div>
+        <div *ngIf="(gameData$ | async)?.save?.length > i && (gameData$ | async)?.save[i]">
+          {{ (gameData$ | async)?.medic }} saves {{ (gameData$ | async)?.save[i] }}
+        </div>
+        <div *ngIf="(gameData$ | async)?.shot?.length > i && (gameData$ | async)?.shot[i]">
+          {{ (gameData$ | async)?.vigilante }} shot {{ (gameData$ | async)?.shot[i] }}
+        </div>
+      </div>
+      <div class="mb-3" *ngIf="(gameData$ | async)?.lynched?.length > i">
+        <div><b>Day {{ i + 1 }}</b></div>
+        <div *ngIf="(gameData$ | async)?.lynched?.length > i">
+          Town lynch {{ (gameData$ | async)?.lynched[i] }}
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  
+  <div class="text-white">
+    {{ (gameData$ | async)?.winner }} has won!
+    <div class="text-white" *ngIf="(gameData$ | async)?.f3_win?.length > 0 && (gameData$ | async)?.f3_loss?.length > 0">
+      <div *ngIf="(gameData$ | async)?.f3_win?.length === 2">
+        {{ (gameData$ | async)?.f3_win[0] }} and  {{ (gameData$ | async)?.f3_win[1] }} won in Final 3
+      </div>
+      <div *ngIf="(gameData$ | async)?.f3_win?.length === 1">
+        {{ (gameData$ | async)?.f3_win[0] }} won in Final 3
+      </div>
+      <div *ngIf="(gameData$ | async)?.f3_loss?.length === 2">
+        {{ (gameData$ | async)?.f3_loss[0] }} and {{ (gameData$ | async)?.f3_loss[1] }} lost in Final 3
+      </div>
+      <div *ngIf="(gameData$ | async)?.f3_loss?.length === 1">
+        {{ (gameData$ | async)?.f3_loss[0] }} lost in Final 3
+      </div>
+    </div>
+  </div>
 </div>

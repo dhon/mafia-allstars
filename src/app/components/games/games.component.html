@@ -1,1 +1,61 @@
-Games Component
+<div>
+  <div class="row text-white">
+    <div class="col-md-4">
+      <div>2017 Games</div>
+      <div class="row">
+        <div class="col-md-6">
+          <div *ngFor="let game of games2017; let i = index">
+            <span *ngIf="i < (games2017?.length / 2)">
+              <a [routerLink]="['/games', 2017, i+1]">{{ game?.id }}</a>
+            </span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div *ngFor="let game of games2017; let i = index">
+            <span *ngIf="i >= (games2017?.length / 2)">
+              <a [routerLink]="['/games', 2017, i+1]">{{ game?.id }}</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div>2018 Games</div>
+      <div class="row">
+        <div class="col-md-6">
+          <div *ngFor="let game of games2018; let i = index">
+            <span *ngIf="i < (games2018?.length / 2)">
+              <a [routerLink]="['/games', 2018, i+1]">{{ game?.id }}</a>
+            </span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div *ngFor="let game of games2018; let i = index">
+            <span *ngIf="i >= (games2018?.length / 2)">
+              <a [routerLink]="['/games', 2018, i+1]">{{ game?.id }}</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div>2019 Games</div>
+      <div class="row">
+        <div class="col-md-6">
+          <div *ngFor="let game of games2019; let i = index">
+            <span *ngIf="i < (games2019?.length / 2)">
+              <a [routerLink]="['/games', 2019, i+1]">{{ game?.id }}</a>
+            </span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div *ngFor="let game of games2019; let i = index">
+            <span *ngIf="i >= (games2019?.length / 2)">
+              <a [routerLink]="['/games', 2019, i+1]">{{ game?.id }}</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
