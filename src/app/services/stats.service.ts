@@ -139,7 +139,7 @@ export class StatsService {
     } else if (game.id.includes('G2') && game.winner === Schemas.MAFIA) {
       gameStats.game2MafiaWins++;
     } else {
-      console.log('Warning: Game Number or Winner is invalid.');
+      console.log('Warning: Game Id or Winner is invalid.');
     }
   }
 
@@ -149,8 +149,8 @@ export class StatsService {
         gameStats.game1DayOneTwoSleeps++;
       } else if (game.id.includes('G2') && game.lynched[i] === Schemas.NONE) {
         gameStats.game2DayOneTwoSleeps++;
-      } else {
-        console.log('Warning: Game Number is invalid.');
+      } else if (!game.id.includes('G1') && !game.id.includes('G2')) {
+        console.log('Warning: Game Id is invalid.');
       }
     }
   }
