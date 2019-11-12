@@ -58,9 +58,9 @@
     </div>
   </ng-template>
   
-  <div class="text-white">
+  <div>
     {{ (gameData$ | async)?.winner }} has won!
-    <div class="text-white" *ngIf="(gameData$ | async)?.f3_win?.length > 0 && (gameData$ | async)?.f3_loss?.length > 0">
+    <div *ngIf="(gameData$ | async)?.f3_win?.length > 0 && (gameData$ | async)?.f3_loss?.length > 0">
       <div *ngIf="(gameData$ | async)?.f3_win?.length === 2">
         {{ (gameData$ | async)?.f3_win[0] }} and  {{ (gameData$ | async)?.f3_win[1] }} won in Final 3
       </div>
