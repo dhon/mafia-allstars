@@ -1,0 +1,47 @@
+{
+  "id": "11/06/2019 G1",
+  "mafia": [ "CarsonGarden", "Garrinski", "Rolfe" ],
+  "kill": [
+    [ "Colin", "Rollo" ],
+    [ "Colin", "Plen" ],
+    [ "Pope" ],
+    [ "Joey" ],
+    [ "Steep" ]
+  ],
+  "cop": "Pope",
+  "check": [
+    "Joey",
+    "Steep",
+    "Kevin"
+  ],
+  "medic": "Rollo",
+  "save": [
+    "Colin"
+  ],
+  "vigilante": "Colin",
+  "shot": [
+    "NONE",
+    "NONE"
+  ],
+  "vanilla_town": [
+    "Jordan",
+    "Greg",
+    "Ryuzilla",
+    "Joey",
+    "Plen",
+    "Steep",
+    "Kevin",
+    "dLGN",
+    "Stockton"
+  ],
+  "lynched": [
+    "Ryuzilla",
+    "CarsonGarden",
+    "Jordan",
+    "Stockton",
+    "Greg"
+  ],
+  "f3_win": [],
+  "f3_loss": [],
+  "winner": "Mafia"
+}

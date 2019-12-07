@@ -74,6 +74,16 @@ import g73 from '../../assets/2019/73.json';
 import g74 from '../../assets/2019/74.json';
 import g75 from '../../assets/2019/75.json';
 import g76 from '../../assets/2019/76.json';
+import g77 from '../../assets/2019/77.json';
+import g78 from '../../assets/2019/78.json';
+import g79 from '../../assets/2019/79.json';
+import g80 from '../../assets/2019/80.json';
+import g81 from '../../assets/2019/81.json';
+import g82 from '../../assets/2019/82.json';
+import g83 from '../../assets/2019/83.json';
+import g84 from '../../assets/2019/84.json';
+import g85 from '../../assets/2019/85.json';
+import g86 from '../../assets/2019/86.json';
 
 export const games2019 = [
   g01, g02, g03, g04, g05, g06, g07, g08, g09, g10,
@@ -83,5 +93,6 @@ export const games2019 = [
   g41, g42, g43, g44, g45, g46, g47, g48, g49, g50,
   g51, g52, g53, g54, g55, g56, g57, g58, g59, g60,
   g61, g62, g63, g64, g65, g66, g67, g68, g69, g70,
-  g71, g72, g73, g74, g75, g76
+  g71, g72, g73, g74, g75, g76, g77, g78, g79, g80,
+  g81, g82, g83, g84, g85, g86
 ];

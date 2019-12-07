@@ -1,0 +1,55 @@
+{
+  "id": "10/30/2019 G2",
+  "mafia": [ "Colin", "Plen", "kny" ],
+  "kill": [
+    [ "Garrinski", "Kevin" ],
+    [ "Ocane", "Cron" ],
+    [ "Rolfe" ],
+    [ "Rolfe" ],
+    [ "Rollo" ],
+    [ "Storm" ]
+  ],
+  "cop": "Rolfe",
+  "check": [
+    "Garrinski",
+    "Plen",
+    "kny",
+    "Rollo"
+  ],
+  "medic": "Rollo",
+  "save": [
+    "Plen",
+    "Pope",
+    "Rolfe",
+    "CarsonGarden",
+    "Storm"
+  ],
+  "vigilante": "Ocane",
+  "shot": [
+    "NONE",
+    "NONE"
+  ],
+  "vanilla_town": [
+    "Kevin",
+    "Garrinski",
+    "Storm",
+    "Striker",
+    "CarsonGarden",
+    "Ryuzilla",
+    "BaehreX",
+    "Pope",
+    "Cron"
+  ],
+  "lynched": [
+    "NONE",
+    "Plen",
+    "kny",
+    "BaehreX",
+    "Striker",
+    "CarsonGarden",
+    "Colin"
+  ],
+  "f3_win": [ "Ryuzilla", "Pope" ],
+  "f3_loss": [ "Colin" ],
+  "winner": "Town"
+}
