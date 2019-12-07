@@ -1,0 +1,43 @@
+{
+  "id": "11/14/2019 G1",
+  "mafia": [ "Joey", "Greg", "Garrinski" ],
+  "kill": [
+    [ "Noah", "Plen" ],
+    [ "Trenomaris", "Kevin" ],
+    [ "Jordan", "Jordan" ]
+  ],
+  "cop": "Noah",
+  "check": [
+    "Trenomaris"
+  ],
+  "medic": "Jordan",
+  "save": [
+    "Rollo",
+    "Ryuzilla",
+    "Joey"
+  ],
+  "vigilante": "Pope",
+  "shot": [
+    "NONE",
+    "NONE"
+  ],
+  "vanilla_town": [
+    "Kevin",
+    "Ryuzilla",
+    "Plen",
+    "Rolfe",
+    "Colin",
+    "Rollo",
+    "RJ",
+    "Stockton",
+    "Trenomaris"
+  ],
+  "lynched": [
+    "NONE",
+    "Pope",
+    "Rolfe"
+  ],
+  "f3_win": [],
+  "f3_loss": [],
+  "winner": "Mafia"
+}

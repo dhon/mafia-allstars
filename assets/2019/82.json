@@ -1,0 +1,49 @@
+{
+  "id": "11/14/2019 G2",
+  "mafia": [ "Thore", "Garrinski", "Trenomaris" ],
+  "kill": [
+    [ "RJ", "Jordan" ],
+    [ "JumpRopes", "Colin" ],
+    [ "Kevin" ],
+    [ "Striker" ],
+    [ "Greg" ],
+    [ "dLGN" ]
+  ],
+  "cop": "Kevin",
+  "check": [
+    "dLGN",
+    "Greg",
+    "Rolfe"
+  ],
+  "medic": "RJ",
+  "save": [
+    "Rollo"
+  ],
+  "vigilante": "Striker",
+  "shot": [
+    "NONE",
+    "NONE",
+    "Plen"
+  ],
+  "vanilla_town": [
+    "JumpRopes",
+    "Rolfe",
+    "Colin",
+    "dLGN",
+    "Greg",
+    "Plen",
+    "Ryuzilla",
+    "Rollo",
+    "Jordan"
+  ],
+  "lynched": [
+    "NONE",
+    "Trenomaris",
+    "Thore",
+    "Ryuzilla",
+    "Rolfe"
+  ],
+  "f3_win": [ "Garrinski" ],
+  "f3_loss": [ "Rolfe", "Rollo" ],
+  "winner": "Mafia"
+}

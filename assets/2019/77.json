@@ -1,0 +1,45 @@
+{
+  "id": "10/30/2019 G1",
+  "mafia": [ "Colin", "Kevin", "Noah" ],
+  "kill": [
+    [ "Rolfe", "Ryuzilla" ],
+    [ "Cron", "Greg" ],
+    [ "Greg" ]
+  ],
+  "cop": "Plen",
+  "check": [
+    "Freak",
+    "Noah",
+    "Stockton"
+  ],
+  "medic": "Cron",
+  "save": [
+    "Colin",
+    "Greg"
+  ],
+  "vigilante": "Greg",
+  "shot": [
+    "NONE",
+    "NONE",
+    "Noah"
+  ],
+  "vanilla_town": [
+    "Garrinski",
+    "Striker",
+    "Ryuzilla",
+    "Ocane",
+    "Freak",
+    "Rolfe",
+    "Stockton",
+    "RJ",
+    "Rollo"
+  ],
+  "lynched": [
+    "Ocane",
+    "Colin",
+    "Kevin"
+  ],
+  "f3_win": [],
+  "f3_loss": [],
+  "winner": "Town"
+}
