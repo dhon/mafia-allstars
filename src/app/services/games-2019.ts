@@ -84,6 +84,10 @@ import g83 from '../../assets/2019/83.json';
 import g84 from '../../assets/2019/84.json';
 import g85 from '../../assets/2019/85.json';
 import g86 from '../../assets/2019/86.json';
+import g87 from '../../assets/2019/87.json';
+import g88 from '../../assets/2019/88.json';
+import g89 from '../../assets/2019/89.json';
+import g90 from '../../assets/2019/90.json';
 
 export const games2019 = [
   g01, g02, g03, g04, g05, g06, g07, g08, g09, g10,
@@ -94,5 +98,5 @@ export const games2019 = [
   g51, g52, g53, g54, g55, g56, g57, g58, g59, g60,
   g61, g62, g63, g64, g65, g66, g67, g68, g69, g70,
   g71, g72, g73, g74, g75, g76, g77, g78, g79, g80,
-  g81, g82, g83, g84, g85, g86
+  g81, g82, g83, g84, g85, g86, g87, g88, g89, g90
 ];
