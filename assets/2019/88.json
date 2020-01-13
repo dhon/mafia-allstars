@@ -1,0 +1,46 @@
+{
+  "id": "12/11/2019 G2",
+  "mafia": [ "CarsonGarden", "FattDamon", "Razze" ],
+  "kill": [
+    [ "Ghost 1", "BaehreX" ],
+    [ "Greg" ],
+    [ "Stockton" ],
+    [ "Ryuzilla" ]
+  ],
+  "cop": "Ryuzilla",
+  "check": [
+    "Storm",
+    "Duke",
+    "Striker",
+    "Plen"
+  ],
+  "medic": "Greg",
+  "save": [
+    "Rollo",
+    "Striker"
+  ],
+  "vigilante": "Ghost 1",
+  "shot": [
+    "NONE"
+  ],
+  "vanilla_town": [
+    "BaehreX",
+    "Colin",
+    "Duke",
+    "Plen",
+    "Rolfe",
+    "Rollo",
+    "Stockton",
+    "Storm",
+    "Striker"
+  ],
+  "lynched": [
+    "CarsonGarden",
+    "Razze",
+    "Rollo",
+    "FattDamon"
+  ],
+  "f3_win": [],
+  "f3_loss": [],
+  "winner": "Town"
+}

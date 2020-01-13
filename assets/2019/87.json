@@ -1,0 +1,48 @@
+{
+  "id": "12/11/2019 G1",
+  "mafia": [ "Pope", "Zero", "Stockton" ],
+  "kill": [
+    [ "dLGN", "Rolfe" ],
+    [ "Hybrid", "Hybrid" ],
+    [ "Ryuzilla", "Ryuzilla" ],
+    [ "FattDamon" ],
+    [ "Rollo" ],
+    [ "Joey" ]
+  ],
+  "cop": "dLGN",
+  "check": [
+    "Joey"
+  ],
+  "medic": "Rolfe",
+  "save": [
+    "Stockton"
+  ],
+  "vigilante": "FattDamon",
+  "shot": [
+    "NONE",
+    "NONE",
+    "Stockton"
+  ],
+  "vanilla_town": [
+    "Jan",
+    "Greg",
+    "Joey",
+    "Colin",
+    "Ryuzilla",
+    "Hybrid",
+    "Ramza",
+    "Rollo",
+    "Kevin"
+  ],
+  "lynched": [
+    "Jan",
+    "Kevin",
+    "SLEEP",
+    "SLEEP",
+    "SLEEP",
+    "Ramza"
+  ],
+  "f3_win": [],
+  "f3_loss": [],
+  "winner": "Mafia"
+}
